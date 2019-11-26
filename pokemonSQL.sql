@@ -1,35 +1,48 @@
+# INITIALIZING TABLES
 
-DROP TABLE Account_xref, Customer,  Transaction_log, Account;
+DROP TABLE PokemonMoves;
+DROP TABLE PokemonAbilities;
 
-CREATE TABLE Customer (
-  customer_id VARCHAR(32) PRIMARY KEY,
-  ssn INT,
-  first_name VARCHAR(50),
-  last_name VARCHAR(50)
+DROP TABLE Pokemon;
+DROP TABLE Moves;
+DROP TABLE Abilities;
+
+
+CREATE TABLE Pokemon (
+  pokemon_id VARCHAR(32) PRIMARY KEY,
+  pokemon_name VARCHAR(32) NOT NULL,
+  pokemon_typeone INT NOT NULL,
+  pokemon_typetwo INT
 );
 
-CREATE TABLE Account (
-  account_num VARCHAR(32) PRIMARY KEY,
-  account_type VARCHAR(50),
-  balance DECIMAL(15,2)
+CREATE TABLE Moves (
+  moves_id VARCHAR(32) PRIMARY KEY,
+  moves_name VARCHAR(32) NOT NULL,
+  moves_type VARCHAR(32) NOT NULL,
+  moves_uses VARCHAR(32),
+  moves_damage INT,
+  moves_accuracy INT
 );
 
-CREATE TABLE Account_xref (
-  customer_id VARCHAR(32) NOT NULL,
-  account_num VARCHAR(32) NOT NULL,
-  FOREIGN KEY (customer_id) REFERENCES Customer(customer_id),
-  FOREIGN KEY (account_num) REFERENCES Account(account_num)
+CREATE TABLE PokemonMoves (
+  pokemon_id VARCHAR(32) NOT NULL,
+  moves_id VARCHAR(32) NOT NULL,
+  FOREIGN KEY (pokemon_id) REFERENCES Pokemon(pokemon_id),
+  FOREIGN KEY (moves_id) REFERENCES Moves(moves_id)
   ON UPDATE NO ACTION
   ON DELETE CASCADE
 );
 
-CREATE TABLE Transaction_log (
-  trans_timestamp VARCHAR(50),
-  trans_id VARCHAR(32) PRIMARY KEY,
-  account_num VARCHAR(32) NOT NULL,
-  trans_type VARCHAR(50),
-  trans_amount DECIMAL(15,2),
-  FOREIGN KEY (account_num) REFERENCES Account(account_num)
+CREATE TABLE Abilities (
+  abilities_id VARCHAR(32) PRIMARY KEY,
+  abilities_name VARCHAR(32)
+);
+
+CREATE TABLE PokemonAbilities (
+  pokemon_id VARCHAR(32) NOT NULL,
+  abilities_id VARCHAR(32) NOT NULL,
+  FOREIGN KEY (pokemon_id) REFERENCES Pokemon(pokemon_id)
+  FOREIGN KEY (abilities_id) REFERENCES Abilities(abilities_id)
   ON UPDATE NO ACTION
   ON DELETE CASCADE
 );
