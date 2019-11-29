@@ -14,24 +14,24 @@ def create_mysql_connection(db_user, db_password, host_name, db_name):
 
 # USING THESE AS EXAMPLE METHODS FROM ASSIGNMENT 3 AS A GUIDELINES TO CREATE METHODS USING SQL
 
-def createCustomer(mysql_cur, ssn, first_name, last_name):
-    id = makeId()
+def createCustomer(mysql_cur, id, ssn, first_name, last_name):
     mysql_cur.execute(f"INSERT INTO Customer VALUES ('{id}', {ssn}, '{first_name}', '{last_name}')")
     print(f"Welcome, {first_name} {last_name}. Your customer ID is:")
     print(id)
+    print("\nMake sure to write this down so you can access your information in the future!")
 
 def depositMoney(mysql_cur, account_num, amount):
-    mysql_cur.execute('UPDATE Account SET balance = balance + ' + amount + ' WHERE account_num = ' + account_num)
+    mysql_cur.execute(f"UPDATE Account SET balance = balance + {amount} WHERE account_num = '{account_num}'")
     logTransaction(mysql_cur, account_num=account_num, trans_type="deposit", trans_amount=amount)
-    return mysql_cur.fetchall()
 
 def logTransaction(mysql_cur, account_num, trans_type, trans_amount):
-    mysql_cur.execute("INSERT INTO Transaction_log VALUES ('" + datetime.now() + "', " + makeId() + ", " + account_num + ", " + trans_type + ", " + trans_amount + ")")
+    mysql_cur.execute(f"INSERT INTO Transaction_log VALUES ('{datetime.now()}', '{makeId()}', '{account_num}', '{trans_type}', '{trans_amount}')")
     return mysql_cur.fetchall()
 
 def getCustomerID(mysql_cur, ssn):
-    mysql_cur.execute('SELECT customer_id FROM Customer WHERE ssn = ' + ssn)
-    return mysql_cur.fetchall()
+    mysql_cur.execute(f"SELECT customer_id FROM Customer WHERE ssn = {ssn}")
+    result = mysql_cur.fetchone()
+    return str(result[0])
 
 def makeId():
     return uuid.uuid4().hex
@@ -40,58 +40,70 @@ def makeId():
 # MAIN FUNCTION
 
 def main():
+    #currentUser
     isRunning = True
-    userLogin = False;
-    mysql_conn = create_mysql_connection(db_user='root', db_password='password', host_name='104.197.101.227', db_name='bank')
+    userLogin = False
+    mysql_conn = create_mysql_connection(db_user='root', db_password='rMxtwa024OfAi7iF', host_name='35.226.194.71', db_name='banking_app')
     mysql_cur = mysql_conn.cursor()
 
     while (isRunning == True):
-        print("\nHello, Welcome to <bank_name>! You can do the following:")
+        print("Hello, Welcome to <bank_name>! You can do the following:")
         print("1. Login")
         print("2. Register")
         print("3. Exit")
 
         inputSelection = int(input("Please select an option: "))
 
-
         # STARTING OPTIONS
         if (inputSelection == 1):
-            loginCred = input("\nPlease enter valid login credentials to access your accounts: ")
+
+            loginCred = input("\nEnter your Customer ID: ")
             # LOGIN AND STORE WHICH USER IS LOGGING IN
             loginCheck = checkValidLogin(mysql_cur, loginCred)
-            if (loginCheck == True):
-                currentUser = loginCred
+            while(not loginCheck):
+                userContinue = input("\nThat was not a valid entry. Would you like to try again? (y/n): ")
+                if (userContinue == 'y' or userContinue == 'Y'):
+                    loginCred = input("\nEnter your Customer ID: ")
+                    if (checkValidLogin(mysql_cur, loginCred)):
+                        currentUser = loginCred
+                        userLogin = True
+                        loginCheck = True
+                elif (userContinue == 'n' or userContinue == 'N'):
+                    break
+            if(loginCheck):
                 userLogin = True
-            else:
-                loginCred = input("\nError. Not a valid login. Try again: ")
+                currentUser = loginCred
+
 
         elif (inputSelection == 2):
+
             # REGISTERING A USER
             print("\nTo create an account, please enter the following: ")
-            ssn = input("SSN: ")
+            ssn = int(input("SSN: "))
             firstName = input("First Name: ")
             lastName = input("Last Name: ")
-            createCustomer(mysql_cur, ssn, firstName, lastName)
+            id = makeId()
+            createCustomer(mysql_cur, id, ssn, firstName, lastName)
             # LOGIN AND STORE WHICH USER IS LOGGING IN
             mysql_conn.commit()
-            loginCred = getCustomerID(mysql_cur, ssn)
-            currentUser = loginCred
+            currentUser = id
             userLogin = True
             # USER REGISTRATION IMMEDIATELY LEADS TO AN ACCOUNT CREATION PROMPT
             promptToCreateAccount(mysql_cur, currentUser)
+            mysql_conn.commit()
 
         elif (inputSelection == 3):
-            print("\nThank you for using <bank_name>!")
+            print("\nThank you for using <bank_name>! Now exiting...\n")
             mysql_conn.close()
             isRunning = False;
+
         else:
-            print()
-            inputSelection = int(input("Error. Not a valid input. Retry: "))
+            inputSelection = int(input("\nError. Not a valid input. Retry: "))
 
 
         # OPTIONS WHILE USER IS LOGGED IN
         while (userLogin == True):
-            print("\n\nWelcome back to <bank_name>!\n")
+            print("\nWelcome back to <bank_name>!\n")
             print("1. Create Account")
             print("2. Check Balance")
             print("3. Deposit Money")
@@ -104,35 +116,38 @@ def main():
 
             # CREATE AN ACCOUNT
             if (inputSelection == 1):
-                promptToCreateAccount()
+                promptToCreateAccount(mysql_cur, currentUser)
+                mysql_conn.commit()
 
             # CHECK BALANCE OF ACCOUNT
             elif (inputSelection == 2):
-                accountNum = int(input("\nEnter your account number: "))
+                accountNum = input("\nEnter your account number: ")
                 if (currentUser == crossCheckCustomerAccount(mysql_cur, currentUser, accountNum)):
-                    print("Your balance is: " + checkBalance(mysql_cur, accountNum))
+                    print("\nYour balance is: $" + str(checkBalance(mysql_cur, accountNum)))
                 else:
-                    print("You do not have access to the account you enterred.")
+                    print("\nYou do not have access to the account you entered.")
                 pass
 
             # DEPOSIT MONEY IN ACCOUNT
             elif (inputSelection == 3):
-                accountNum = int(input("\nEnter your account number: "))
+                accountNum = input("\nEnter your account number: ")
                 if (currentUser == crossCheckCustomerAccount(mysql_cur, currentUser, accountNum)):
                     depositAmt = float(input("Enter the amount you wish to deposit: $"))
                     depositMoney(mysql_cur, accountNum, depositAmt)
-                    print("Success. Your balance after deposit is: " + checkBalance(mysql_cur, accountNum))
+                    mysql_conn.commit()
+                    print("Success. Your balance after deposit is: " + str(checkBalance(mysql_cur, accountNum)))
                 else:
                     print("You do not have access to this account.")
                 pass
 
             # WITHDRAW MONEY FROM ACCOUNT
             elif (inputSelection == 4):
-                accountNum = int(input("\nEnter your account number: "))
+                accountNum = input("\nEnter your account number: ")
                 if (currentUser == crossCheckCustomerAccount(mysql_cur, currentUser, accountNum)):
                     withdrawAmt = float(input("Enter the amount you wish to withdraw: $"))
-                    withdraw(mysql_cur, accountNum, withdrawAmt)
-                    print("Success. Your balance after withdraw is: " + checkBalance(mysql_cur, accountNum))
+                    withdrawMoney(mysql_cur, accountNum, withdrawAmt)
+                    mysql_conn.commit()
+                    print("Success. Your balance after withdraw is: " + str(checkBalance(mysql_cur, accountNum)))
                 else:
                     print("You do not have access to this account.")
                 pass
@@ -141,22 +156,27 @@ def main():
             elif (inputSelection == 5):
                 print()
                 while (True):
-                    accountNum1 = int(input("Please enter the account ID# you would like to transfer money out of: "))
-                    if (currentUser == crossCheckCustomerAccount(mysql_cur, currentUser, accountNum1)):
-                        accountNum2 = int(input("Please enter the account ID# you would like to transfer money into: "))
-                        amount = 0
-                        break
-                    else:
+                    accountNum1 = input("Please enter the account ID# you would like to transfer money out of: ")
+                    if (currentUser != crossCheckCustomerAccount(mysql_cur, currentUser, accountNum1)):
                         print("The account you listed is not registered to you.")
+                    else:
+                        break
                 while(True):
-                    amount = int(input("Please enter the amount of money you would like to transfer: "))
+                    accountNum2 = input("Please enter the account ID# you would like to transfer money into: ")
+                    if (accountNum2 != crossCheckAccount(mysql_cur, accountNum2)):
+                        print("The account you listed does not exist.")
+                    else:
+                        break
+                while(True):
+                    amount = float(input("Please enter the amount of money you would like to transfer: "))
                     if (amount > 5000):
                         print("You can not transfer more than $5000 at a time. Please enter a valid amount: ")
                     else:
                         transferMoney(mysql_cur, accountNum1, accountNum2, amount)
+                        mysql_conn.commit()
                         break
 
-            # UPDAATE CUSTOMER INFORMATION
+            # UPDATE CUSTOMER INFORMATION
             elif (inputSelection == 6):
                 print("\nInformation available:")
                 print("1. Change Fist Name")
@@ -168,24 +188,24 @@ def main():
                     if (inputSelection == 1):
                         firstName = input("\nEnter new first name: ")
                         updateCustomerFirstName(mysql_cur, currentUser, firstName)
+                        mysql_conn.commit()
                         break
                     elif (inputSelection == 2):
                         lastName = input("\nEnter new last name: ")
                         updateCustomerLastName(mysql_cur, currentUser, lastName)
+                        mysql_conn.commit()
                         break
                     elif (inputSelection == 3):
-                        ssn = input("\nEnter first name: ")
+                        ssn = int(input("\nEnter new SSN: "))
                         updateCustomerSSN(mysql_cur, currentUser, ssn)
                         break
                     else:
-                        print("The value you enterred is not valid. Please try again.")
+                        print("The value you enterred is not valid.")
 
             # LOGOUT OF ACCOUNT
             elif (inputSelection == 7):
-                print("\nThank you for using the <bank_name> banking service. Now exitting..")
-                mysql_conn.close()
+                print("\nThank you for using the <bank_name> banking service. Now exitting..\n")
                 userLogin = False
-                isRunning = False
 
             else:
                 inputSelection = int(input("Error. Not a valid input. Retry: "))
