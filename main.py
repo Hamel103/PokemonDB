@@ -1,6 +1,5 @@
 import pymysql
 import pandas as pl
-import uuid
 from datetime import datetime
 
 def create_mysql_connection(db_user, db_password, host_name, db_name):
@@ -27,14 +26,6 @@ def depositMoney(mysql_cur, account_num, amount):
 def logTransaction(mysql_cur, account_num, trans_type, trans_amount):
     mysql_cur.execute(f"INSERT INTO Transaction_log VALUES ('{datetime.now()}', '{makeId()}', '{account_num}', '{trans_type}', '{trans_amount}')")
     return mysql_cur.fetchall()
-
-def getCustomerID(mysql_cur, ssn):
-    mysql_cur.execute(f"SELECT customer_id FROM Customer WHERE ssn = {ssn}")
-    result = mysql_cur.fetchone()
-    return str(result[0])
-
-def makeId():
-    return uuid.uuid4().hex
 
 
 # SQL FUNCTIONS
