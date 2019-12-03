@@ -37,179 +37,158 @@ def makeId():
     return uuid.uuid4().hex
 
 
+# SQL FUNCTIONS
+
+# DONT KNOW IF THESE FOUR WILL WORK PROPERLY; THEY MAY ONLY RETURN A SINGLE ATTRIBUTE INSTEAD OF ALL
+def SearchByPokeName(mysql_cur, pokemon_name):
+    mysql_cur.execute(f"SELECT * FROM Pokemon WHERE pokemon_name = {pokemon_name}")
+    result = mysql_cur.fetchone()
+    return str(result[0])
+
+def SearchByPokeDex(mysql_cur, pokemon_id):
+    mysql_cur.execute(f"SELECT * FROM Pokemon WHERE pokemon_id = {pokemon_id}")
+    result = mysql_cur.fetchone()
+    return str(result[0])
+
+def SearchByMoveName(mysql_cur, moves_name):
+    mysql_cur.execute(f"SELECT * FROM Moves WHERE moves_name = {moves_name}")
+    result = mysql_cur.fetchone()
+    return str(result[0])
+
+def SearchByAbilityName(mysql_cur, abilities_name):
+    mysql_cur.execute(f"SELECT * FROM Abilities WHERE abilities_name = {abilities_name}")
+    result = mysql_cur.fetchone()
+    return str(result[0])
+
+# __________ FUNCTIONS
+
+def ReadData():
+    readingData = True
+
+    print("\nWhat data would you like to view?")
+    print("1. \nPokemon")
+    print("2. Moves")
+    print("3. Abilities")
+    #print("4. Types")                IF WE ADD A TYPES TABLE
+    print("5. Return to previous menu")
+
+    while (readingData):
+        inputSelection = int(input("\nPlease select an option: "))
+
+        if (inputSelection == 1):
+            print("First Option Selected")
+            print("\nWould you like to search by Name or Pokedex Number?")
+            print("1. \nName")
+            print("2. Pokedex Number")
+
+            while (True):
+                inputSelection = int(input("\nPlease select an option: "))
+
+                if (inputSelection == 1):
+                    print("First Option Selected")
+                    pokeName = input("\nPlease enter the Pokemon's Name: ")
+                    print(SearchByPokeName(mysql_cur, pokeName))
+                    break
+                elif (inputSelection == 2):
+                    print("Second Option Selected")
+                    dexNum = int(input("\nPlease enter the Pokedex Number: "))
+                    print(SearchByPokeDex(mysql_cur, dexNum))
+                    break
+                else:
+                    print("\nThe input given was invalid.")
+
+        elif (inputSelection == 2):
+            print("Second Option Selected")
+
+            moveName = input("\nPlease enter the name of the move: ")
+            print(SearchByMoveName(mysql_cur, moveName))
+
+        elif (inputSelection == 3):
+            print("Third Option Selected")
+
+            abilityName = input("\nPlease enter the name of the move: ")
+            print(SearchByAbilityName(mysql_cur, abilityName))
+
+        #elif (inputSelection == 4):
+        #    print("Fourth Option Selected")
+        elif (inputSelection == 5):
+            print("Fifth Option Selected")
+            readingData = False
+        else:
+            print("\nThe input given was invalid.")
+
+def AddNewData():
+    addingData = True
+
+    print("\nWhat data would you like to add?")
+    print("1. \nNew Pokemon")
+    print("2. New Moves")
+    print("3. New Abilities")
+    #print("4. New Types")                IF WE ADD A TYPES TABLE
+    print("5. Return to previous menu")
+
+    while (addingData):
+        inputSelection = int(input("\nPlease select an option: "))
+
+        if (inputSelection == 1):
+            print("First Option Selected")
+        elif (inputSelection == 2):
+            print("Second Option Selected")
+        elif (inputSelection == 3):
+            print("Third Option Selected")
+        #elif (inputSelection == 4):
+        #    print("Fourth Option Selected")
+        elif (inputSelection == 5):
+            print("Fifth Option Selected")
+            addingData = False
+        else:
+            print("\nThe input given was invalid.")
+
+def UpdateData():
+    print("\nUpdating Data...")
+
+def DeleteData():
+    print("\nDeleting Data...")
+
 # MAIN FUNCTION
 
 def main():
-    #currentUser
-    isRunning = True
-    userLogin = False
+
     mysql_conn = create_mysql_connection(db_user='root', db_password='rMxtwa024OfAi7iF', host_name='35.226.194.71', db_name='banking_app')
     mysql_cur = mysql_conn.cursor()
 
+    isRunning = True
+
+    print("\nHello, Welcome to The Pokemon Database! What would you like to do?")
+
     while (isRunning == True):
-        print("Hello, Welcome to <bank_name>! You can do the following:")
-        print("1. Login")
-        print("2. Register")
-        print("3. Exit")
 
-        inputSelection = int(input("Please select an option: "))
+        print("1. \nFind a pokemon")
+        print("2. Add on to our existing data")
+        print("3. Update the data we have")
+        print("4. Delete an entry from our data")
+        print("5. Exit")
 
-        # STARTING OPTIONS
+        inputSelection = int(input("\nPlease select an option: "))
+
         if (inputSelection == 1):
-
-            loginCred = input("\nEnter your Customer ID: ")
-            # LOGIN AND STORE WHICH USER IS LOGGING IN
-            loginCheck = checkValidLogin(mysql_cur, loginCred)
-            while(not loginCheck):
-                userContinue = input("\nThat was not a valid entry. Would you like to try again? (y/n): ")
-                if (userContinue == 'y' or userContinue == 'Y'):
-                    loginCred = input("\nEnter your Customer ID: ")
-                    if (checkValidLogin(mysql_cur, loginCred)):
-                        currentUser = loginCred
-                        userLogin = True
-                        loginCheck = True
-                elif (userContinue == 'n' or userContinue == 'N'):
-                    break
-            if(loginCheck):
-                userLogin = True
-                currentUser = loginCred
-
-
+            print("First Option Selected")
+            ReadData()                              #IMPLEMENTED WITHOUT TESTING OR ERROR HANDLING
         elif (inputSelection == 2):
-
-            # REGISTERING A USER
-            print("\nTo create an account, please enter the following: ")
-            ssn = int(input("SSN: "))
-            firstName = input("First Name: ")
-            lastName = input("Last Name: ")
-            id = makeId()
-            createCustomer(mysql_cur, id, ssn, firstName, lastName)
-            # LOGIN AND STORE WHICH USER IS LOGGING IN
-            mysql_conn.commit()
-            currentUser = id
-            userLogin = True
-            # USER REGISTRATION IMMEDIATELY LEADS TO AN ACCOUNT CREATION PROMPT
-            promptToCreateAccount(mysql_cur, currentUser)
-            mysql_conn.commit()
-
+            print("Second Option Selected")
+            AddNewData()                            #LIMITED IMPLEMENTATION
         elif (inputSelection == 3):
-            print("\nThank you for using <bank_name>! Now exiting...\n")
-            mysql_conn.close()
-            isRunning = False;
-
+            print("Third Option Selected")
+            UpdateData()                            #NO IMPLEMENTATION
+        elif (inputSelection == 4):
+            print("Fourth Option Selected")
+            DeleteData()                            #NO IMPLEMENTATION
+        elif (inputSelection == 5):
+            print("Fifth Option Selected")
+            print("\nThank you for using our program!")
+            isRunning = False
         else:
-            inputSelection = int(input("\nError. Not a valid input. Retry: "))
-
-
-        # OPTIONS WHILE USER IS LOGGED IN
-        while (userLogin == True):
-            print("\nWelcome back to <bank_name>!\n")
-            print("1. Create Account")
-            print("2. Check Balance")
-            print("3. Deposit Money")
-            print("4. Withdraw Money")
-            print("5. Transfer Money")
-            print("6. Update Account Information")
-            print("7. Logout\n")
-
-            inputSelection = int(input("Please select an option: "))
-
-            # CREATE AN ACCOUNT
-            if (inputSelection == 1):
-                promptToCreateAccount(mysql_cur, currentUser)
-                mysql_conn.commit()
-
-            # CHECK BALANCE OF ACCOUNT
-            elif (inputSelection == 2):
-                accountNum = input("\nEnter your account number: ")
-                if (currentUser == crossCheckCustomerAccount(mysql_cur, currentUser, accountNum)):
-                    print("\nYour balance is: $" + str(checkBalance(mysql_cur, accountNum)))
-                else:
-                    print("\nYou do not have access to the account you entered.")
-                pass
-
-            # DEPOSIT MONEY IN ACCOUNT
-            elif (inputSelection == 3):
-                accountNum = input("\nEnter your account number: ")
-                if (currentUser == crossCheckCustomerAccount(mysql_cur, currentUser, accountNum)):
-                    depositAmt = float(input("Enter the amount you wish to deposit: $"))
-                    depositMoney(mysql_cur, accountNum, depositAmt)
-                    mysql_conn.commit()
-                    print("Success. Your balance after deposit is: " + str(checkBalance(mysql_cur, accountNum)))
-                else:
-                    print("You do not have access to this account.")
-                pass
-
-            # WITHDRAW MONEY FROM ACCOUNT
-            elif (inputSelection == 4):
-                accountNum = input("\nEnter your account number: ")
-                if (currentUser == crossCheckCustomerAccount(mysql_cur, currentUser, accountNum)):
-                    withdrawAmt = float(input("Enter the amount you wish to withdraw: $"))
-                    withdrawMoney(mysql_cur, accountNum, withdrawAmt)
-                    mysql_conn.commit()
-                    print("Success. Your balance after withdraw is: " + str(checkBalance(mysql_cur, accountNum)))
-                else:
-                    print("You do not have access to this account.")
-                pass
-
-            # TRANSFER MONEY BETWEEN ACCOUNTS
-            elif (inputSelection == 5):
-                print()
-                while (True):
-                    accountNum1 = input("Please enter the account ID# you would like to transfer money out of: ")
-                    if (currentUser != crossCheckCustomerAccount(mysql_cur, currentUser, accountNum1)):
-                        print("The account you listed is not registered to you.")
-                    else:
-                        break
-                while(True):
-                    accountNum2 = input("Please enter the account ID# you would like to transfer money into: ")
-                    if (accountNum2 != crossCheckAccount(mysql_cur, accountNum2)):
-                        print("The account you listed does not exist.")
-                    else:
-                        break
-                while(True):
-                    amount = float(input("Please enter the amount of money you would like to transfer: "))
-                    if (amount > 5000):
-                        print("You can not transfer more than $5000 at a time. Please enter a valid amount: ")
-                    else:
-                        transferMoney(mysql_cur, accountNum1, accountNum2, amount)
-                        mysql_conn.commit()
-                        break
-
-            # UPDATE CUSTOMER INFORMATION
-            elif (inputSelection == 6):
-                print("\nInformation available:")
-                print("1. Change Fist Name")
-                print("2. Change Last Name")
-                print("3. Change SSN")
-
-                while (True):
-                    inputSelection = int(input("Enter the number of the information you would like to change: "))
-                    if (inputSelection == 1):
-                        firstName = input("\nEnter new first name: ")
-                        updateCustomerFirstName(mysql_cur, currentUser, firstName)
-                        mysql_conn.commit()
-                        break
-                    elif (inputSelection == 2):
-                        lastName = input("\nEnter new last name: ")
-                        updateCustomerLastName(mysql_cur, currentUser, lastName)
-                        mysql_conn.commit()
-                        break
-                    elif (inputSelection == 3):
-                        ssn = int(input("\nEnter new SSN: "))
-                        updateCustomerSSN(mysql_cur, currentUser, ssn)
-                        break
-                    else:
-                        print("The value you enterred is not valid.")
-
-            # LOGOUT OF ACCOUNT
-            elif (inputSelection == 7):
-                print("\nThank you for using the <bank_name> banking service. Now exitting..\n")
-                userLogin = False
-
-            else:
-                inputSelection = int(input("Error. Not a valid input. Retry: "))
-
+            print("\nThe input given was invalid.")
 
     #mysql_pandas = pl.read_sql('SELECT * FROM test_table;', con=mysql_conn)
     #print(mysql_pandas.head())
