@@ -28,9 +28,7 @@ def logTransaction(mysql_cur, account_num, trans_type, trans_amount):
     return mysql_cur.fetchall()
 
 
-# SQL FUNCTIONS
-
-# DONT KNOW IF THESE FOUR WILL WORK PROPERLY; THEY MAY ONLY RETURN A SINGLE ATTRIBUTE INSTEAD OF ALL
+# SQL SELECT FUNCTIONS: DONT KNOW IF THESE FOUR WILL WORK PROPERLY; THEY MAY ONLY RETURN A SINGLE ATTRIBUTE INSTEAD OF ALL
 def SearchByPokeName(mysql_cur, pokemon_name):
     mysql_cur.execute(f"SELECT * FROM Pokemon WHERE pokemon_name = {pokemon_name}")
     result = mysql_cur.fetchone()
