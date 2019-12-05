@@ -49,9 +49,22 @@ def SearchByAbilityName(mysql_cur, abilities_name):
     result = mysql_cur.fetchone()
     return str(result[0])
 
+#NEED TO ADD ABILITY AND MOVES TO POKEMON CREATION
+def CreatePokemon(mysql_cur, pokemon_name, pokemon_typeone, pokemon_typetwo):
+    mysql_cur.execute(f"INSERT INTO Pokemon VALUES ('{pokemon_name}', {pokemon_typeone}, '{pokemon_typetwo}')")
+    #mysql_cur.execute(f"INSERT INTO PokemonMoves VALUES ()")
+    #mysql_cur.execute(f"INSERT INTO PokemonAbilities VALUES ()")
+
+def CreateMove(mysql_cur, moves_name, moves_type, moves_uses, moves_damage, moves_accuracy):
+    mysql_cur.execute(f"INSERT INTO Moves VALUES ('{moves_name}', {moves_type}, '{moves_uses}', '{moves_damage}', '{moves_accuracy}')")
+
+def CreateAbility(mysql_cur, abilities_name):
+    mysql_cur.execute(f"INSERT INTO Abilities VALUES ('{abilities_name}')")
+
+
 # __________ FUNCTIONS
 
-def ReadData():
+def ReadData():     #COULD USE AGGREGATE FUNCTIONS FOR MORE SPECIFIC SEARCH RESULTS (ie, search for pokemon by type, by moves, etc)
     readingData = True
 
     print("\nWhat data would you like to view?")
@@ -106,25 +119,82 @@ def ReadData():
         else:
             print("\nThe input given was invalid.")
 
-def AddNewData():
+def AddNewData():   #NEED FUNCTIONALITY TO ADD MOVES TO A POKEMON
     addingData = True
 
-    print("\nWhat data would you like to add?")
-    print("1. \nNew Pokemon")
-    print("2. New Moves")
-    print("3. New Abilities")
-    #print("4. New Types")                IF WE ADD A TYPES TABLE
-    print("5. Return to previous menu")
-
     while (addingData):
+        print("\nWhat data would you like to add?")
+        print("1. \nNew Pokemon")
+        print("2. New Moves")
+        print("3. New Abilities")
+        #print("4. New Types")                IF WE ADD A TYPES TABLE
+        print("5. Return to previous menu")
+
         inputSelection = int(input("\nPlease select an option: "))
 
         if (inputSelection == 1):
             print("First Option Selected")
+            count = 0
+            while (count < 4):
+                exitCreatingPokemon = input("\nType 'y' to cancel: ")
+                if (exitCreatingPokemon == 'y' or exitCreatingPokemon == 'Y'):
+                    break
+                elif (count == 0):
+                    pokeName = input("\nEnter the name of the new Pokemon: ")
+                    count += 1
+                elif (count == 1):
+                    pokeTypeOne = input("\nEnter the type of the Pokemon: ")
+                    count += 1
+                elif (count == 2):
+                    pokeTypeTwo = input("\nEnter the second type of the pokemon (If it does not have one, enter 'None'): ")
+                    count += 1
+                elif (count == 3):
+                    CreatePokemon(mysql_cur, pokeName, pokeTypeOne, pokeTypeTwo)
+                    count += 1
+                else:
+                    print("Invalid input given.")
         elif (inputSelection == 2):
             print("Second Option Selected")
+            count = 0
+            while (count < 6):
+                exitCreatingPokemon = input("\nWould you like to cancel? (y/n)")
+                if (exitCreatingPokemon == 'y' or exitCreatingPokemon == 'Y'):
+                    break
+                elif (count == 0):
+                    moveName = input("\nEnter the name of the new move: ")
+                    count += 1
+                elif (count == 1):
+                    pokeTypeOne = input("\nEnter the type of the move: ")
+                    count += 1
+                elif (count == 2):
+                    pokeTypeTwo = input("\nEnter the number of uses of the move: ")
+                    count += 1
+                elif (count == 3):
+                    pokeTypeTwo = inputint(("\nEnter the move's damage (integer): "))
+                    count += 1
+                elif (count == 4):
+                    pokeTypeTwo = input(int("\nEnter the move's accuracy (integer): "))
+                    count += 1
+                elif (count == 5):
+                    CreateMove(mysql_cur, moveName, moveType, moveUses, moveDamage, moveAccuracy)
+                    count += 1
+                else:
+                    print("Invalid input given.")
         elif (inputSelection == 3):
             print("Third Option Selected")
+            count = 0
+            while (count < 2):
+                exitCreatingPokemon = input("\nWould you like to cancel? (y/n)")
+                if (exitCreatingPokemon == 'y' or exitCreatingPokemon == 'Y'):
+                    break
+                elif (count == 0):
+                    abilityName = input("\nEnter the name of the new ability: ")
+                    count += 1
+                elif (count == 1):
+                    CreateAbility(mysql_cur, abilityName)
+                    count += 1
+                else:
+                    print("Invalid input given.")
         #elif (inputSelection == 4):
         #    print("Fourth Option Selected")
         elif (inputSelection == 5):
