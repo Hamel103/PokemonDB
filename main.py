@@ -13,12 +13,6 @@ def create_mysql_connection(db_user, db_password, host_name, db_name):
 
 # USING THESE AS EXAMPLE METHODS FROM ASSIGNMENT 3 AS A GUIDELINES TO CREATE METHODS USING SQL
 
-def createCustomer(mysql_cur, id, ssn, first_name, last_name):
-    mysql_cur.execute(f"INSERT INTO Customer VALUES ('{id}', {ssn}, '{first_name}', '{last_name}')")
-    print(f"Welcome, {first_name} {last_name}. Your customer ID is:")
-    print(id)
-    print("\nMake sure to write this down so you can access your information in the future!")
-
 def depositMoney(mysql_cur, account_num, amount):
     mysql_cur.execute(f"UPDATE Account SET balance = balance + {amount} WHERE account_num = '{account_num}'")
     logTransaction(mysql_cur, account_num=account_num, trans_type="deposit", trans_amount=amount)
@@ -49,7 +43,7 @@ def SearchByAbilityName(mysql_cur, abilities_name):
     result = mysql_cur.fetchone()
     return str(result[0])
 
-#NEED TO ADD ABILITY AND MOVES TO POKEMON CREATION
+#SQL CREATE FUNCTIONS: NEED TO ADD ABILITY AND MOVES TO POKEMON CREATION
 def CreatePokemon(mysql_cur, pokemon_name, pokemon_typeone, pokemon_typetwo):
     mysql_cur.execute(f"INSERT INTO Pokemon VALUES ('{pokemon_name}', {pokemon_typeone}, '{pokemon_typetwo}')")
     #mysql_cur.execute(f"INSERT INTO PokemonMoves VALUES ()")
@@ -61,20 +55,49 @@ def CreateMove(mysql_cur, moves_name, moves_type, moves_uses, moves_damage, move
 def CreateAbility(mysql_cur, abilities_name):
     mysql_cur.execute(f"INSERT INTO Abilities VALUES ('{abilities_name}')")
 
+# SQL UPDATE FUNCTIONS
+def UpdatePokemonName(mysql_cur, old_pokemon_name, new_pokemon_name):
+    mysql_cur.execute(f"UPDATE Pokemon SET pokemon_name = {new_pokemon_name} WHERE pokemon_name = '{old_pokemon_name}'")
+
+def UpdatePokemonTypeOne(mysql_cur, old_pokemon_typeone, new_pokemon_typeone):
+    mysql_cur.execute(f"UPDATE Pokemon SET pokemon_typeone = {new_pokemon_typeone} WHERE pokemon_typeone = '{old_pokemon_typeone}'")
+
+def UpdatePokemonTypeTwo(mysql_cur, old_pokemon_typetwo, new_pokemon_typetwo):
+    mysql_cur.execute(f"UPDATE Pokemon SET pokemon_typetwo = {new_pokemon_typetwo} WHERE pokemon_typetwo = '{old_pokemon_typetwo}'")
+
+def UpdateMovesName(mysql_cur, old_moves_name, new_moves_name):
+    mysql_cur.execute(f"UPDATE Moves SET moves_name = {new_moves_name} WHERE moves_name = '{old_moves_name}'")
+
+def UpdateMovesType(mysql_cur, old_moves_type, new_moves_type):
+    mysql_cur.execute(f"UPDATE Moves SET moves_type = {new_moves_type} WHERE moves_type = '{old_moves_type}'")
+
+def UpdateMovesUses(mysql_cur, old_moves_uses, new_moves_uses):
+    mysql_cur.execute(f"UPDATE Moves SET moves_uses = {new_moves_uses} WHERE moves_uses = '{old_moves_uses}'")
+
+def UpdateMovesDamage(mysql_cur, old_moves_damage, new_moves_damage):
+    mysql_cur.execute(f"UPDATE Moves SET moves_damage = {new_moves_damage} WHERE moves_damage = '{old_moves_damage}'")
+
+def UpdateMovesAccuracy(mysql_cur, old_moves_accuracy, new_moves_accuracy):
+    mysql_cur.execute(f"UPDATE Moves SET moves_accuracy = {new_moves_accuracy} WHERE moves_accuracy = '{old_moves_accuracy}'")
+
+def UpdateAbilitiesName(mysql_cur, old_abilities_name, new_abilities_name):
+    mysql_cur.execute(f"UPDATE Abilities SET abilities_name = {new_abilities_name} WHERE abilities_name = '{old_abilities_name}'")
+
+#SQL DELETE FUNCTIONS
 
 # __________ FUNCTIONS
 
 def ReadData():     #COULD USE AGGREGATE FUNCTIONS FOR MORE SPECIFIC SEARCH RESULTS (ie, search for pokemon by type, by moves, etc)
     readingData = True
 
-    print("\nWhat data would you like to view?")
-    print("1. \nPokemon")
-    print("2. Moves")
-    print("3. Abilities")
-    #print("4. Types")                IF WE ADD A TYPES TABLE
-    print("5. Return to previous menu")
-
     while (readingData):
+        print("\nWhat data would you like to view?")
+        print("1. \nPokemon")
+        print("2. Moves")
+        print("3. Abilities")
+        #print("4. Types")                IF WE ADD A TYPES TABLE
+        print("5. Return to previous menu")
+
         inputSelection = int(input("\nPlease select an option: "))
 
         if (inputSelection == 1):
@@ -204,7 +227,58 @@ def AddNewData():   #NEED FUNCTIONALITY TO ADD MOVES TO A POKEMON
             print("\nThe input given was invalid.")
 
 def UpdateData():
-    print("\nUpdating Data...")
+    updatingData = True
+
+    #POKEMON: Name and Types
+    #MOVES: Name, Type, Uses, Damage, accuracy
+    #ABILITIES: Name
+
+    while (updatingData):
+        print("\nWhat data would you like to update?")
+        print("1. \nPokemon")
+        print("2. Moves")
+        print("3. Abilities")
+        #print("4. Types")                IF WE ADD A TYPES TABLE
+        print("5. Return to previous menu")
+
+        inputSelection = int(input("\nPlease select an option: "))
+
+        if (inputSelection == 1):
+            print("First Option Selected")
+            print("\nWhat would you like to update?")
+            print("1. \nName")
+            print("2. First Type")
+            print("3. Second Type")
+
+            while (True):
+                inputSelection = int(input("\nPlease select an option: "))
+
+                if (inputSelection == 1):
+                    print("First Option Selected")
+                    pokeName = input("\nPlease enter the Pokemon's Name: ")
+                    print(SearchByPokeName(mysql_cur, pokeName))
+                    break
+                elif (inputSelection == 2):
+                    print("Second Option Selected")
+                    dexNum = int(input("\nPlease enter the Pokedex Number: "))
+                    print(SearchByPokeDex(mysql_cur, dexNum))
+                    break
+                else:
+                    print("\nThe input given was invalid.")
+        elif (inputSelection == 2):
+            print("You chose option 2")
+        elif (inputSelection == 3):
+            print("You chose option 4")
+        elif (inputSelection == 5):
+            print("You chose option 5")
+            updatingData = False
+        else:
+            print("\nThe input was invalid.")
+
+
+
+
+
 
 def DeleteData():
     print("\nDeleting Data...")
