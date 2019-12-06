@@ -59,26 +59,26 @@ def CreateAbility(mysql_cur, abilities_name):
 def UpdatePokemonName(mysql_cur, old_pokemon_name, new_pokemon_name):
     mysql_cur.execute(f"UPDATE Pokemon SET pokemon_name = {new_pokemon_name} WHERE pokemon_name = '{old_pokemon_name}'")
 
-def UpdatePokemonTypeOne(mysql_cur, old_pokemon_typeone, new_pokemon_typeone):
-    mysql_cur.execute(f"UPDATE Pokemon SET pokemon_typeone = {new_pokemon_typeone} WHERE pokemon_typeone = '{old_pokemon_typeone}'")
+def UpdatePokemonTypeOne(mysql_cur, pokemon_name, new_pokemon_typeone):
+    mysql_cur.execute(f"UPDATE Pokemon SET pokemon_typeone = {new_pokemon_typeone} WHERE pokemon_name = '{pokemon_name}'")
 
-def UpdatePokemonTypeTwo(mysql_cur, old_pokemon_typetwo, new_pokemon_typetwo):
-    mysql_cur.execute(f"UPDATE Pokemon SET pokemon_typetwo = {new_pokemon_typetwo} WHERE pokemon_typetwo = '{old_pokemon_typetwo}'")
+def UpdatePokemonTypeTwo(mysql_cur, pokemon_name, new_pokemon_typetwo):
+    mysql_cur.execute(f"UPDATE Pokemon SET pokemon_typetwo = {new_pokemon_typetwo} WHERE pokemon_name = '{pokemon_name}'")
 
 def UpdateMovesName(mysql_cur, old_moves_name, new_moves_name):
     mysql_cur.execute(f"UPDATE Moves SET moves_name = {new_moves_name} WHERE moves_name = '{old_moves_name}'")
 
-def UpdateMovesType(mysql_cur, old_moves_type, new_moves_type):
-    mysql_cur.execute(f"UPDATE Moves SET moves_type = {new_moves_type} WHERE moves_type = '{old_moves_type}'")
+def UpdateMovesType(mysql_cur, moves_name, new_moves_type):
+    mysql_cur.execute(f"UPDATE Moves SET moves_type = {new_moves_type} WHERE moves_name = '{moves_name}'")
 
-def UpdateMovesUses(mysql_cur, old_moves_uses, new_moves_uses):
-    mysql_cur.execute(f"UPDATE Moves SET moves_uses = {new_moves_uses} WHERE moves_uses = '{old_moves_uses}'")
+def UpdateMovesUses(mysql_cur, moves_name, new_moves_uses):
+    mysql_cur.execute(f"UPDATE Moves SET moves_uses = {new_moves_uses} WHERE moves_name = '{moves_name}'")
 
-def UpdateMovesDamage(mysql_cur, old_moves_damage, new_moves_damage):
-    mysql_cur.execute(f"UPDATE Moves SET moves_damage = {new_moves_damage} WHERE moves_damage = '{old_moves_damage}'")
+def UpdateMovesDamage(mysql_cur, moves_name, new_moves_damage):
+    mysql_cur.execute(f"UPDATE Moves SET moves_damage = {new_moves_damage} WHERE moves_name = '{moves_name}'")
 
-def UpdateMovesAccuracy(mysql_cur, old_moves_accuracy, new_moves_accuracy):
-    mysql_cur.execute(f"UPDATE Moves SET moves_accuracy = {new_moves_accuracy} WHERE moves_accuracy = '{old_moves_accuracy}'")
+def UpdateMovesAccuracy(mysql_cur, moves_name, new_moves_accuracy):
+    mysql_cur.execute(f"UPDATE Moves SET moves_accuracy = {new_moves_accuracy} WHERE moves_name = '{moves_name}'")
 
 def UpdateAbilitiesName(mysql_cur, old_abilities_name, new_abilities_name):
     mysql_cur.execute(f"UPDATE Abilities SET abilities_name = {new_abilities_name} WHERE abilities_name = '{old_abilities_name}'")
@@ -193,10 +193,10 @@ def AddNewData():   #NEED FUNCTIONALITY TO ADD MOVES TO A POKEMON
                     pokeTypeTwo = input("\nEnter the number of uses of the move: ")
                     count += 1
                 elif (count == 3):
-                    pokeTypeTwo = inputint(("\nEnter the move's damage (integer): "))
+                    pokeTypeTwo = int(input("\nEnter the move's damage (integer): "))
                     count += 1
                 elif (count == 4):
-                    pokeTypeTwo = input(int("\nEnter the move's accuracy (integer): "))
+                    pokeTypeTwo = int(input("\nEnter the move's accuracy (integer): "))
                     count += 1
                 elif (count == 5):
                     CreateMove(mysql_cur, moveName, moveType, moveUses, moveDamage, moveAccuracy)
@@ -229,7 +229,7 @@ def AddNewData():   #NEED FUNCTIONALITY TO ADD MOVES TO A POKEMON
 def UpdateData():
     updatingData = True
 
-    #POKEMON: Name and Types
+    #POKEMON: Name, Type One, Type Two
     #MOVES: Name, Type, Uses, Damage, accuracy
     #ABILITIES: Name
 
@@ -249,35 +249,89 @@ def UpdateData():
             print("1. \nName")
             print("2. First Type")
             print("3. Second Type")
+            print("4. Return to previous menu")
 
             while (True):
                 inputSelection = int(input("\nPlease select an option: "))
 
                 if (inputSelection == 1):
                     print("First Option Selected")
-                    pokeName = input("\nPlease enter the Pokemon's Name: ")
-                    print(SearchByPokeName(mysql_cur, pokeName))
+                    currPokeName = input("\nPlease enter the Pokemon's current name that you would like to change: ")
+                    oldPokeName = input("\nPlease enter the Pokemon's new name: ")
+                    UpdatePokemonName(mysql_cur, currPokeName, newPokeName)
                     break
                 elif (inputSelection == 2):
                     print("Second Option Selected")
-                    dexNum = int(input("\nPlease enter the Pokedex Number: "))
-                    print(SearchByPokeDex(mysql_cur, dexNum))
+                    currTypeOne = input("\nPlease enter the current type you would like to update: ")
+                    newTypeOne = input("\nPlease enter the new type: ")
+                    UpdatePokemonTypeOne(mysql_cur, currTypeOne, newTypeOne))
+                    break
+                elif (inputSelection == 3):
+                    print("Third Option Selected")
+                    currTypeTwo = input("\nPlease enter the current type you would like to update: ")
+                    newTypeTwo = input("\nPlease enter the new type: ")
+                    UpdatePokemonTypeOne(mysql_cur, currTypeTwo, newTypeTwo))
+                    break
+                elif (inputSelection == 4):
                     break
                 else:
                     print("\nThe input given was invalid.")
         elif (inputSelection == 2):
             print("You chose option 2")
+            print("\nWhat would you like to update?")
+            print("1. \nName")
+            print("2. Type")
+            print("3. Uses")
+            print("4. Damage")
+            print("5. Accuracy")
+            print("6. Return to previous menu")
+            while (True):
+                inputSelection = int(input("\nPlease select an option: "))
+
+                if (inputSelection == 1):
+                    print("First Option Selected")
+                    currMovesName = input("\nPlease enter the move's current name that you would like to change: ")
+                    oldMovesName = input("\nPlease enter the move's new name: ")
+                    UpdatePokemonName(mysql_cur, currMovesName, newMovesName)
+                    break
+                elif (inputSelection == 2):
+                    print("Second Option Selected")
+                    currMovesType = input("\nPlease enter the current type you would like to update: ")
+                    newMovesType = input("\nPlease enter the new type: ")
+                    UpdatePokemonTypeOne(mysql_cur, currMovesType, newMovesType))
+                    break
+                elif (inputSelection == 3):
+                    print("Third Option Selected")
+                    currTypeTwo = input("\nPlease enter the current type you would like to update: ")
+                    newTypeTwo = input("\nPlease enter the new type: ")
+                    UpdatePokemonTypeOne(mysql_cur, currTypeTwo, newTypeTwo))
+                    break
+                elif (inputSelection == 4):
+                    print("Fourth Option Selected")
+                    currTypeOne = input("\nPlease enter the current type you would like to update: ")
+                    newTypeOne = input("\nPlease enter the new type: ")
+                    UpdatePokemonTypeOne(mysql_cur, currTypeOne, newTypeOne))
+                    break
+                elif (inputSelection == 5):
+                    print("Fifth Option Selected")
+                    currTypeTwo = input("\nPlease enter the current type you would like to update: ")
+                    newTypeTwo = input("\nPlease enter the new type: ")
+                    UpdatePokemonTypeOne(mysql_cur, currTypeTwo, newTypeTwo))
+                    break
+                elif (inputSelection == 6):
+                    break
+                else:
+                    print("\nThe input given was invalid.")
         elif (inputSelection == 3):
             print("You chose option 4")
+            currAbilitiesName = input("\nPlease enter the name of the ability you would like to update: ")
+            newAbilitiesName = input("\nPlease enter the new name: ")
+            UpdateAbilitiesName(mysql_cur, currAbilitiesName, newAbilitiesName))
         elif (inputSelection == 5):
             print("You chose option 5")
             updatingData = False
         else:
             print("\nThe input was invalid.")
-
-
-
-
 
 
 def DeleteData():
