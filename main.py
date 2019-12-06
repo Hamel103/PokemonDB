@@ -262,13 +262,13 @@ def UpdateData():
                     break
                 elif (inputSelection == 2):
                     print("Second Option Selected")
-                    currTypeOne = input("\nPlease enter the current type you would like to update: ")
+                    currTypeOne = input("\nPlease enter the name of the Pokemon whose type you would like to update: ")
                     newTypeOne = input("\nPlease enter the new type: ")
                     UpdatePokemonTypeOne(mysql_cur, currTypeOne, newTypeOne))
                     break
                 elif (inputSelection == 3):
                     print("Third Option Selected")
-                    currTypeTwo = input("\nPlease enter the current type you would like to update: ")
+                    currTypeTwo = input("\nPlease enter the name of the Pokemon whose type you would like to update: ")
                     newTypeTwo = input("\nPlease enter the new type: ")
                     UpdatePokemonTypeOne(mysql_cur, currTypeTwo, newTypeTwo))
                     break
