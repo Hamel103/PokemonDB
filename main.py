@@ -262,15 +262,15 @@ def UpdateData():
                     break
                 elif (inputSelection == 2):
                     print("Second Option Selected")
-                    currTypeOne = input("\nPlease enter the name of the Pokemon whose type you would like to update: ")
+                    pokeName = input("\nPlease enter the name of the Pokemon whose type you would like to update: ")
                     newTypeOne = input("\nPlease enter the new type: ")
-                    UpdatePokemonTypeOne(mysql_cur, currTypeOne, newTypeOne))
+                    UpdatePokemonTypeOne(mysql_cur, pokeName, newTypeOne))
                     break
                 elif (inputSelection == 3):
                     print("Third Option Selected")
-                    currTypeTwo = input("\nPlease enter the name of the Pokemon whose type you would like to update: ")
+                    pokeName = input("\nPlease enter the name of the Pokemon whose type you would like to update: ")
                     newTypeTwo = input("\nPlease enter the new type: ")
-                    UpdatePokemonTypeOne(mysql_cur, currTypeTwo, newTypeTwo))
+                    UpdatePokemonTypeOne(mysql_cur, pokeName, newTypeTwo))
                     break
                 elif (inputSelection == 4):
                     break
@@ -296,43 +296,54 @@ def UpdateData():
                     break
                 elif (inputSelection == 2):
                     print("Second Option Selected")
-                    currMovesType = input("\nPlease enter the current type you would like to update: ")
+                    movesName = input("\nPlease enter the move's name whose type you would like to update: ")
                     newMovesType = input("\nPlease enter the new type: ")
-                    UpdatePokemonTypeOne(mysql_cur, currMovesType, newMovesType))
+                    UpdatePokemonTypeOne(mysql_cur, movesName, newMovesType))
                     break
                 elif (inputSelection == 3):
                     print("Third Option Selected")
-                    currTypeTwo = input("\nPlease enter the current type you would like to update: ")
-                    newTypeTwo = input("\nPlease enter the new type: ")
-                    UpdatePokemonTypeOne(mysql_cur, currTypeTwo, newTypeTwo))
+                    movesName = input("\nPlease enter the move's name whose uses you would like to update: ")
+                    newMovesUses = input("\nPlease enter the new amount of uses: ")
+                    UpdatePokemonTypeOne(mysql_cur, movesName, newMovesUses))
                     break
                 elif (inputSelection == 4):
                     print("Fourth Option Selected")
-                    currTypeOne = input("\nPlease enter the current type you would like to update: ")
-                    newTypeOne = input("\nPlease enter the new type: ")
-                    UpdatePokemonTypeOne(mysql_cur, currTypeOne, newTypeOne))
+                    movesName = input("\nPlease enter the move's name whose damage you would like to update: ")
+                    newMovesDamage = input("\nPlease enter the new type: ")
+                    UpdatePokemonTypeOne(mysql_cur, movesName, newMovesDamage))
                     break
                 elif (inputSelection == 5):
                     print("Fifth Option Selected")
-                    currTypeTwo = input("\nPlease enter the current type you would like to update: ")
-                    newTypeTwo = input("\nPlease enter the new type: ")
-                    UpdatePokemonTypeOne(mysql_cur, currTypeTwo, newTypeTwo))
+                    movesName = input("\nPlease enter the move's name whose accuracy you would like to update: ")
+                    newMovesAccuracy = input("\nPlease enter the new type: ")
+                    UpdatePokemonTypeOne(mysql_cur, movesName, newMovesAccuracy))
                     break
                 elif (inputSelection == 6):
                     break
                 else:
                     print("\nThe input given was invalid.")
         elif (inputSelection == 3):
-            print("You chose option 4")
-            currAbilitiesName = input("\nPlease enter the name of the ability you would like to update: ")
-            newAbilitiesName = input("\nPlease enter the new name: ")
-            UpdateAbilitiesName(mysql_cur, currAbilitiesName, newAbilitiesName))
+            print("You chose option 3")
+            print("\nWhat would you like to update?")
+            print("1. \nName")
+            print("2. Return to previous menu")
+            while (True):
+                inputSelection = int(input("\nPlease select an option: "))
+
+                if (inputSelection == 1):
+                    currAbilitiesName = input("\nPlease enter the name of the ability you would like to update: ")
+                    newAbilitiesName = input("\nPlease enter the new name: ")
+                    UpdateAbilitiesName(mysql_cur, currAbilitiesName, newAbilitiesName))
+                    break
+                elif (inputSelection == 2):
+                    break
+                else:
+                    print("The input was invalid.")
         elif (inputSelection == 5):
             print("You chose option 5")
             updatingData = False
         else:
             print("\nThe input was invalid.")
-
 
 def DeleteData():
     print("\nDeleting Data...")
