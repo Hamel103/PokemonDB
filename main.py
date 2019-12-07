@@ -13,24 +13,18 @@ def create_mysql_connection(db_user, db_password, host_name, db_name):
 
 # USING THESE AS EXAMPLE METHODS FROM ASSIGNMENT 3 AS A GUIDELINES TO CREATE METHODS USING SQL
 
-def logTransaction(mysql_cur, account_num, trans_type, trans_amount):
-    mysql_cur.execute(f"INSERT INTO Transaction_log VALUES ('{datetime.now()}', '{makeId()}', '{account_num}', '{trans_type}', '{trans_amount}')")
-    return mysql_cur.fetchall()
-
+#def logTransaction(mysql_cur, account_num, trans_type, trans_amount):
+#    mysql_cur.execute(f"INSERT INTO Transaction_log VALUES ('{datetime.now()}', '{makeId()}', '{account_num}', '{trans_type}', '{trans_amount}')")
+#    return mysql_cur.fetchall()
 
 # SQL SELECT FUNCTIONS: DONT KNOW IF THESE FOUR WILL WORK PROPERLY; THEY MAY ONLY RETURN A SINGLE ATTRIBUTE INSTEAD OF ALL
 def SearchByPokeName(mysql_cur, pokemon_name):
-    mysql_cur.execute(f"SELECT * FROM Pokemon WHERE pokemon_name = {pokemon_name}")
+    mysql_cur.execute(f"SELECT * FROM Pokemon WHERE pokemon_name = '{pokemon_name}'")
     result = mysql_cur.fetchone()
     return str(result[0])
 
 def SearchByPokeDex(mysql_cur, pokemon_id):
     mysql_cur.execute(f"SELECT * FROM Pokemon WHERE pokemon_id = {pokemon_id}")
-    result = mysql_cur.fetchone()
-    return str(result[0])
-
-def SearchByMoveName(mysql_cur, moves_name):
-    mysql_cur.execute(f"SELECT * FROM Moves WHERE moves_name = {moves_name}")
     result = mysql_cur.fetchone()
     return str(result[0])
 
@@ -45,9 +39,6 @@ def CreatePokemon(mysql_cur, pokemon_name, pokemon_typeone, pokemon_typetwo):
     #mysql_cur.execute(f"INSERT INTO PokemonMoves VALUES ()")
     #mysql_cur.execute(f"INSERT INTO PokemonAbilities VALUES ()")
 
-def CreateMove(mysql_cur, moves_name, moves_type, moves_uses, moves_damage, moves_accuracy):
-    mysql_cur.execute(f"INSERT INTO Moves VALUES ('{moves_name}', {moves_type}, '{moves_uses}', '{moves_damage}', '{moves_accuracy}')")
-
 def CreateAbility(mysql_cur, abilities_name):
     mysql_cur.execute(f"INSERT INTO Abilities VALUES ('{abilities_name}')")
 
@@ -61,21 +52,6 @@ def UpdatePokemonTypeOne(mysql_cur, pokemon_name, new_pokemon_typeone):
 def UpdatePokemonTypeTwo(mysql_cur, pokemon_name, new_pokemon_typetwo):
     mysql_cur.execute(f"UPDATE Pokemon SET pokemon_typetwo = {new_pokemon_typetwo} WHERE pokemon_name = '{pokemon_name}'")
 
-def UpdateMovesName(mysql_cur, old_moves_name, new_moves_name):
-    mysql_cur.execute(f"UPDATE Moves SET moves_name = {new_moves_name} WHERE moves_name = '{old_moves_name}'")
-
-def UpdateMovesType(mysql_cur, moves_name, new_moves_type):
-    mysql_cur.execute(f"UPDATE Moves SET moves_type = {new_moves_type} WHERE moves_name = '{moves_name}'")
-
-def UpdateMovesUses(mysql_cur, moves_name, new_moves_uses):
-    mysql_cur.execute(f"UPDATE Moves SET moves_uses = {new_moves_uses} WHERE moves_name = '{moves_name}'")
-
-def UpdateMovesDamage(mysql_cur, moves_name, new_moves_damage):
-    mysql_cur.execute(f"UPDATE Moves SET moves_damage = {new_moves_damage} WHERE moves_name = '{moves_name}'")
-
-def UpdateMovesAccuracy(mysql_cur, moves_name, new_moves_accuracy):
-    mysql_cur.execute(f"UPDATE Moves SET moves_accuracy = {new_moves_accuracy} WHERE moves_name = '{moves_name}'")
-
 def UpdateAbilitiesName(mysql_cur, old_abilities_name, new_abilities_name):
     mysql_cur.execute(f"UPDATE Abilities SET abilities_name = {new_abilities_name} WHERE abilities_name = '{old_abilities_name}'")
 
@@ -85,12 +61,6 @@ def DeletePokemonByID(mysql_cur, pokemon_id):
 
 def DeletePokemonByName(mysql_cur, pokemon_name):
     mysql_cur.execute(f"DELETE * FROM Pokemon WHERE pokemon_name = '{pokemon_name}'")
-
-def DeleteMoveByID(mysql_cur, moves_id):
-    mysql_cur.execute(f"DELETE * FROM Moves WHERE moves_id = '{moves_id}'")
-
-def DeleteMoveByName(mysql_cur, moves_name):
-    mysql_cur.execute(f"DELETE * FROM Moves WHERE moves_name = '{moves_name}'")
 
 def DeleteAbilityByID(mysql_cur, abilities_id):
     mysql_cur.execute(f"DELETE * FROM Abilities WHERE abilities_id = '{abilities_id}'")
@@ -106,10 +76,9 @@ def ReadData():     #COULD USE AGGREGATE FUNCTIONS FOR MORE SPECIFIC SEARCH RESU
     while (readingData):
         print("\nWhat data would you like to view?")
         print("1. \nPokemon")
-        print("2. Moves")
+        print("2. Types")
         print("3. Abilities")
-        #print("4. Types")                IF WE ADD A TYPES TABLE
-        print("5. Return to previous menu")
+        print("4. Return to previous menu")
 
         inputSelection = int(input("\nPlease select an option: "))
 
@@ -137,20 +106,13 @@ def ReadData():     #COULD USE AGGREGATE FUNCTIONS FOR MORE SPECIFIC SEARCH RESU
 
         elif (inputSelection == 2):
             print("Second Option Selected")
-
-            moveName = input("\nPlease enter the name of the move: ")
-            print(SearchByMoveName(mysql_cur, moveName))
-
         elif (inputSelection == 3):
             print("Third Option Selected")
 
             abilityName = input("\nPlease enter the name of the move: ")
             print(SearchByAbilityName(mysql_cur, abilityName))
-
-        #elif (inputSelection == 4):
-        #    print("Fourth Option Selected")
-        elif (inputSelection == 5):
-            print("Fifth Option Selected")
+        elif (inputSelection == 4):
+            print("Fourth Option Selected")
             readingData = False
         else:
             print("\nThe input given was invalid.")
@@ -161,10 +123,9 @@ def AddNewData():   #NEED FUNCTIONALITY TO ADD MOVES TO A POKEMON
     while (addingData):
         print("\nWhat data would you like to add?")
         print("1. \nNew Pokemon")
-        print("2. New Moves")
+        print("2. New Type")
         print("3. New Abilities")
-        #print("4. New Types")                IF WE ADD A TYPES TABLE
-        print("5. Return to previous menu")
+        print("4. Return to previous menu")
 
         inputSelection = int(input("\nPlease select an option: "))
 
@@ -191,31 +152,6 @@ def AddNewData():   #NEED FUNCTIONALITY TO ADD MOVES TO A POKEMON
                     print("Invalid input given.")
         elif (inputSelection == 2):
             print("Second Option Selected")
-            count = 0
-            while (count < 6):
-                exitCreatingPokemon = input("\nWould you like to cancel? (y/n)")
-                if (exitCreatingPokemon == 'y' or exitCreatingPokemon == 'Y'):
-                    break
-                elif (count == 0):
-                    moveName = input("\nEnter the name of the new move: ")
-                    count += 1
-                elif (count == 1):
-                    moveType = int(input("\nEnter the Type ID of the move: "))
-                    count += 1
-                elif (count == 2):
-                    moveUses = input("\nEnter the number of uses of the move: ")
-                    count += 1
-                elif (count == 3):
-                    moveDamage = int(input("\nEnter the move's damage (integer): "))
-                    count += 1
-                elif (count == 4):
-                    moveAccuracy = int(input("\nEnter the move's accuracy (integer): "))
-                    count += 1
-                elif (count == 5):
-                    CreateMove(mysql_cur, moveName, moveType, moveUses, moveDamage, moveAccuracy)
-                    count += 1
-                else:
-                    print("Invalid input given.")
         elif (inputSelection == 3):
             print("Third Option Selected")
             count = 0
@@ -231,10 +167,8 @@ def AddNewData():   #NEED FUNCTIONALITY TO ADD MOVES TO A POKEMON
                     count += 1
                 else:
                     print("Invalid input given.")
-        #elif (inputSelection == 4):
-        #    print("Fourth Option Selected")
-        elif (inputSelection == 5):
-            print("Fifth Option Selected")
+        elif (inputSelection == 4):
+            print("Fourth Option Selected")
             addingData = False
         else:
             print("\nThe input given was invalid.")
@@ -249,9 +183,8 @@ def UpdateData():
     while (updatingData):
         print("\nWhat data would you like to update?")
         print("1. \nPokemon")
-        print("2. Moves")
+        print("2. Types")
         print("3. Abilities")
-        #print("4. Types")                IF WE ADD A TYPES TABLE
         print("5. Return to previous menu")
 
         inputSelection = int(input("\nPlease select an option: "))
@@ -291,50 +224,6 @@ def UpdateData():
                     print("\nThe input given was invalid.")
         elif (inputSelection == 2):
             print("You chose option 2")
-            print("\nWhat would you like to update?")
-            print("1. \nName")
-            print("2. Type")
-            print("3. Uses")
-            print("4. Damage")
-            print("5. Accuracy")
-            print("6. Return to previous menu")
-            while (True):
-                inputSelection = int(input("\nPlease select an option: "))
-
-                if (inputSelection == 1):
-                    print("First Option Selected")
-                    currMovesName = input("\nPlease enter the move's current name that you would like to change: ")
-                    oldMovesName = input("\nPlease enter the move's new name: ")
-                    UpdatePokemonName(mysql_cur, currMovesName, newMovesName)
-                    break
-                elif (inputSelection == 2):
-                    print("Second Option Selected")
-                    movesName = input("\nPlease enter the move's name whose type you would like to update: ")
-                    newMovesType = int(input("\nPlease enter the new Type ID: "))
-                    UpdatePokemonTypeOne(mysql_cur, movesName, newMovesType))
-                    break
-                elif (inputSelection == 3):
-                    print("Third Option Selected")
-                    movesName = input("\nPlease enter the move's name whose uses you would like to update: ")
-                    newMovesUses = input("\nPlease enter the new amount of uses: ")
-                    UpdatePokemonTypeOne(mysql_cur, movesName, newMovesUses))
-                    break
-                elif (inputSelection == 4):
-                    print("Fourth Option Selected")
-                    movesName = input("\nPlease enter the move's name whose damage you would like to update: ")
-                    newMovesDamage = input("\nPlease enter the new type: ")
-                    UpdatePokemonTypeOne(mysql_cur, movesName, newMovesDamage))
-                    break
-                elif (inputSelection == 5):
-                    print("Fifth Option Selected")
-                    movesName = input("\nPlease enter the move's name whose accuracy you would like to update: ")
-                    newMovesAccuracy = input("\nPlease enter the new type: ")
-                    UpdatePokemonTypeOne(mysql_cur, movesName, newMovesAccuracy))
-                    break
-                elif (inputSelection == 6):
-                    break
-                else:
-                    print("\nThe input given was invalid.")
         elif (inputSelection == 3):
             print("You chose option 3")
             print("\nWhat would you like to update?")
@@ -352,8 +241,8 @@ def UpdateData():
                     break
                 else:
                     print("The input was invalid.")
-        elif (inputSelection == 5):
-            print("You chose option 5")
+        elif (inputSelection == 4):
+            print("You chose option 4")
             updatingData = False
         else:
             print("\nThe input was invalid.")
@@ -364,10 +253,9 @@ def DeleteData():
     while (deletingData):
         print("\nWhat data would you like to delete?")
         print("1. \nPokemon")
-        print("2. Moves")
+        print("2. Types")
         print("3. Abilities")
-        #print("4. Types")                IF WE ADD A TYPES TABLE
-        print("5. Return to previous menu")
+        print("4. Return to previous menu")
 
         inputSelection = int(input("\nPlease select an option: "))
 
@@ -394,25 +282,6 @@ def DeleteData():
                     print("\nThe input given was invalid.")
         elif (inputSelection == 2):
             print("Second Option Selected")
-            print("\nWould you like to delete by Name or ID Number?")
-            print("1. \nName")
-            print("2. ID Number")
-
-            while (True):
-                inputSelection = int(input("\nPlease select an option: "))
-
-                if (inputSelection == 1):
-                    print("First Option Selected")
-                    moveName = input("\nPlease enter the move's Name: ")
-                    DeleteMoveByName(mysql_cur, moveName)
-                    break
-                elif (inputSelection == 2):
-                    print("Second Option Selected")
-                    moveID = int(input("\nPlease enter the Pokedex Number: "))
-                    DeleteMoveByID(mysql_cur, moveID)
-                    break
-                else:
-                    print("\nThe input given was invalid.")
         elif (inputSelection == 3):
             print("Third Option Selected")
             print("\nWould you like to delete by Name or ID Number?")
@@ -434,7 +303,7 @@ def DeleteData():
                     break
                 else:
                     print("\nThe input given was invalid.")
-        elif (inputSelection == 5):
+        elif (inputSelection == 4):
             deletingData = False
         else:
             print("\nThe input given was invalid.")
