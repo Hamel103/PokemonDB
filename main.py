@@ -26,22 +26,42 @@ def GetPokemonName(mysql_cur, pokemon_id):
     return str(result[0])
 
 # SQL SELECT FUNCTIONS: DONT KNOW IF THESE FOUR WILL WORK PROPERLY; THEY MAY ONLY RETURN A SINGLE ATTRIBUTE INSTEAD OF ALL
-def SearchByPokeName(mysql_cur, pokemon_name):
+def ViewAllPokemon(mysql_cur):
+    mysql_cur.execute(f"SELECT * FROM Pokemon")
+    result = mysql_cur.fetchone()
+    return str(result[0])
+
+def SearchPokeByName(mysql_cur, pokemon_name):
     mysql_cur.execute(f"SELECT * FROM Pokemon WHERE pokemon_name = '{pokemon_name}'")
     result = mysql_cur.fetchone()
     return str(result[0])
 
-def SearchByPokeDex(mysql_cur, pokemon_id):
+def SearchPokeByDex(mysql_cur, pokemon_id):
     mysql_cur.execute(f"SELECT * FROM Pokemon WHERE pokemon_id = {pokemon_id}")
     result = mysql_cur.fetchone()
     return str(result[0])
 
-def SearchByTypeID(mysql_cur, type_id):
+def SearchPokeByType(mysql_cur, type_id):
+    mysql_cur.execute(f"SELECT * FROM Pokemon WHERE pokemon_typeone = {type_id} OR pokemon_typetwo = {type_id}")
+    result = mysql_cur.fetchone()
+    return str(result[0])
+
+def ViewAllTypes(mysql_cur):
+    mysql_cur.execute(f"SELECT * FROM Type")
+    result = mysql_cur.fetchone()
+    return str(result[0])
+
+def SearchTypeByID(mysql_cur, type_id):
     mysql_cur.execute(f"SELECT type_name FROM Type WHERE type_id = {type_id}")
     result = mysql_cur.fetchone()
     return str(result[0])
 
-def SearchByAbilityID(mysql_cur, abilities_id):
+def ViewAllAbilities(mysql_cur):
+    mysql_cur.execute(f"SELECT * FROM Abilities")
+    result = mysql_cur.fetchone()
+    return str(result[0])
+
+def SearchAbilityByID(mysql_cur, abilities_id):
     mysql_cur.execute(f"SELECT abilities_name FROM Abilities WHERE abilities_id = {abilities_id}")
     result = mysql_cur.fetchone()
     return str(result[0])
@@ -108,36 +128,52 @@ def ReadData():     #COULD USE AGGREGATE FUNCTIONS FOR MORE SPECIFIC SEARCH RESU
 
         if (inputSelection == 1):
             print("First Option Selected")
-            print("\nWould you like to search by Name or Pokedex Number?")
-            print("\n1. Name")
-            print("2. Pokedex Number")
+            print("\nWhat would you like to view?")
+            print("\n1. All Pokemon")
+            print("2. All Pokemon of a certain Type")
+            print("3. A specific Pokemon")
+            print("4. Return to previous menu")
 
-            while (True):
-                inputSelection = int(input("\nPlease select an option: "))
+            inputSelection = int(input("\nPlease select an option: "))
+            if (inputSelection == 1):
+                print("Fist option selected")
+                print(ViewAllPokemon(mysql_cur))
+            elif (inputSelection == 2):
+                print("Second option selected")
+                typeID = int(input("Please enter the Type ID you would like to search by: "))
+                print(SearchPokeByType(mysql_cur, typeID))
+            elif (inputSelection == 3):
+                print("Third option selected")
+                print("\nWould you like to search by Name or Pokedex Number?")
+                print("\n1. Name")
+                print("2. Pokedex Number")
 
-                if (inputSelection == 1):
-                    print("First Option Selected")
-                    pokeName = input("\nPlease enter the Pokemon's Name: ")
-                    print(SearchByPokeName(mysql_cur, pokeName))
-                    break
-                elif (inputSelection == 2):
-                    print("Second Option Selected")
-                    dexNum = int(input("\nPlease enter the Pokedex Number: "))
-                    print(SearchByPokeDex(mysql_cur, dexNum))
-                    break
-                else:
-                    print("\nThe input given was invalid.")
+                while (True):
+                    inputSelection = int(input("\nPlease select an option: "))
+
+                    if (inputSelection == 1):
+                        print("First Option Selected")
+                        pokeName = input("\nPlease enter the Pokemon's Name: ")
+                        print(SearchPokeByName(mysql_cur, pokeName))
+                        break
+                    elif (inputSelection == 2):
+                        print("Second Option Selected")
+                        dexNum = int(input("\nPlease enter the Pokedex Number: "))
+                        print(SearchPokeByDex(mysql_cur, dexNum))
+                        break
+                    else:
+                        print("\nThe input given was invalid.")
+            elif (inputSelection == 4):
+                print("Fourth option selected")
+            else:
+                print("Invalid input given.")
 
         elif (inputSelection == 2):
             print("Second Option Selected")
-
-            typeID = input("\nPlease enter the ID of the Type: ")
-            print(SearchByTypeID(mysql_cur, typeID))
+            print(ViewAllTypes(mysql_cur))
         elif (inputSelection == 3):
             print("Third Option Selected")
-
-            abilityID = int(input("\nPlease enter the ID of the Ability: "))
-            print(SearchByAbilityID(mysql_cur, abilityID))
+            print(ViewAllAbilities(mysql_cur))
         elif (inputSelection == 4):
             print("Fourth Option Selected")
             readingData = False
@@ -353,7 +389,7 @@ def DeleteData():
                 elif (inputSelection == 2):
                     print("Second Option Selected")
                     typeID = int(input("\nPlease enter the Type ID: "))
-                    print(f"You have deleted '{SearchByTypeID(mysql_cur, typeID)}' from the database.")
+                    print(f"You have deleted '{SearchTypeByID(mysql_cur, typeID)}' from the database.")
                     DeleteTypeByID(mysql_cur, typeID)
                     break
                 else:
@@ -375,7 +411,7 @@ def DeleteData():
                 elif (inputSelection == 2):
                     print("Second Option Selected")
                     abilityID = int(input("\nPlease enter the Ability's ID: "))
-                    print(f"You have deleted '{SearchByAbilityID(mysql_cur, abilityID)}' from the database.")
+                    print(f"You have deleted '{SearchAbilityByID(mysql_cur, abilityID)}' from the database.")
                     DeleteAbilityByID(mysql_cur, abilityID)
                     break
                 else:
