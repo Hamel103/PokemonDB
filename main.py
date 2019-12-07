@@ -75,7 +75,7 @@ def ReadData():     #COULD USE AGGREGATE FUNCTIONS FOR MORE SPECIFIC SEARCH RESU
 
     while (readingData):
         print("\nWhat data would you like to view?")
-        print("1. \nPokemon")
+        print("\n1. Pokemon")
         print("2. Types")
         print("3. Abilities")
         print("4. Return to previous menu")
@@ -85,7 +85,7 @@ def ReadData():     #COULD USE AGGREGATE FUNCTIONS FOR MORE SPECIFIC SEARCH RESU
         if (inputSelection == 1):
             print("First Option Selected")
             print("\nWould you like to search by Name or Pokedex Number?")
-            print("1. \nName")
+            print("\n1. Name")
             print("2. Pokedex Number")
 
             while (True):
@@ -122,7 +122,7 @@ def AddNewData():   #NEED FUNCTIONALITY TO ADD MOVES TO A POKEMON
 
     while (addingData):
         print("\nWhat data would you like to add?")
-        print("1. \nNew Pokemon")
+        print("\n1. New Pokemon")
         print("2. New Type")
         print("3. New Abilities")
         print("4. Return to previous menu")
@@ -182,7 +182,7 @@ def UpdateData():
 
     while (updatingData):
         print("\nWhat data would you like to update?")
-        print("1. \nPokemon")
+        print("\n1. Pokemon")
         print("2. Types")
         print("3. Abilities")
         print("5. Return to previous menu")
@@ -192,7 +192,7 @@ def UpdateData():
         if (inputSelection == 1):
             print("First Option Selected")
             print("\nWhat would you like to update?")
-            print("1. \nName")
+            print("\n1. Name")
             print("2. First Type")
             print("3. Second Type")
             print("4. Return to previous menu")
@@ -210,13 +210,13 @@ def UpdateData():
                     print("Second Option Selected")
                     pokeName = input("\nPlease enter the name of the Pokemon whose type you would like to update: ")
                     newTypeOne = int(input("\nPlease enter the new Type ID: "))
-                    UpdatePokemonTypeOne(mysql_cur, pokeName, newTypeOne))
+                    UpdatePokemonTypeOne(mysql_cur, pokeName, newTypeOne)
                     break
                 elif (inputSelection == 3):
                     print("Third Option Selected")
                     pokeName = input("\nPlease enter the name of the Pokemon whose type you would like to update: ")
                     newTypeTwo = int(input("\nPlease enter the new Type ID: "))
-                    UpdatePokemonTypeOne(mysql_cur, pokeName, newTypeTwo))
+                    UpdatePokemonTypeOne(mysql_cur, pokeName, newTypeTwo)
                     break
                 elif (inputSelection == 4):
                     break
@@ -227,7 +227,7 @@ def UpdateData():
         elif (inputSelection == 3):
             print("You chose option 3")
             print("\nWhat would you like to update?")
-            print("1. \nName")
+            print("\n1. Name")
             print("2. Return to previous menu")
             while (True):
                 inputSelection = int(input("\nPlease select an option: "))
@@ -235,7 +235,7 @@ def UpdateData():
                 if (inputSelection == 1):
                     currAbilitiesName = input("\nPlease enter the name of the ability you would like to update: ")
                     newAbilitiesName = input("\nPlease enter the new name: ")
-                    UpdateAbilitiesName(mysql_cur, currAbilitiesName, newAbilitiesName))
+                    UpdateAbilitiesName(mysql_cur, currAbilitiesName, newAbilitiesName)
                     break
                 elif (inputSelection == 2):
                     break
@@ -321,7 +321,7 @@ def main():
 
     while (isRunning == True):
 
-        print("1. \nFind a pokemon")
+        print("\n1. Find a pokemon")
         print("2. Add on to our existing data")
         print("3. Update the data we have")
         print("4. Delete an entry from our data")
