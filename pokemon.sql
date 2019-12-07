@@ -3,16 +3,25 @@
 DROP TABLE PokemonMoves;
 DROP TABLE PokemonAbilities;
 
+DROP TABLE Type;
 DROP TABLE Pokemon;
 DROP TABLE Moves;
 DROP TABLE Abilities;
 
+CREATE TABLE Type (
+  type_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  type_name VARCHAR(32) NOT NULL
+);
 
 CREATE TABLE Pokemon (
   pokemon_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   pokemon_name VARCHAR(32) NOT NULL,
   pokemon_typeone INT NOT NULL,
-  pokemon_typetwo INT
+  pokemon_typetwo INT,
+  FOREIGN KEY (pokemon_typeone) REFERENCES Type(type_id),
+  FOREIGN KEY (pokemon_typetwo) REFERENCES Type(type_id)
+  ON UPDATE NO ACTION
+  ON DELETE CASCADE
 );
 
 CREATE TABLE Moves (

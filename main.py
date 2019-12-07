@@ -179,10 +179,10 @@ def AddNewData():   #NEED FUNCTIONALITY TO ADD MOVES TO A POKEMON
                     pokeName = input("\nEnter the name of the new Pokemon: ")
                     count += 1
                 elif (count == 1):
-                    pokeTypeOne = input("\nEnter the type of the Pokemon: ")
+                    pokeTypeOne = int(input("\nEnter the Type ID of the Pokemon: "))
                     count += 1
                 elif (count == 2):
-                    pokeTypeTwo = input("\nEnter the second type of the pokemon (If it does not have one, enter 'None'): ")
+                    pokeTypeTwo = int(input("\nEnter the second Type ID of the pokemon (If it does not have one, leave the input empty): "))
                     count += 1
                 elif (count == 3):
                     CreatePokemon(mysql_cur, pokeName, pokeTypeOne, pokeTypeTwo)
@@ -200,16 +200,16 @@ def AddNewData():   #NEED FUNCTIONALITY TO ADD MOVES TO A POKEMON
                     moveName = input("\nEnter the name of the new move: ")
                     count += 1
                 elif (count == 1):
-                    pokeTypeOne = input("\nEnter the type of the move: ")
+                    moveType = int(input("\nEnter the Type ID of the move: "))
                     count += 1
                 elif (count == 2):
-                    pokeTypeTwo = input("\nEnter the number of uses of the move: ")
+                    moveUses = input("\nEnter the number of uses of the move: ")
                     count += 1
                 elif (count == 3):
-                    pokeTypeTwo = int(input("\nEnter the move's damage (integer): "))
+                    moveDamage = int(input("\nEnter the move's damage (integer): "))
                     count += 1
                 elif (count == 4):
-                    pokeTypeTwo = int(input("\nEnter the move's accuracy (integer): "))
+                    moveAccuracy = int(input("\nEnter the move's accuracy (integer): "))
                     count += 1
                 elif (count == 5):
                     CreateMove(mysql_cur, moveName, moveType, moveUses, moveDamage, moveAccuracy)
@@ -276,13 +276,13 @@ def UpdateData():
                 elif (inputSelection == 2):
                     print("Second Option Selected")
                     pokeName = input("\nPlease enter the name of the Pokemon whose type you would like to update: ")
-                    newTypeOne = input("\nPlease enter the new type: ")
+                    newTypeOne = int(input("\nPlease enter the new Type ID: "))
                     UpdatePokemonTypeOne(mysql_cur, pokeName, newTypeOne))
                     break
                 elif (inputSelection == 3):
                     print("Third Option Selected")
                     pokeName = input("\nPlease enter the name of the Pokemon whose type you would like to update: ")
-                    newTypeTwo = input("\nPlease enter the new type: ")
+                    newTypeTwo = int(input("\nPlease enter the new Type ID: "))
                     UpdatePokemonTypeOne(mysql_cur, pokeName, newTypeTwo))
                     break
                 elif (inputSelection == 4):
@@ -310,7 +310,7 @@ def UpdateData():
                 elif (inputSelection == 2):
                     print("Second Option Selected")
                     movesName = input("\nPlease enter the move's name whose type you would like to update: ")
-                    newMovesType = input("\nPlease enter the new type: ")
+                    newMovesType = int(input("\nPlease enter the new Type ID: "))
                     UpdatePokemonTypeOne(mysql_cur, movesName, newMovesType))
                     break
                 elif (inputSelection == 3):
