@@ -67,8 +67,8 @@ def SearchAbilityByID(mysql_cur, abilities_id):
     return str(result[0])
 
 #SQL CREATE FUNCTIONS: NEED TO ADD ABILITY AND MOVES TO POKEMON CREATION
-def CreatePokemon(mysql_cur, pokemon_name, pokemon_typeone, pokemon_typetwo):
-    mysql_cur.execute(f"INSERT INTO Pokemon VALUES ('{pokemon_name}', {pokemon_typeone}, '{pokemon_typetwo}')")
+def CreatePokemon(mysql_cur, pokemon_name, pokemon_typeone, pokemon_typetwo, pokemon_ability):
+    mysql_cur.execute(f"INSERT INTO Pokemon VALUES ('{pokemon_name}', {pokemon_typeone}, '{pokemon_typetwo}', '{pokemon_ability}')")
     #mysql_cur.execute(f"INSERT INTO PokemonAbilities VALUES ()")
 
 def CreateType(mysql_cur, type_name):
@@ -86,6 +86,9 @@ def UpdatePokemonTypeOne(mysql_cur, pokemon_name, new_pokemon_typeone):
 
 def UpdatePokemonTypeTwo(mysql_cur, pokemon_name, new_pokemon_typetwo):
     mysql_cur.execute(f"UPDATE Pokemon SET pokemon_typetwo = {new_pokemon_typetwo} WHERE pokemon_name = '{pokemon_name}'")
+
+def UpdatePokemonAbility(mysql_cur, pokemon_ability, new_pokemon_ability):
+    mysql_cur.execute(f"UPDATE Pokemon SET pokemon_ability = {new_pokemon_ability} WHERE pokemon_ability = '{pokemon_ability}'")
 
 def UpdateTypeName(mysql_cur, old_type_name, new_type_name):
     mysql_cur.execute(f"UPDATE Abilities SET type_name = {new_type_name} WHERE type_name = '{old_type_name}'")
@@ -195,7 +198,7 @@ def AddNewData():
         if (inputSelection == 1):
             print("First Option Selected")
             count = 0
-            while (count < 4):
+            while (count < 5):
                 exitCreatingPokemon = input("\nType 'y' to cancel: ")
                 if (exitCreatingPokemon == 'y' or exitCreatingPokemon == 'Y'):
                     break
@@ -203,13 +206,16 @@ def AddNewData():
                     pokeName = input("\nEnter the name of the new Pokemon: ")
                     count += 1
                 elif (count == 1):
-                    pokeTypeOne = int(input("\nEnter the Type ID of the Pokemon: "))
+                    pokeTypeOne = int(input("\nEnter the Type ID for the Pokemon: "))
                     count += 1
                 elif (count == 2):
-                    pokeTypeTwo = int(input("\nEnter the second Type ID of the pokemon (If it does not have one, leave the input empty): "))
+                    pokeTypeTwo = int(input("\nEnter the second Type ID for the pokemon (If it does not have one, leave the input empty): "))
                     count += 1
                 elif (count == 3):
-                    CreatePokemon(mysql_cur, pokeName, pokeTypeOne, pokeTypeTwo)
+                    pokeAbility = int(input("\nEnter the Ability ID for the Pokemon: "))
+                    count += 1
+                elif (count == 4):
+                    CreatePokemon(mysql_cur, pokeName, pokeTypeOne, pokeTypeTwo, pokeAbility)
                     count += 1
                 else:
                     print("Invalid input given.")
@@ -271,7 +277,8 @@ def UpdateData():
             print("\n1. Name")
             print("2. First Type")
             print("3. Second Type")
-            print("4. Return to previous menu")
+            print("4. Ability")
+            print("5. Return to previous menu")
 
             while (True):
                 inputSelection = int(input("\nPlease select an option: "))
@@ -295,6 +302,13 @@ def UpdateData():
                     UpdatePokemonTypeOne(mysql_cur, pokeName, newTypeTwo)
                     break
                 elif (inputSelection == 4):
+                    print("Fourth Option Selected")
+                    currPokeAbility = input("\nPlease enter the Pokemon's current Ability that you would like to change: ")
+                    oldPokeAbility = input("\nPlease enter the Pokemon's new Ability: ")
+                    UpdatePokemonAbility(mysql_cur, currPokeAbility, newPokeAbility)
+                    break
+                elif (inputSelection == 5):
+                    print("Fifth Option Selected")
                     break
                 else:
                     print("\nThe input given was invalid.")

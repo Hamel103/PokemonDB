@@ -16,8 +16,10 @@ CREATE TABLE Pokemon (
   pokemon_name VARCHAR(32) NOT NULL,
   pokemon_typeone INT NOT NULL,
   pokemon_typetwo INT,
+  pokemon_ability INT,
   FOREIGN KEY (pokemon_typeone) REFERENCES Type(type_id),
   FOREIGN KEY (pokemon_typetwo) REFERENCES Type(type_id)
+  FOREIGN KEY (pokemon_ability) REFERENCES Abilities(ability_id)
   ON UPDATE NO ACTION
   ON DELETE CASCADE
 );
