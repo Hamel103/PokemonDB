@@ -17,6 +17,14 @@ def create_mysql_connection(db_user, db_password, host_name, db_name):
 #    mysql_cur.execute(f"INSERT INTO Transaction_log VALUES ('{datetime.now()}', '{makeId()}', '{account_num}', '{trans_type}', '{trans_amount}')")
 #    return mysql_cur.fetchall()
 
+
+
+#SQL GENERAL FUNCTIONS
+def GetPokemonName(mysql_cur, pokemon_id):
+    mysql_cur.execute(f"SELECT pokemon_name FROM Pokemon WHERE pokemon_id = '{pokemon_id}'")
+    result = mysql_cur.fetchone()
+    return str(result[0])
+
 # SQL SELECT FUNCTIONS: DONT KNOW IF THESE FOUR WILL WORK PROPERLY; THEY MAY ONLY RETURN A SINGLE ATTRIBUTE INSTEAD OF ALL
 def SearchByPokeName(mysql_cur, pokemon_name):
     mysql_cur.execute(f"SELECT * FROM Pokemon WHERE pokemon_name = '{pokemon_name}'")
@@ -28,15 +36,19 @@ def SearchByPokeDex(mysql_cur, pokemon_id):
     result = mysql_cur.fetchone()
     return str(result[0])
 
-def SearchByAbilityName(mysql_cur, abilities_name):
-    mysql_cur.execute(f"SELECT * FROM Abilities WHERE abilities_name = {abilities_name}")
+def SearchByTypeID(mysql_cur, type_id):
+    mysql_cur.execute(f"SELECT type_name FROM Type WHERE type_id = {type_id}")
+    result = mysql_cur.fetchone()
+    return str(result[0])
+
+def SearchByAbilityID(mysql_cur, abilities_id):
+    mysql_cur.execute(f"SELECT abilities_name FROM Abilities WHERE abilities_id = {abilities_id}")
     result = mysql_cur.fetchone()
     return str(result[0])
 
 #SQL CREATE FUNCTIONS: NEED TO ADD ABILITY AND MOVES TO POKEMON CREATION
 def CreatePokemon(mysql_cur, pokemon_name, pokemon_typeone, pokemon_typetwo):
     mysql_cur.execute(f"INSERT INTO Pokemon VALUES ('{pokemon_name}', {pokemon_typeone}, '{pokemon_typetwo}')")
-    #mysql_cur.execute(f"INSERT INTO PokemonMoves VALUES ()")
     #mysql_cur.execute(f"INSERT INTO PokemonAbilities VALUES ()")
 
 def CreateAbility(mysql_cur, abilities_name):
@@ -62,6 +74,12 @@ def DeletePokemonByID(mysql_cur, pokemon_id):
 def DeletePokemonByName(mysql_cur, pokemon_name):
     mysql_cur.execute(f"DELETE * FROM Pokemon WHERE pokemon_name = '{pokemon_name}'")
 
+def DeleteTypeByID(mysql_cur, type_id):
+    mysql_cur.execute(f"DELETE * FROM Type WHERE type_id = '{type_id}'")
+
+def DeleteTypeByName(mysql_cur, type_name):
+    mysql_cur.execute(f"DELETE * FROM Type WHERE type_name = '{type_name}'")
+
 def DeleteAbilityByID(mysql_cur, abilities_id):
     mysql_cur.execute(f"DELETE * FROM Abilities WHERE abilities_id = '{abilities_id}'")
 
@@ -70,7 +88,7 @@ def DeleteAbilityByName(mysql_cur, abilities_name):
 
 # CRUD FUNCTIONS
 
-def ReadData():     #COULD USE AGGREGATE FUNCTIONS FOR MORE SPECIFIC SEARCH RESULTS (ie, search for pokemon by type, by moves, etc)
+def ReadData():     #COULD USE AGGREGATE FUNCTIONS FOR MORE SPECIFIC SEARCH RESULTS (ie, search for pokemon by type, etc)
     readingData = True
 
     while (readingData):
@@ -106,18 +124,21 @@ def ReadData():     #COULD USE AGGREGATE FUNCTIONS FOR MORE SPECIFIC SEARCH RESU
 
         elif (inputSelection == 2):
             print("Second Option Selected")
+
+            typeID = input("\nPlease enter the ID of the Type: ")
+            print(SearchByTypeID(mysql_cur, typeID))
         elif (inputSelection == 3):
             print("Third Option Selected")
 
-            abilityName = input("\nPlease enter the name of the move: ")
-            print(SearchByAbilityName(mysql_cur, abilityName))
+            abilityID = int(input("\nPlease enter the ID of the Ability: "))
+            print(SearchByAbilityID(mysql_cur, abilityID))
         elif (inputSelection == 4):
             print("Fourth Option Selected")
             readingData = False
         else:
             print("\nThe input given was invalid.")
 
-def AddNewData():   #NEED FUNCTIONALITY TO ADD MOVES TO A POKEMON
+def AddNewData():
     addingData = True
 
     while (addingData):
@@ -252,7 +273,7 @@ def DeleteData():
 
     while (deletingData):
         print("\nWhat data would you like to delete?")
-        print("1. \nPokemon")
+        print("\n1. Pokemon")
         print("2. Types")
         print("3. Abilities")
         print("4. Return to previous menu")
@@ -276,16 +297,37 @@ def DeleteData():
                 elif (inputSelection == 2):
                     print("Second Option Selected")
                     dexNum = int(input("\nPlease enter the Pokedex Number(ID): "))
+                    print(f"You have deleted '{GetPokemonName(mysql_cur, dexNum)}' from the database.")
                     DeletePokemonByID(mysql_cur, dexNum)
                     break
                 else:
                     print("\nThe input given was invalid.")
         elif (inputSelection == 2):
             print("Second Option Selected")
+            print("\nWould you like to delete by Name or Type ID?")
+            print("\n1. Name")
+            print("2. Type ID")
+
+            while (True):
+                inputSelection = int(input("\nPlease select an option: "))
+
+                if (inputSelection == 1):
+                    print("First Option Selected")
+                    typeName = input("\nPlease enter the Type's Name: ")
+                    DeleteTypeByName(mysql_cur, typeName)
+                    break
+                elif (inputSelection == 2):
+                    print("Second Option Selected")
+                    typeID = int(input("\nPlease enter the Type ID: "))
+                    print(f"You have deleted '{SearchByTypeID(mysql_cur, typeID)}' from the database.")
+                    DeleteTypeByID(mysql_cur, typeID)
+                    break
+                else:
+                    print("\nThe input given was invalid.")
         elif (inputSelection == 3):
             print("Third Option Selected")
             print("\nWould you like to delete by Name or ID Number?")
-            print("1. \nName")
+            print("\n1. Name")
             print("2. ID Number")
 
             while (True):
@@ -293,12 +335,13 @@ def DeleteData():
 
                 if (inputSelection == 1):
                     print("First Option Selected")
-                    abilityName = input("\nPlease enter the ability's Name: ")
+                    abilityName = input("\nPlease enter the Ability's Name: ")
                     DeleteAbilityByName(mysql_cur, abilityName)
                     break
                 elif (inputSelection == 2):
                     print("Second Option Selected")
-                    abilityID = int(input("\nPlease enter the Pokedex Number: "))
+                    abilityID = int(input("\nPlease enter the Ability's ID: "))
+                    print(f"You have deleted '{SearchByAbilityID(mysql_cur, abilityID)}' from the database.")
                     DeleteAbilityByID(mysql_cur, abilityID)
                     break
                 else:
