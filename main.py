@@ -408,16 +408,16 @@ def main():
 
         if (inputSelection == 1):
             print("First Option Selected")
-            ReadData()                              #IMPLEMENTED WITHOUT TESTING OR ERROR HANDLING
+            ReadData()                              #LIMITED IMPLEMENTATION WITHOUT ERROR HANDLING
         elif (inputSelection == 2):
             print("Second Option Selected")
-            AddNewData()                            #LIMITED IMPLEMENTATION
+            AddNewData()                            #IMPLEMENTED WITHOUT ERROR HANDLING
         elif (inputSelection == 3):
             print("Third Option Selected")
-            UpdateData()                            #NO IMPLEMENTATION
+            UpdateData()                            #IMPLEMENTED WITHOUT ERROR HANDLING
         elif (inputSelection == 4):
             print("Fourth Option Selected")
-            DeleteData()                            #NO IMPLEMENTATION
+            DeleteData()                            #IMPLEMENTED WITHOUT ERROR HANDLING
         elif (inputSelection == 5):
             print("Fifth Option Selected")
             print("\nThank you for using our program!")
