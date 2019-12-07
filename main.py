@@ -51,6 +51,9 @@ def CreatePokemon(mysql_cur, pokemon_name, pokemon_typeone, pokemon_typetwo):
     mysql_cur.execute(f"INSERT INTO Pokemon VALUES ('{pokemon_name}', {pokemon_typeone}, '{pokemon_typetwo}')")
     #mysql_cur.execute(f"INSERT INTO PokemonAbilities VALUES ()")
 
+def CreateType(mysql_cur, type_name):
+    mysql_cur.execute(f"INSERT INTO Type VALUES ('{type_name}')")
+
 def CreateAbility(mysql_cur, abilities_name):
     mysql_cur.execute(f"INSERT INTO Abilities VALUES ('{abilities_name}')")
 
@@ -63,6 +66,9 @@ def UpdatePokemonTypeOne(mysql_cur, pokemon_name, new_pokemon_typeone):
 
 def UpdatePokemonTypeTwo(mysql_cur, pokemon_name, new_pokemon_typetwo):
     mysql_cur.execute(f"UPDATE Pokemon SET pokemon_typetwo = {new_pokemon_typetwo} WHERE pokemon_name = '{pokemon_name}'")
+
+def UpdateTypeName(mysql_cur, old_type_name, new_type_name):
+    mysql_cur.execute(f"UPDATE Abilities SET type_name = {new_type_name} WHERE type_name = '{old_type_name}'")
 
 def UpdateAbilitiesName(mysql_cur, old_abilities_name, new_abilities_name):
     mysql_cur.execute(f"UPDATE Abilities SET abilities_name = {new_abilities_name} WHERE abilities_name = '{old_abilities_name}'")
@@ -173,12 +179,25 @@ def AddNewData():
                     print("Invalid input given.")
         elif (inputSelection == 2):
             print("Second Option Selected")
+            count = 0
+            while (count < 2):
+                exitCreatingType = input("\nWould you like to cancel? (y/n)")
+                if (exitCreatingType == 'y' or exitCreatingType == 'Y'):
+                    break
+                elif (count == 0):
+                    typeName = input("\nEnter the name of the new Type: ")
+                    count += 1
+                elif (count == 1):
+                    CreateType(mysql_cur, typeName)
+                    count += 1
+                else:
+                    print("Invalid input given.")
         elif (inputSelection == 3):
             print("Third Option Selected")
             count = 0
             while (count < 2):
-                exitCreatingPokemon = input("\nWould you like to cancel? (y/n)")
-                if (exitCreatingPokemon == 'y' or exitCreatingPokemon == 'Y'):
+                exitCreatingAbility = input("\nWould you like to cancel? (y/n)")
+                if (exitCreatingAbility == 'y' or exitCreatingAbility == 'Y'):
                     break
                 elif (count == 0):
                     abilityName = input("\nEnter the name of the new ability: ")
@@ -198,7 +217,7 @@ def UpdateData():
     updatingData = True
 
     #POKEMON: Name, Type One, Type Two
-    #MOVES: Name, Type, Uses, Damage, accuracy
+    #TYPE: Name
     #ABILITIES: Name
 
     while (updatingData):
@@ -206,7 +225,7 @@ def UpdateData():
         print("\n1. Pokemon")
         print("2. Types")
         print("3. Abilities")
-        print("5. Return to previous menu")
+        print("4. Return to previous menu")
 
         inputSelection = int(input("\nPlease select an option: "))
 
@@ -245,6 +264,21 @@ def UpdateData():
                     print("\nThe input given was invalid.")
         elif (inputSelection == 2):
             print("You chose option 2")
+            print("\nWhat would you like to update?")
+            print("\n1. Name")
+            print("2. Return to previous menu")
+            while (True):
+                inputSelection = int(input("\nPlease select an option: "))
+
+                if (inputSelection == 1):
+                    currTypeName = input("\nPlease enter the name of the ability you would like to update: ")
+                    newTypeName = input("\nPlease enter the new name: ")
+                    UpdateAbilitiesName(mysql_cur, currTypeName, newTypeName)
+                    break
+                elif (inputSelection == 2):
+                    break
+                else:
+                    print("The input was invalid.")
         elif (inputSelection == 3):
             print("You chose option 3")
             print("\nWhat would you like to update?")
