@@ -1,39 +1,37 @@
-# INITIALIZING TABLES
-
+-- INITIALIZING TABLES
 DROP TABLE PokemonAbilities;
-
 DROP TABLE Pokemon;
 DROP TABLE Abilities;
 DROP TABLE Type;
 
 CREATE TABLE Type (
-  type_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  type_name VARCHAR(32) NOT NULL
+  type_id INT AUTO_INCREMENT PRIMARY KEY,
+  type_name VARCHAR(32)
+);
+
+CREATE TABLE Abilities (
+  ability_id INT AUTO_INCREMENT PRIMARY KEY,
+  ability_name VARCHAR(32)
 );
 
 CREATE TABLE Pokemon (
-  pokemon_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  pokemon_name VARCHAR(32) NOT NULL,
-  pokemon_typeone INT NOT NULL,
-  pokemon_typetwo INT,
-  pokemon_ability INT,
-  FOREIGN KEY (pokemon_typeone) REFERENCES Type(type_id),
-  FOREIGN KEY (pokemon_typetwo) REFERENCES Type(type_id)
-  FOREIGN KEY (pokemon_ability) REFERENCES Abilities(ability_id)
+  dex_num INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(32) NOT NULL,
+  type_one INT NOT NULL,
+  type_two INT NOT NULL,
+  ability_id INT NOT NULL,
+  FOREIGN KEY (type_one) REFERENCES Type(type_id),
+  FOREIGN KEY (type_two) REFERENCES Type(type_id),
+  FOREIGN KEY (ability_id) REFERENCES Abilities(ability_id)
   ON UPDATE NO ACTION
   ON DELETE CASCADE
 );
 
-CREATE TABLE Abilities (
-  abilities_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  abilities_name VARCHAR(32)
-);
-
 CREATE TABLE PokemonAbilities (
-  pokemon_id INT NOT NULL,
-  abilities_id INT NOT NULL,
-  FOREIGN KEY (pokemon_id) REFERENCES Pokemon(pokemon_id),
-  FOREIGN KEY (abilities_id) REFERENCES Abilities(abilities_id)
+  dex_num INT NOT NULL,
+  ability_id INT NOT NULL,
+  FOREIGN KEY (dex_num) REFERENCES Pokemon(dex_num),
+  FOREIGN KEY (ability_id) REFERENCES Abilities(ability_id)
   ON UPDATE NO ACTION
   ON DELETE CASCADE
 );
