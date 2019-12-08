@@ -17,24 +17,30 @@ def getPokemonName(mysql_cur, pokemon_id):
 
 # SQL SELECT FUNCTIONS: DONT KNOW IF THESE FOUR WILL WORK PROPERLY; THEY MAY ONLY RETURN A SINGLE ATTRIBUTE INSTEAD OF ALL
 def viewAllPokemon(mysql_cur):
-    mysql_cur.execute(f"SELECT * FROM Pokemon")
-    result = mysql_cur.fetchone()
-    return str(result[0])
+    counter = 0
+    mysql_cur.execute("SELECT * FROM Pokemon")
+    result = mysql_cur.fetchall()
+    for pkmn in result:
+        print(f"Dex Number: {result[counter][0]}\nName: {result[counter][1]}\nType(s): {result[counter][2]}/{result[counter][3]}\nAbility: {result[counter][3]}\n")
+        counter += 1
 
 def searchPkmnByName(mysql_cur, pokemon_name):
     mysql_cur.execute(f"SELECT * FROM Pokemon WHERE pokemon_name = '{pokemon_name}'")
     result = mysql_cur.fetchone()
-    return str(result[0])
+    return f"Dex Number: {result[0][0]}\nName: {result[0][1]}\nType(s): {result[0][2]}/{result[0][3]}\nAbility: {result[0][3]}\n"
 
-def searchPkmnByDex(mysql_cur, pokemon_id):
-    mysql_cur.execute(f"SELECT * FROM Pokemon WHERE pokemon_id = {pokemon_id}")
+def searchPkmnByDex(mysql_cur, dex_num):
+    mysql_cur.execute(f"SELECT * FROM Pokemon WHERE dex_num = {dex_num}")
     result = mysql_cur.fetchone()
-    return str(result[0])
+    return f"Dex Number: {result[0][0]}\nName: {result[0][1]}\nType(s): {result[0][2]}/{result[0][3]}\nAbility: {result[0][3]}\n"
 
-def searchPkmnByType(mysql_cur, type_id):
-    mysql_cur.execute(f"SELECT * FROM Pokemon WHERE pokemon_typeone = {type_id} OR pokemon_typetwo = {type_id}")
-    result = mysql_cur.fetchone()
-    return str(result[0])
+def viewAllPkmnByType(mysql_cur, type_name):
+    counter = 0
+    mysql_cur.execute(f"SELECT * FROM Pokemon WHERE pokemon_typeone = {type_name} OR pokemon_typetwo = {type_name}")
+    result = mysql_cur.fetchall()
+    for pkmn in result:
+        print(f"Dex Number: {result[counter][0]}\nName: {result[counter][1]}\nType(s): {result[counter][2]}/{result[counter][3]}\nAbility: {result[counter][3]}\n")
+        counter += 1
 
 def viewAllTypes(mysql_cur):
     mysql_cur.execute(f"SELECT * FROM Type")
@@ -106,52 +112,59 @@ def deleteAbilityByName(mysql_cur, abilities_name):
     mysql_cur.execute(f"DELETE * FROM Abilities WHERE abilities_name = '{abilities_name}'")
 
 # CRUD FUNCTIONS
-
 def readData():     #COULD USE AGGREGATE FUNCTIONS FOR MORE SPECIFIC SEARCH RESULTS (ie, search for pokemon by type, etc)
     readingData = True
     while (readingData):
-        print("\nWhat data would you like to view?")
+        print("\nThe following data is viewable:")
         print("\n1. Pokémon")
         print("2. Types")
         print("3. Abilities")
         print("4. Return to previous menu")
-
-        inputSelection = input("\nPlease select an option: ")
+        inputSelection = input("\nEnter the option number of the data you wish to view: ")
 
         if (inputSelection == '1'):
-            print("\nWhat would you like to view?")
-            print("\n1. All Pokemon")
-            print("2. All Pokemon of a certain Type")
-            print("3. A specific Pokemon")
+            print("\nThe following options are available:")
+            print("\n1. View all Pokémon")
+            print("2. View all Pokémon of a specificed type")
+            print("3. View a specific Pokémon")
             print("4. Return to previous menu")
-            inputSelection = input("\nPlease select an option: ")
+            inputSelection = input("\nEnter the option number you wish to view: ")
 
             if (inputSelection == '1'):
                 print("Showing the entire dex..\n\n")
-                print(viewAllPokemon(mysql_cur))
+                viewAllPokemon(mysql_cur)
             elif (inputSelection == '2'):
-                typeID = int(input("Please enter the Type ID you would like to search by: "))
-                print(searchPkmnByType(mysql_cur, typeID))
+                typeName = input("Enter the name of the type you wish to view: ")
+                try:
+                    viewAllPkmnByType(mysql_cur, typeName.upper())
+                except:
+                    print("ERROR. Invalid Type input.")
             elif (inputSelection == '3'):
-                print("\nWould you like to search by Name or Pokédex Number?")
+                print("\nThe following options are available:")
                 print("\n1. Name")
                 print("2. Pokédex Number")
-                while (True):
-                    inputSelection = int(input("\nPlease select an option: "))
-                    if (inputSelection == 1):
-                        pokeName = input("\nPlease enter the Pokémon's Name: ")
-                        print(seachPkmnByName(mysql_cur, pokeName))
-                        break
-                    elif (inputSelection == 2):
-                        dexNum = int(input("\nPlease enter the Pokédex Number: "))
+                print("3. Return to previous menu")
+                inputSelection = input("\nPlease select an option: ")
+                if (inputSelection == '1'):
+                    pkmnName = input("\nEnter the name of the Pokémon you wish to view: ")
+                    try:
+                        print(seachPkmnByName(mysql_cur, pkmnName.upper()))
+                    except:
+                        print("ERROR. Invalid Pokémon name.")
+                elif (inputSelection == '2'):
+                    dexNum = input("\nEnter the Pokédex Number of the Pokémon you wish to view: ")
+                    try:
                         print(serchPkmnByDex(mysql_cur, dexNum))
-                        break
-                    else:
-                        print("\nERROR. Invalid input.")
+                    except:
+                        print("ERROR. Invalid Pokédex Number.")
+                elif (inputSelection == '3')
+                    print("Returning to previous menu..\n")
+                else:
+                    print("\nERROR. Invalid input.")
             elif (inputSelection == '4'):
                 print("Returning to previous menu..\n")
             else:
-                print("Invalid input given.")
+                print("ERROR. Invalid input.")
 
         elif (inputSelection == '2'):
             print("Showing all types..\n\n")
@@ -402,9 +415,9 @@ def main():
     print("- - - - -")
 
     while (isRunning == True):
-
-        print("\n1. Search for a Pokémon")
-        print("2. Add a new Pokémon")
+        print("The following services are offered:")
+        print("\n1. Search for Pokémon-related data")
+        print("2. Add new Pokémon-related data")
         print("3. Update an existing data entry")
         print("4. Delete an existing data entry")
         print("5. Exit")
