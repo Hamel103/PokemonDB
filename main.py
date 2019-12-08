@@ -18,49 +18,45 @@ def getPokemonName(mysql_cur, pokemon_id):
 # SQL SELECT FUNCTIONS: DONT KNOW IF THESE FOUR WILL WORK PROPERLY; THEY MAY ONLY RETURN A SINGLE ATTRIBUTE INSTEAD OF ALL
 def viewAllPokemon(mysql_cur):
     counter = 0
-    mysql_cur.execute("SELECT * FROM Pokemon")
+    mysql_cur.execute("SELECT * FROM Pokedex")
     result = mysql_cur.fetchall()
     for pkmn in result:
-        print(f"Dex Number: {result[counter][0]}\nName: {result[counter][1]}\nType(s): {result[counter][2]}/{result[counter][3]}\nAbility: {result[counter][3]}\n")
+        print(f"Dex Number: {result[counter][0]}\nName: {result[counter][1]}\nType(s): {result[counter][2]}/{result[counter][3]}\n")
         counter += 1
 
 def searchPkmnByName(mysql_cur, pokemon_name):
     mysql_cur.execute(f"SELECT * FROM Pokemon WHERE pokemon_name = '{pokemon_name}'")
     result = mysql_cur.fetchone()
-    return f"Dex Number: {result[0][0]}\nName: {result[0][1]}\nType(s): {result[0][2]}/{result[0][3]}\nAbility: {result[0][3]}\n"
+    return f"Dex Number: {result[0][0]}\nName: {result[0][1]}\nType(s): {result[0][2]}/{result[0][3]}\nAbility: {result[0][3]}\nCan Mega Evolve: {result[0][4]}\nHas Gigantimax Form: {result[0][5]}\n"
 
 def searchPkmnByDex(mysql_cur, dex_num):
     mysql_cur.execute(f"SELECT * FROM Pokemon WHERE dex_num = {dex_num}")
     result = mysql_cur.fetchone()
-    return f"Dex Number: {result[0][0]}\nName: {result[0][1]}\nType(s): {result[0][2]}/{result[0][3]}\nAbility: {result[0][3]}\n"
+    return f"Dex Number: {result[0][0]}\nName: {result[0][1]}\nType(s): {result[0][2]}/{result[0][3]}\nAbility: {result[0][3]}\nCan Mega Evolve: {result[0][4]}\nHas Gigantimax Form: {result[0][5]}\n"
 
 def viewAllPkmnByType(mysql_cur, type_name):
     counter = 0
-    mysql_cur.execute(f"SELECT * FROM Pokemon WHERE pokemon_typeone = {type_name} OR pokemon_typetwo = {type_name}")
+    mysql_cur.execute(f"SELECT * FROM Pokedex WHERE type_one = {type_name} OR type_two = {type_name}")
     result = mysql_cur.fetchall()
     for pkmn in result:
-        print(f"Dex Number: {result[counter][0]}\nName: {result[counter][1]}\nType(s): {result[counter][2]}/{result[counter][3]}\nAbility: {result[counter][3]}\n")
+        print(f"Dex Number: {result[counter][0]}\nName: {result[counter][1]}\nType(s): {result[counter][2]}/{result[counter][3]}\n)
         counter += 1
 
 def viewAllTypes(mysql_cur):
+    counter = 0
     mysql_cur.execute(f"SELECT * FROM Type")
-    result = mysql_cur.fetchone()
-    return str(result[0])
-
-def searchTypeByID(mysql_cur, type_id):
-    mysql_cur.execute(f"SELECT type_name FROM Type WHERE type_id = {type_id}")
-    result = mysql_cur.fetchone()
-    return str(result[0])
+    result = mysql_cur.fetchall()
+    for type in result:
+        print(f"Type: {result[counter][0]}\nEffective Against: {result[counter][1]}\nWeak Against: {result[counter][2]}\n")
+        counter += 1
 
 def viewAllAbilities(mysql_cur):
+    counter = 0
     mysql_cur.execute(f"SELECT * FROM Abilities")
-    result = mysql_cur.fetchone()
-    return str(result[0])
-
-def searchAbilityByID(mysql_cur, abilities_id):
-    mysql_cur.execute(f"SELECT abilities_name FROM Abilities WHERE abilities_id = {abilities_id}")
-    result = mysql_cur.fetchone()
-    return str(result[0])
+    result = mysql_cur.fetchall()
+    for type in result:
+        print(f"Ability: {result[counter][0]}\nDescription: {result[counter][1]}\n")
+        counter += 1
 
 #SQL CREATE FUNCTIONS: NEED TO ADD ABILITY AND MOVES TO POKEMON CREATION
 def createPokemon(mysql_cur, pokemon_name, pokemon_typeone, pokemon_typetwo, pokemon_ability):
@@ -112,7 +108,7 @@ def deleteAbilityByName(mysql_cur, abilities_name):
     mysql_cur.execute(f"DELETE * FROM Abilities WHERE abilities_name = '{abilities_name}'")
 
 # CRUD FUNCTIONS
-def readData():     #COULD USE AGGREGATE FUNCTIONS FOR MORE SPECIFIC SEARCH RESULTS (ie, search for pokemon by type, etc)
+def readData():
     readingData = True
     while (readingData):
         print("\nThe following data is viewable:")
@@ -168,10 +164,10 @@ def readData():     #COULD USE AGGREGATE FUNCTIONS FOR MORE SPECIFIC SEARCH RESU
 
         elif (inputSelection == '2'):
             print("Showing all types..\n\n")
-            print(viewAllTypes(mysql_cur))
+            viewAllTypes(mysql_cur)
         elif (inputSelection == '3'):
             print("Showing all abilities..\n\n")
-            print(viewAllAbilities(mysql_cur))
+            viewAllAbilities(mysql_cur)
         elif (inputSelection == '4'):
             print("Returning to previous menu..\n")
             readingData = False
