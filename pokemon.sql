@@ -1,6 +1,6 @@
 -- INITIALIZING TABLES
-DROP TABLE Pokemon;
 DROP TABLE Pokedex;
+DROP TABLE Pokemon;
 DROP TABLE Abilities;
 DROP TABLE Types;
 
@@ -18,7 +18,7 @@ CREATE TABLE Abilities (
 CREATE TABLE Pokemon (
   name VARCHAR(12) PRIMARY KEY,
   has_mega_evolution BOOLEAN,
-  has_gmax_form BOOLEAN,
+  has_gmax_form BOOLEAN
 );
 
 CREATE TABLE Pokedex (
