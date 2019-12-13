@@ -15,26 +15,19 @@ CREATE TABLE Abilities (
   ability_description VARCHAR(100)
 );
 
+CREATE TABLE Pokemon (
+  name VARCHAR(12) PRIMARY KEY,
+  has_mega_evolution BOOLEAN,
+  has_gmax_form BOOLEAN,
+);
+
 CREATE TABLE Pokedex (
   dex_num INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(12) NOT NULL,
   type_one VARCHAR(10) NOT NULL,
   type_two VARCHAR(10) NOT NULL,
-  FOREIGN KEY (type_one) REFERENCES Types(type_name),
-  FOREIGN KEY (type_two) REFERENCES Types(type_name)
-  ON UPDATE NO ACTION
-  ON DELETE CASCADE
-);
-
-CREATE TABLE Pokemon (
-  dex_num INT NOT NULL,
-  name VARCHAR(12) NOT NULL,
-  type_one VARCHAR(10) NOT NULL,
-  type_two VARCHAR(10) NOT NULL,
   ability_name VARCHAR(32) NOT NULL,
-  has_mega_evolution BOOLEAN,
-  has_gmax_form BOOLEAN,
-  FOREIGN KEY (dex_num) REFERENCES Pokedex(dex_num),
+  FOREIGN KEY (name) REFERENCES Pokemon(name),
   FOREIGN KEY (type_one) REFERENCES Types(type_name),
   FOREIGN KEY (type_two) REFERENCES Types(type_name),
   FOREIGN KEY (ability_name) REFERENCES Abilities(ability_name)
