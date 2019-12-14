@@ -1,722 +1,722 @@
-﻿,DexNum,,Name,,TypeOne,,TypeTwo,,Ability,
-(,1,"(""",BULBASAUR,""", """,GRASS,""", """,POISON,""", """,OVERGROW,"""),"
-(,2,"(""",IVYSAUR,""", """,GRASS,""", """,POISON,""", """,OVERGROW,"""),"
-(,3,"(""",VENUSAUR,""", """,GRASS,""", """,POISON,""", """,OVERGROW,"""),"
-(,4,"(""",CHARMANDER,""", """,FIRE,""", """,NONE,""", """,BLAZE,"""),"
-(,5,"(""",CHARMELEON,""", """,FIRE,""", """,NONE,""", """,BLAZE,"""),"
-(,6,"(""",CHARIZARD,""", """,FIRE,""", """,FLYING,""", """,BLAZE,"""),"
-(,7,"(""",SQUIRTLE,""", """,WATER,""", """,NONE,""", """,TORRENT,"""),"
-(,8,"(""",WARTORTLE,""", """,WATER,""", """,NONE,""", """,TORRENT,"""),"
-(,9,"(""",BLASTOISE,""", """,WATER,""", """,NONE,""", """,TORRENT,"""),"
-(,10,"(""",CATERPIE,""", """,BUG,""", """,NONE,""", """,SHIELD DUST,"""),"
-(,11,"(""",METAPOD,""", """,BUG,""", """,NONE,""", """,SHED SKIN,"""),"
-(,12,"(""",BUTTERFREE,""", """,BUG,""", """,FLYING,""", """,COMPOUND EYES,"""),"
-(,13,"(""",WEEDLE,""", """,BUG,""", """,POISON,""", """,SHIELD DUST,"""),"
-(,14,"(""",KAKUNA,""", """,BUG,""", """,POISON,""", """,SHED SKIN,"""),"
-(,15,"(""",BEEDRILL,""", """,BUG,""", """,POISON,""", """,SWARM,"""),"
-(,16,"(""",PIDGEY,""", """,NORMAL,""", """,FLYING,""", """,KEEN EYE,"""),"
-(,17,"(""",PIDGEOTTO,""", """,NORMAL,""", """,FLYING,""", """,KEEN EYE,"""),"
-(,18,"(""",PIDGEOT,""", """,NORMAL,""", """,FLYING,""", """,KEEN EYE,"""),"
-(,19,"(""",RATTATA,""", """,NORMAL,""", """,NONE,""", """,RUN AWAY,"""),"
-(,20,"(""",RATICATE,""", """,NORMAL,""", """,NONE,""", """,RUN AWAY,"""),"
-(,21,"(""",SPEAROW,""", """,NORMAL,""", """,FLYING,""", """,KEEN EYE,"""),"
-(,22,"(""",FEAROW,""", """,NORMAL,""", """,FLYING,""", """,KEEN EYE,"""),"
-(,23,"(""",EKANS,""", """,POISON,""", """,NONE,""", """,INTIMIDATE,"""),"
-(,24,"(""",ARBOK,""", """,POISON,""", """,NONE,""", """,INTIMIDATE,"""),"
-(,25,"(""",PIKACHU,""", """,ELECTRIC,""", """,NONE,""", """,STATIC,"""),"
-(,26,"(""",RAICHU,""", """,ELECTRIC,""", """,NONE,""", """,STATIC,"""),"
-(,27,"(""",SANDSHREW,""", """,GROUND,""", """,NONE,""", """,SAND VEIL,"""),"
-(,28,"(""",SANDSLASH,""", """,GROUND,""", """,NONE,""", """,SAND VEIL,"""),"
-(,29,"(""",NIDORAN FEMALE,""", """,POISON,""", """,NONE,""", """,POISON POINT,"""),"
-(,30,"(""",NIDORINA,""", """,POISON,""", """,NONE,""", """,POISON POINT,"""),"
-(,31,"(""",NIDOQUEEN,""", """,POISON,""", """,GROUND,""", """,POISON POINT,"""),"
-(,32,"(""",NIDORAN MALE,""", """,POISON,""", """,NONE,""", """,POISON POINT,"""),"
-(,33,"(""",NIDORINO,""", """,POISON,""", """,NONE,""", """,POISON POINT,"""),"
-(,34,"(""",NIDOKING,""", """,POISON,""", """,GROUND,""", """,POISON POINT,"""),"
-(,35,"(""",CLEFAIRY,""", """,FAIRY,""", """,NONE,""", """,CUTE CHARM,"""),"
-(,36,"(""",CLEFABLE,""", """,FAIRY,""", """,NONE,""", """,CUTE CHARM,"""),"
-(,37,"(""",VULPIX,""", """,FIRE,""", """,NONE,""", """,FLASH FIRE,"""),"
-(,38,"(""",NINETALES,""", """,FIRE,""", """,NONE,""", """,FLASH FIRE,"""),"
-(,39,"(""",JIGGLYPUFF,""", """,NORMAL,""", """,FAIRY,""", """,CUTE CHARM,"""),"
-(,40,"(""",WIGGLYTUFF,""", """,NORMAL,""", """,FAIRY,""", """,CUTE CHARM,"""),"
-(,41,"(""",ZUBAT,""", """,POISON,""", """,FLYING,""", """,INNER FOCUS,"""),"
-(,42,"(""",GOLBAT,""", """,POISON,""", """,FLYING,""", """,INNER FOCUS,"""),"
-(,43,"(""",ODDISH,""", """,GRASS,""", """,POISON,""", """,CHLOROPHYLL,"""),"
-(,44,"(""",GLOOM,""", """,GRASS,""", """,POISON,""", """,CHLOROPHYLL,"""),"
-(,45,"(""",VILEPLUME,""", """,GRASS,""", """,POISON,""", """,CHLOROPHYLL,"""),"
-(,46,"(""",PARAS,""", """,BUG,""", """,GRASS,""", """,EFFECT SPORE,"""),"
-(,47,"(""",PARASECT,""", """,BUG,""", """,GRASS,""", """,EFFECT SPORE,"""),"
-(,48,"(""",VENONAT,""", """,BUG,""", """,POISON,""", """,COMPOUND EYES,"""),"
-(,49,"(""",VENOMOTH,""", """,BUG,""", """,POISON,""", """,SHIELD DUST,"""),"
-(,50,"(""",DIGLETT,""", """,GROUND,""", """,NONE,""", """,SAND VEIL,"""),"
-(,51,"(""",DUGTRIO,""", """,GROUND,""", """,NONE,""", """,SAND VEIL,"""),"
-(,52,"(""",MEOWTH,""", """,NORMAL,""", """,NONE,""", """,PICKUP,"""),"
-(,53,"(""",PERSIAN,""", """,NORMAL,""", """,NONE,""", """,LIMBER,"""),"
-(,54,"(""",PSYDUCK,""", """,WATER,""", """,NONE,""", """,DAMP,"""),"
-(,55,"(""",GOLDUCK,""", """,WATER,""", """,NONE,""", """,DAMP,"""),"
-(,56,"(""",MANKEY,""", """,FIGHTING,""", """,NONE,""", """,VITAL SPIRIT,"""),"
-(,57,"(""",PRIMEAPE,""", """,FIGHTING,""", """,NONE,""", """,VITAL SPIRIT,"""),"
-(,58,"(""",GROWLITHE,""", """,FIRE,""", """,NONE,""", """,INTIMIDATE,"""),"
-(,59,"(""",ARCANINE,""", """,FIRE,""", """,NONE,""", """,INTIMIDATE,"""),"
-(,60,"(""",POLIWAG,""", """,WATER,""", """,NONE,""", """,WATER ABSORB,"""),"
-(,61,"(""",POLIWHIRL,""", """,WATER,""", """,NONE,""", """,WATER ABSORB,"""),"
-(,62,"(""",POLIWRATH,""", """,WATER,""", """,FIGHTING,""", """,WATER ABSORB,"""),"
-(,63,"(""",ABRA,""", """,PSYCHIC,""", """,NONE,""", """,SYNCHRONIZE,"""),"
-(,64,"(""",KADABRA,""", """,PSYCHIC,""", """,NONE,""", """,SYNCHRONIZE,"""),"
-(,65,"(""",ALAKAZAM,""", """,PSYCHIC,""", """,NONE,""", """,SYNCHRONIZE,"""),"
-(,66,"(""",MACHOP,""", """,FIGHTING,""", """,NONE,""", """,GUTS,"""),"
-(,67,"(""",MACHOKE,""", """,FIGHTING,""", """,NONE,""", """,GUTS,"""),"
-(,68,"(""",MACHAMP,""", """,FIGHTING,""", """,NONE,""", """,GUTS,"""),"
-(,69,"(""",BELLSPROUT,""", """,GRASS,""", """,POISON,""", """,CHLOROPHYLL,"""),"
-(,70,"(""",WEEPINBELL,""", """,GRASS,""", """,POISON,""", """,CHLOROPHYLL,"""),"
-(,71,"(""",VICTREEBEL,""", """,GRASS,""", """,POISON,""", """,CHLOROPHYLL,"""),"
-(,72,"(""",TENTACOOL,""", """,WATER,""", """,POISON,""", """,CLEAR BODY,"""),"
-(,73,"(""",TENTACRUEL,""", """,WATER,""", """,POISON,""", """,CLEAR BODY,"""),"
-(,74,"(""",GEODUDE,""", """,ROCK,""", """,GROUND,""", """,ROCK HEAD,"""),"
-(,75,"(""",GRAVELER,""", """,ROCK,""", """,GROUND,""", """,ROCK HEAD,"""),"
-(,76,"(""",GOLEM,""", """,ROCK,""", """,GROUND,""", """,ROCK HEAD,"""),"
-(,77,"(""",PONYTA,""", """,FIRE,""", """,NONE,""", """,RUN AWAY,"""),"
-(,78,"(""",RAPIDASH,""", """,FIRE,""", """,NONE,""", """,RUN AWAY,"""),"
-(,79,"(""",SLOWPOKE,""", """,WATER,""", """,PSYCHIC,""", """,OBLIVIOUS,"""),"
-(,80,"(""",SLOWBRO,""", """,WATER,""", """,PSYCHIC,""", """,OBLIVIOUS,"""),"
-(,81,"(""",MAGNEMITE,""", """,ELECTRIC,""", """,STEEL,""", """,MAGNET PULL,"""),"
-(,82,"(""",MAGNETON,""", """,ELECTRIC,""", """,STEEL,""", """,MAGNET PULL,"""),"
-(,83,"(""",FARFETCH'D,""", """,NORMAL,""", """,FLYING,""", """,KEEN EYE,"""),"
-(,84,"(""",DODUO,""", """,NORMAL,""", """,FLYING,""", """,RUN AWAY,"""),"
-(,85,"(""",DODRIO,""", """,NORMAL,""", """,FLYING,""", """,RUN AWAY,"""),"
-(,86,"(""",SEEL,""", """,WATER,""", """,NONE,""", """,THICK FAT,"""),"
-(,87,"(""",DEWGONG,""", """,WATER,""", """,ICE,""", """,THICK FAT,"""),"
-(,88,"(""",GRIMER,""", """,POISON,""", """,NONE,""", """,STENCH,"""),"
-(,89,"(""",MUK,""", """,POISON,""", """,NONE,""", """,STENCH,"""),"
-(,90,"(""",SHELLDER,""", """,WATER,""", """,NONE,""", """,SHELL ARMOR,"""),"
-(,91,"(""",CLOYSTER,""", """,WATER,""", """,ICE,""", """,SHELL ARMOR,"""),"
-(,92,"(""",GASTLY,""", """,GHOST,""", """,POISON,""", """,LEVITATE,"""),"
-(,93,"(""",HAUNTER,""", """,GHOST,""", """,POISON,""", """,LEVITATE,"""),"
-(,94,"(""",GENGAR,""", """,GHOST,""", """,POISON,""", """,CURSED BODY,"""),"
-(,95,"(""",ONIX,""", """,ROCK,""", """,GROUND,""", """,ROCK HEAD,"""),"
-(,96,"(""",DROWZEE,""", """,PSYCHIC,""", """,NONE,""", """,INSOMNIA,"""),"
-(,97,"(""",HYPNO,""", """,PSYCHIC,""", """,NONE,""", """,INSOMNIA,"""),"
-(,98,"(""",KRABBY,""", """,WATER,""", """,NONE,""", """,HYPER CUTTER,"""),"
-(,99,"(""",KINGLER,""", """,WATER,""", """,NONE,""", """,HYPER CUTTER,"""),"
-(,100,"(""",VOLTORB,""", """,ELECTRIC,""", """,NONE,""", """,SOUNDPROOF,"""),"
-(,101,"(""",ELECTRODE,""", """,ELECTRIC,""", """,NONE,""", """,SOUNDPROOF,"""),"
-(,102,"(""",EXEGGCUTE,""", """,GRASS,""", """,PSYCHIC,""", """,CHLOROPHYLL,"""),"
-(,103,"(""",EXEGGUTOR,""", """,GRASS,""", """,PSYCHIC,""", """,CHLOROPHYLL,"""),"
-(,104,"(""",CUBONE,""", """,GROUND,""", """,NONE,""", """,ROCK HEAD,"""),"
-(,105,"(""",MAROWAK,""", """,GROUND,""", """,NONE,""", """,ROCK HEAD,"""),"
-(,106,"(""",HITMONLEE,""", """,FIGHTING,""", """,NONE,""", """,LIMBER,"""),"
-(,107,"(""",HITMONCHAN,""", """,FIGHTING,""", """,NONE,""", """,KEEN EYE,"""),"
-(,108,"(""",LICKITUNG,""", """,NORMAL,""", """,NONE,""", """,OWN TEMPO,"""),"
-(,109,"(""",KOFFING,""", """,POISON,""", """,NONE,""", """,LEVITATE,"""),"
-(,110,"(""",WEEZING,""", """,POISON,""", """,NONE,""", """,LEVITATE,"""),"
-(,111,"(""",RHYHORN,""", """,GROUND,""", """,ROCK,""", """,LIGHTNING ROD,"""),"
-(,112,"(""",RHYDON,""", """,GROUND,""", """,ROCK,""", """,LIGHTNING ROD,"""),"
-(,113,"(""",CHANSEY,""", """,NORMAL,""", """,NONE,""", """,NATURAL CURE,"""),"
-(,114,"(""",TANGELA,""", """,GRASS,""", """,NONE,""", """,CHLOROPHYLL,"""),"
-(,115,"(""",KANGASKHAN,""", """,NORMAL,""", """,NONE,""", """,EARLY BIRD,"""),"
-(,116,"(""",HORSEA,""", """,WATER,""", """,NONE,""", """,SWIFT SWIM,"""),"
-(,117,"(""",SEADRA,""", """,WATER,""", """,NONE,""", """,POISON POINT,"""),"
-(,118,"(""",GOLDEEN,""", """,WATER,""", """,NONE,""", """,SWIFT SWIM,"""),"
-(,119,"(""",SEAKING,""", """,WATER,""", """,NONE,""", """,SWIFT SWIM,"""),"
-(,120,"(""",STARYU,""", """,WATER,""", """,NONE,""", """,ILLUMINATE,"""),"
-(,121,"(""",STARMIE,""", """,WATER,""", """,PSYCHIC,""", """,ILLUMINATE,"""),"
-(,122,"(""",MR. MIME,""", """,PSYCHIC,""", """,FAIRY,""", """,SOUNDPROOF,"""),"
-(,123,"(""",SCYTHER,""", """,BUG,""", """,FLYING,""", """,SWARM,"""),"
-(,124,"(""",JYNX,""", """,ICE,""", """,PSYCHIC,""", """,OBLIVIOUS,"""),"
-(,125,"(""",ELECTABUZZ,""", """,ELECTRIC,""", """,NONE,""", """,STATIC,"""),"
-(,126,"(""",MAGMAR,""", """,FIRE,""", """,NONE,""", """,FLAME BODY,"""),"
-(,127,"(""",PINSIR,""", """,BUG,""", """,NONE,""", """,HYPER CUTTER,"""),"
-(,128,"(""",TAUROS,""", """,NORMAL,""", """,NONE,""", """,INTIMIDATE,"""),"
-(,129,"(""",MAGIKARP,""", """,WATER,""", """,NONE,""", """,SWIFT SWIM,"""),"
-(,130,"(""",GYARADOS,""", """,WATER,""", """,FLYING,""", """,INTIMIDATE,"""),"
-(,131,"(""",LAPRAS,""", """,WATER,""", """,ICE,""", """,WATER ABSORB,"""),"
-(,132,"(""",DITTO,""", """,NORMAL,""", """,NONE,""", """,LIMBER,"""),"
-(,133,"(""",EEVEE,""", """,NORMAL,""", """,NONE,""", """,RUN AWAY,"""),"
-(,134,"(""",VAPOREON,""", """,WATER,""", """,NONE,""", """,WATER ABSORB,"""),"
-(,135,"(""",JOLTEON,""", """,ELECTRIC,""", """,NONE,""", """,VOLT ABSORB,"""),"
-(,136,"(""",FLAREON,""", """,FIRE,""", """,NONE,""", """,FLASH FIRE,"""),"
-(,137,"(""",PORYGON,""", """,NORMAL,""", """,NONE,""", """,TRACE,"""),"
-(,138,"(""",OMANYTE,""", """,ROCK,""", """,WATER,""", """,SWIFT SWIM,"""),"
-(,139,"(""",OMASTAR,""", """,ROCK,""", """,WATER,""", """,SWIFT SWIM,"""),"
-(,140,"(""",KABUTO,""", """,ROCK,""", """,WATER,""", """,SWIFT SWIM,"""),"
-(,141,"(""",KABUTOPS,""", """,ROCK,""", """,WATER,""", """,SWIFT SWIM,"""),"
-(,142,"(""",AERODACTYL,""", """,ROCK,""", """,FLYING,""", """,ROCK HEAD,"""),"
-(,143,"(""",SNORLAX,""", """,NORMAL,""", """,NONE,""", """,IMMUNITY,"""),"
-(,144,"(""",ARTICUNO,""", """,ICE,""", """,FLYING,""", """,PRESSURE,"""),"
-(,145,"(""",ZAPDOS,""", """,ELECTRIC,""", """,FLYING,""", """,PRESSURE,"""),"
-(,146,"(""",MOLTRES,""", """,FIRE,""", """,FLYING,""", """,PRESSURE,"""),"
-(,147,"(""",DRATINI,""", """,DRAGON,""", """,NONE,""", """,SHED SKIN,"""),"
-(,148,"(""",DRAGONAIR,""", """,DRAGON,""", """,NONE,""", """,SHED SKIN,"""),"
-(,149,"(""",DRAGONITE,""", """,DRAGON,""", """,FLYING,""", """,INNER FOCUS,"""),"
-(,150,"(""",MEWTWO,""", """,PSYCHIC,""", """,NONE,""", """,PRESSURE,"""),"
-(,151,"(""",MEW,""", """,PSYCHIC,""", """,NONE,""", """,SYNCHRONIZE,"""),"
-(,152,"(""",CHIKORITA,""", """,GRASS,""", """,NONE,""", """,OVERGROW,"""),"
-(,153,"(""",BAYLEEF,""", """,GRASS,""", """,NONE,""", """,OVERGROW,"""),"
-(,154,"(""",MEGANIUM,""", """,GRASS,""", """,NONE,""", """,OVERGROW,"""),"
-(,155,"(""",CYNDAQUIL,""", """,FIRE,""", """,NONE,""", """,BLAZE,"""),"
-(,156,"(""",QUILAVA,""", """,FIRE,""", """,NONE,""", """,BLAZE,"""),"
-(,157,"(""",TYPHLOSION,""", """,FIRE,""", """,NONE,""", """,BLAZE,"""),"
-(,158,"(""",TOTODILE,""", """,WATER,""", """,NONE,""", """,TORRENT,"""),"
-(,159,"(""",CROCONAW,""", """,WATER,""", """,NONE,""", """,TORRENT,"""),"
-(,160,"(""",FERALIGATR,""", """,WATER,""", """,NONE,""", """,TORRENT,"""),"
-(,161,"(""",SENTRET,""", """,NORMAL,""", """,NONE,""", """,RUN AWAY,"""),"
-(,162,"(""",FURRET,""", """,NORMAL,""", """,NONE,""", """,RUN AWAY,"""),"
-(,163,"(""",HOOTHOOT,""", """,NORMAL,""", """,FLYING,""", """,INSOMNIA,"""),"
-(,164,"(""",NOCTOWL,""", """,NORMAL,""", """,FLYING,""", """,INSOMNIA,"""),"
-(,165,"(""",LEDYBA,""", """,BUG,""", """,FLYING,""", """,SWARM,"""),"
-(,166,"(""",LEDIAN,""", """,BUG,""", """,FLYING,""", """,SWARM,"""),"
-(,167,"(""",SPINARAK,""", """,BUG,""", """,POISON,""", """,SWARM,"""),"
-(,168,"(""",ARIADOS,""", """,BUG,""", """,POISON,""", """,SWARM,"""),"
-(,169,"(""",CROBAT,""", """,POISON,""", """,FLYING,""", """,INNER FOCUS,"""),"
-(,170,"(""",CHINCHOU,""", """,WATER,""", """,ELECTRIC,""", """,VOLT ABSORB,"""),"
-(,171,"(""",LANTURN,""", """,WATER,""", """,ELECTRIC,""", """,VOLT ABSORB,"""),"
-(,172,"(""",PICHU,""", """,ELECTRIC,""", """,NONE,""", """,STATIC,"""),"
-(,173,"(""",CLEFFA,""", """,FAIRY,""", """,NONE,""", """,CUTE CHARM,"""),"
-(,174,"(""",IGGLYBUFF,""", """,NORMAL,""", """,FAIRY,""", """,CUTE CHARM,"""),"
-(,175,"(""",TOGEPI,""", """,FAIRY,""", """,NONE,""", """,HUSTLE,"""),"
-(,176,"(""",TOGETIC,""", """,FAIRY,""", """,FLYING,""", """,HUSTLE,"""),"
-(,177,"(""",NATU,""", """,PSYCHIC,""", """,FLYING,""", """,SYNCHRONIZE,"""),"
-(,178,"(""",XATU,""", """,PSYCHIC,""", """,FLYING,""", """,SYNCHRONIZE,"""),"
-(,179,"(""",MAREEP,""", """,ELECTRIC,""", """,NONE,""", """,STATIC,"""),"
-(,180,"(""",FLAAFFY,""", """,ELECTRIC,""", """,NONE,""", """,STATIC,"""),"
-(,181,"(""",AMPHAROS,""", """,ELECTRIC,""", """,NONE,""", """,STATIC,"""),"
-(,182,"(""",BELLOSSOM,""", """,GRASS,""", """,NONE,""", """,CHLOROPHYLL,"""),"
-(,183,"(""",MARILL,""", """,WATER,""", """,FAIRY,""", """,THICK FAT,"""),"
-(,184,"(""",AZUMARILL,""", """,WATER,""", """,FAIRY,""", """,THICK FAT,"""),"
-(,185,"(""",SUDOWOODO,""", """,ROCK,""", """,NONE,""", """,STURDY,"""),"
-(,186,"(""",POLITOED,""", """,WATER,""", """,NONE,""", """,WATER ABSORB,"""),"
-(,187,"(""",HOPPIP,""", """,GRASS,""", """,FLYING,""", """,CHLOROPHYLL,"""),"
-(,188,"(""",SKIPLOOM,""", """,GRASS,""", """,FLYING,""", """,CHLOROPHYLL,"""),"
-(,189,"(""",JUMPLUFF,""", """,GRASS,""", """,FLYING,""", """,CHLOROPHYLL,"""),"
-(,190,"(""",AIPOM,""", """,NORMAL,""", """,NONE,""", """,RUN AWAY,"""),"
-(,191,"(""",SUNKERN,""", """,GRASS,""", """,NONE,""", """,CHLOROPHYLL,"""),"
-(,192,"(""",SUNFLORA,""", """,GRASS,""", """,NONE,""", """,CHLOROPHYLL,"""),"
-(,193,"(""",YANMA,""", """,BUG,""", """,FLYING,""", """,SPEED BOOST,"""),"
-(,194,"(""",WOOPER,""", """,WATER,""", """,GROUND,""", """,DAMP,"""),"
-(,195,"(""",QUAGSIRE,""", """,WATER,""", """,GROUND,""", """,DAMP,"""),"
-(,196,"(""",ESPEON,""", """,PSYCHIC,""", """,NONE,""", """,SYNCHRONIZE,"""),"
-(,197,"(""",UMBREON,""", """,DARK,""", """,NONE,""", """,SYNCHRONIZE,"""),"
-(,198,"(""",MURKROW,""", """,DARK,""", """,FLYING,""", """,INSOMNIA,"""),"
-(,199,"(""",SLOWKING,""", """,WATER,""", """,PSYCHIC,""", """,OBLIVIOUS,"""),"
-(,200,"(""",MISDREAVUS,""", """,GHOST,""", """,NONE,""", """,LEVITATE,"""),"
-(,201,"(""",UNOWN,""", """,PSYCHIC,""", """,NONE,""", """,LEVITATE,"""),"
-(,202,"(""",WOBBUFFET,""", """,PSYCHIC,""", """,NONE,""", """,SHADOW TAG,"""),"
-(,203,"(""",GIRAFARIG,""", """,NORMAL,""", """,PSYCHIC,""", """,INNER FOCUS,"""),"
-(,204,"(""",PINECO,""", """,BUG,""", """,NONE,""", """,STURDY,"""),"
-(,205,"(""",FORRETRESS,""", """,BUG,""", """,STEEL,""", """,STURDY,"""),"
-(,206,"(""",DUNSPARCE,""", """,NORMAL,""", """,NONE,""", """,SERENE GRACE,"""),"
-(,207,"(""",GLIGAR,""", """,GROUND,""", """,FLYING,""", """,HYPER CUTTER,"""),"
-(,208,"(""",STEELIX,""", """,STEEL,""", """,GROUND,""", """,ROCK HEAD,"""),"
-(,209,"(""",SNUBBULL,""", """,FAIRY,""", """,NONE,""", """,INTIMIDATE,"""),"
-(,210,"(""",GRANBULL,""", """,FAIRY,""", """,NONE,""", """,INTIMIDATE,"""),"
-(,211,"(""",QWILFISH,""", """,WATER,""", """,POISON,""", """,POISON POINT,"""),"
-(,212,"(""",SCIZOR,""", """,BUG,""", """,STEEL,""", """,SWARM,"""),"
-(,213,"(""",SHUCKLE,""", """,BUG,""", """,ROCK,""", """,STURDY,"""),"
-(,214,"(""",HERACROSS,""", """,BUG,""", """,FIGHTING,""", """,SWARM,"""),"
-(,215,"(""",SNEASEL,""", """,DARK,""", """,ICE,""", """,INNER FOCUS,"""),"
-(,216,"(""",TEDDIURSA,""", """,NORMAL,""", """,NONE,""", """,PICKUP,"""),"
-(,217,"(""",URSARING,""", """,NORMAL,""", """,NONE,""", """,GUTS,"""),"
-(,218,"(""",SLUGMA,""", """,FIRE,""", """,NONE,""", """,MAGMA ARMOR,"""),"
-(,219,"(""",MAGCARGO,""", """,FIRE,""", """,ROCK,""", """,MAGMA ARMOR,"""),"
-(,220,"(""",SWINUB,""", """,ICE,""", """,GROUND,""", """,OBLIVIOUS,"""),"
-(,221,"(""",PILOSWINE,""", """,ICE,""", """,GROUND,""", """,OBLIVIOUS,"""),"
-(,222,"(""",CORSOLA,""", """,WATER,""", """,ROCK,""", """,HUSTLE,"""),"
-(,223,"(""",REMORAID,""", """,WATER,""", """,NONE,""", """,HUSTLE,"""),"
-(,224,"(""",OCTILLERY,""", """,WATER,""", """,NONE,""", """,SUCTION CUPS,"""),"
-(,225,"(""",DELIBIRD,""", """,ICE,""", """,FLYING,""", """,VITAL SPIRIT,"""),"
-(,226,"(""",MANTINE,""", """,WATER,""", """,FLYING,""", """,SWIFT SWIM,"""),"
-(,227,"(""",SKARMORY,""", """,STEEL,""", """,FLYING,""", """,KEEN EYE,"""),"
-(,228,"(""",HOUNDOUR,""", """,DARK,""", """,FIRE,""", """,EARLY BIRD,"""),"
-(,229,"(""",HOUNDOOM,""", """,DARK,""", """,FIRE,""", """,EARLY BIRD,"""),"
-(,230,"(""",KINGDRA,""", """,WATER,""", """,DRAGON,""", """,SWIFT SWIM,"""),"
-(,231,"(""",PHANPY,""", """,GROUND,""", """,NONE,""", """,PICKUP,"""),"
-(,232,"(""",DONPHAN,""", """,GROUND,""", """,NONE,""", """,STURDY,"""),"
-(,233,"(""",PORYGON2,""", """,NORMAL,""", """,NONE,""", """,TRACE,"""),"
-(,234,"(""",STANTLER,""", """,NORMAL,""", """,NONE,""", """,INTIMIDATE,"""),"
-(,235,"(""",SMEARGLE,""", """,NORMAL,""", """,NONE,""", """,OWN TEMPO,"""),"
-(,236,"(""",TYROGUE,""", """,FIGHTING,""", """,NONE,""", """,GUTS,"""),"
-(,237,"(""",HITMONTOP,""", """,FIGHTING,""", """,NONE,""", """,INTIMIDATE,"""),"
-(,238,"(""",SMOOCHUM,""", """,ICE,""", """,PSYCHIC,""", """,OBLIVIOUS,"""),"
-(,239,"(""",ELEKID,""", """,ELECTRIC,""", """,NONE,""", """,STATIC,"""),"
-(,240,"(""",MAGBY,""", """,FIRE,""", """,NONE,""", """,FLAME BODY,"""),"
-(,241,"(""",MILTANK,""", """,NORMAL,""", """,NONE,""", """,THICK FAT,"""),"
-(,242,"(""",BLISSEY,""", """,NORMAL,""", """,NONE,""", """,NATURAL CURE,"""),"
-(,243,"(""",RAIKOU,""", """,ELECTRIC,""", """,NONE,""", """,PRESSURE,"""),"
-(,244,"(""",ENTEI,""", """,FIRE,""", """,NONE,""", """,PRESSURE,"""),"
-(,245,"(""",SUICUNE,""", """,WATER,""", """,NONE,""", """,PRESSURE,"""),"
-(,246,"(""",LARVITAR,""", """,ROCK,""", """,GROUND,""", """,GUTS,"""),"
-(,247,"(""",PUPITAR,""", """,ROCK,""", """,GROUND,""", """,SHED SKIN,"""),"
-(,248,"(""",TYRANITAR,""", """,ROCK,""", """,DARK,""", """,SAND STREAM,"""),"
-(,249,"(""",LUGIA,""", """,PSYCHIC,""", """,FLYING,""", """,PRESSURE,"""),"
-(,250,"(""",HO-OH,""", """,FIRE,""", """,FLYING,""", """,PRESSURE,"""),"
-(,251,"(""",CELEBI,""", """,PSYCHIC,""", """,GRASS,""", """,NATURAL CURE,"""),"
-(,252,"(""",TREECKO,""", """,GRASS,""", """,NONE,""", """,OVERGROW,"""),"
-(,253,"(""",GROVYLE,""", """,GRASS,""", """,NONE,""", """,OVERGROW,"""),"
-(,254,"(""",SCEPTILE,""", """,GRASS,""", """,NONE,""", """,OVERGROW,"""),"
-(,255,"(""",TORCHIC,""", """,FIRE,""", """,NONE,""", """,BLAZE,"""),"
-(,256,"(""",COMBUSKEN,""", """,FIRE,""", """,FIGHTING,""", """,BLAZE,"""),"
-(,257,"(""",BLAZIKEN,""", """,FIRE,""", """,FIGHTING,""", """,BLAZE,"""),"
-(,258,"(""",MUDKIP,""", """,WATER,""", """,NONE,""", """,TORRENT,"""),"
-(,259,"(""",MARSHTOMP,""", """,WATER,""", """,GROUND,""", """,TORRENT,"""),"
-(,260,"(""",SWAMPERT,""", """,WATER,""", """,GROUND,""", """,TORRENT,"""),"
-(,261,"(""",POOCHYENA,""", """,DARK,""", """,NONE,""", """,RUN AWAY,"""),"
-(,262,"(""",MIGHTYENA,""", """,DARK,""", """,NONE,""", """,INTIMIDATE,"""),"
-(,263,"(""",ZIGZAGOON,""", """,NORMAL,""", """,NONE,""", """,PICKUP,"""),"
-(,264,"(""",LINOONE,""", """,NORMAL,""", """,NONE,""", """,PICKUP,"""),"
-(,265,"(""",WURMPLE,""", """,BUG,""", """,NONE,""", """,SHIELD DUST,"""),"
-(,266,"(""",SILCOON,""", """,BUG,""", """,NONE,""", """,SHED SKIN,"""),"
-(,267,"(""",BEAUTIFLY,""", """,BUG,""", """,FLYING,""", """,SWARM,"""),"
-(,268,"(""",CASCOON,""", """,BUG,""", """,NONE,""", """,SHED SKIN,"""),"
-(,269,"(""",DUSTOX,""", """,BUG,""", """,POISON,""", """,SHIELD DUST,"""),"
-(,270,"(""",LOTAD,""", """,WATER,""", """,GRASS,""", """,SWIFT SWIM,"""),"
-(,271,"(""",LOMBRE,""", """,WATER,""", """,GRASS,""", """,SWIFT SWIM,"""),"
-(,272,"(""",LUDICOLO,""", """,WATER,""", """,GRASS,""", """,SWIFT SWIM,"""),"
-(,273,"(""",SEEDOT,""", """,GRASS,""", """,NONE,""", """,CHLOROPHYLL,"""),"
-(,274,"(""",NUZLEAF,""", """,GRASS,""", """,DARK,""", """,CHLOROPHYLL,"""),"
-(,275,"(""",SHIFTRY,""", """,GRASS,""", """,DARK,""", """,CHLOROPHYLL,"""),"
-(,276,"(""",TAILLOW,""", """,NORMAL,""", """,FLYING,""", """,GUTS,"""),"
-(,277,"(""",SWELLOW,""", """,NORMAL,""", """,FLYING,""", """,GUTS,"""),"
-(,278,"(""",WINGULL,""", """,WATER,""", """,FLYING,""", """,KEEN EYE,"""),"
-(,279,"(""",PELIPPER,""", """,WATER,""", """,FLYING,""", """,KEEN EYE,"""),"
-(,280,"(""",RALTS,""", """,PSYCHIC,""", """,FAIRY,""", """,SYNCHRONIZE,"""),"
-(,281,"(""",KIRLIA,""", """,PSYCHIC,""", """,FAIRY,""", """,SYNCHRONIZE,"""),"
-(,282,"(""",GARDEVOIR,""", """,PSYCHIC,""", """,FAIRY,""", """,SYNCHRONIZE,"""),"
-(,283,"(""",SURSKIT,""", """,BUG,""", """,WATER,""", """,SWIFT SWIM,"""),"
-(,284,"(""",MASQUERAIN,""", """,BUG,""", """,FLYING,""", """,INTIMIDATE,"""),"
-(,285,"(""",SHROOMISH,""", """,GRASS,""", """,NONE,""", """,EFFECT SPORE,"""),"
-(,286,"(""",BRELOOM,""", """,GRASS,""", """,FIGHTING,""", """,EFFECT SPORE,"""),"
-(,287,"(""",SLAKOTH,""", """,NORMAL,""", """,NONE,""", """,TRUANT,"""),"
-(,288,"(""",VIGOROTH,""", """,NORMAL,""", """,NONE,""", """,VITAL SPIRIT,"""),"
-(,289,"(""",SLAKING,""", """,NORMAL,""", """,NONE,""", """,TRUANT,"""),"
-(,290,"(""",NINCADA,""", """,BUG,""", """,GROUND,""", """,COMPOUND EYES,"""),"
-(,291,"(""",NINJASK,""", """,BUG,""", """,FLYING,""", """,SPEED BOOST,"""),"
-(,292,"(""",SHEDINJA,""", """,BUG,""", """,GHOST,""", """,WONDER GUARD,"""),"
-(,293,"(""",WHISMUR,""", """,NORMAL,""", """,NONE,""", """,SOUNDPROOF,"""),"
-(,294,"(""",LOUDRED,""", """,NORMAL,""", """,NONE,""", """,SOUNDPROOF,"""),"
-(,295,"(""",EXPLOUD,""", """,NORMAL,""", """,NONE,""", """,SOUNDPROOF,"""),"
-(,296,"(""",MAKUHITA,""", """,FIGHTING,""", """,NONE,""", """,THICK FAT,"""),"
-(,297,"(""",HARIYAMA,""", """,FIGHTING,""", """,NONE,""", """,THICK FAT,"""),"
-(,298,"(""",AZURILL,""", """,NORMAL,""", """,FAIRY,""", """,THICK FAT,"""),"
-(,299,"(""",NOSEPASS,""", """,ROCK,""", """,NONE,""", """,STURDY,"""),"
-(,300,"(""",SKITTY,""", """,NORMAL,""", """,NONE,""", """,CUTE CHARM,"""),"
-(,301,"(""",DELCATTY,""", """,NORMAL,""", """,NONE,""", """,CUTE CHARM,"""),"
-(,302,"(""",SABLEYE,""", """,DARK,""", """,GHOST,""", """,KEEN EYE,"""),"
-(,303,"(""",MAWILE,""", """,STEEL,""", """,FAIRY,""", """,HYPER CUTTER,"""),"
-(,304,"(""",ARON,""", """,STEEL,""", """,ROCK,""", """,STURDY,"""),"
-(,305,"(""",LAIRON,""", """,STEEL,""", """,ROCK,""", """,STURDY,"""),"
-(,306,"(""",AGGRON,""", """,STEEL,""", """,ROCK,""", """,STURDY,"""),"
-(,307,"(""",MEDITITE,""", """,FIGHTING,""", """,PSYCHIC,""", """,PURE POWER,"""),"
-(,308,"(""",MEDICHAM,""", """,FIGHTING,""", """,PSYCHIC,""", """,PURE POWER,"""),"
-(,309,"(""",ELECTRIKE,""", """,ELECTRIC,""", """,NONE,""", """,STATIC,"""),"
-(,310,"(""",MANECTRIC,""", """,ELECTRIC,""", """,NONE,""", """,STATIC,"""),"
-(,311,"(""",PLUSLE,""", """,ELECTRIC,""", """,NONE,""", """,PLUS,"""),"
-(,312,"(""",MINUN,""", """,ELECTRIC,""", """,NONE,""", """,MINUS,"""),"
-(,313,"(""",VOLBEAT,""", """,BUG,""", """,NONE,""", """,ILLUMINATE,"""),"
-(,314,"(""",ILLUMISE,""", """,BUG,""", """,NONE,""", """,OBLIVIOUS,"""),"
-(,315,"(""",ROSELIA,""", """,GRASS,""", """,POISON,""", """,NATURAL CURE,"""),"
-(,316,"(""",GULPIN,""", """,POISON,""", """,NONE,""", """,LIQUID OOZE,"""),"
-(,317,"(""",SWALOT,""", """,POISON,""", """,NONE,""", """,LIQUID OOZE,"""),"
-(,318,"(""",CARVANHA,""", """,WATER,""", """,DARK,""", """,ROUGH SKIN,"""),"
-(,319,"(""",SHARPEDO,""", """,WATER,""", """,DARK,""", """,ROUGH SKIN,"""),"
-(,320,"(""",WAILMER,""", """,WATER,""", """,NONE,""", """,WATER VEIL,"""),"
-(,321,"(""",WAILORD,""", """,WATER,""", """,NONE,""", """,WATER VEIL,"""),"
-(,322,"(""",NUMEL,""", """,FIRE,""", """,GROUND,""", """,OBLIVIOUS,"""),"
-(,323,"(""",CAMERUPT,""", """,FIRE,""", """,GROUND,""", """,MAGMA ARMOR,"""),"
-(,324,"(""",TORKOAL,""", """,FIRE,""", """,NONE,""", """,WHITE SMOKE,"""),"
-(,325,"(""",SPOINK,""", """,PSYCHIC,""", """,NONE,""", """,THICK FAT,"""),"
-(,326,"(""",GRUMPIG,""", """,PSYCHIC,""", """,NONE,""", """,THICK FAT,"""),"
-(,327,"(""",SPINDA,""", """,NORMAL,""", """,NONE,""", """,OWN TEMPO,"""),"
-(,328,"(""",TRAPINCH,""", """,GROUND,""", """,NONE,""", """,HYPER CUTTER,"""),"
-(,329,"(""",VIBRAVA,""", """,GROUND,""", """,DRAGON,""", """,LEVITATE,"""),"
-(,330,"(""",FLYGON,""", """,GROUND,""", """,DRAGON,""", """,LEVITATE,"""),"
-(,331,"(""",CACNEA,""", """,GRASS,""", """,NONE,""", """,SAND VEIL,"""),"
-(,332,"(""",CACTURNE,""", """,GRASS,""", """,DARK,""", """,SAND VEIL,"""),"
-(,333,"(""",SWABLU,""", """,NORMAL,""", """,FLYING,""", """,NATURAL CURE,"""),"
-(,334,"(""",ALTARIA,""", """,DRAGON,""", """,FLYING,""", """,NATURAL CURE,"""),"
-(,335,"(""",ZANGOOSE,""", """,NORMAL,""", """,NONE,""", """,IMMUNITY,"""),"
-(,336,"(""",SEVIPER,""", """,POISON,""", """,NONE,""", """,SHED SKIN,"""),"
-(,337,"(""",LUNATONE,""", """,ROCK,""", """,PSYCHIC,""", """,LEVITATE,"""),"
-(,338,"(""",SOLROCK,""", """,ROCK,""", """,PSYCHIC,""", """,LEVITATE,"""),"
-(,339,"(""",BARBOACH,""", """,WATER,""", """,GROUND,""", """,OBLIVIOUS,"""),"
-(,340,"(""",WHISCASH,""", """,WATER,""", """,GROUND,""", """,OBLIVIOUS,"""),"
-(,341,"(""",CORPHISH,""", """,WATER,""", """,NONE,""", """,HYPER CUTTER,"""),"
-(,342,"(""",CRAWDAUNT,""", """,WATER,""", """,DARK,""", """,HYPER CUTTER,"""),"
-(,343,"(""",BALTOY,""", """,GROUND,""", """,PSYCHIC,""", """,LEVITATE,"""),"
-(,344,"(""",CLAYDOL,""", """,GROUND,""", """,PSYCHIC,""", """,LEVITATE,"""),"
-(,345,"(""",LILEEP,""", """,ROCK,""", """,GRASS,""", """,SUCTION CUPS,"""),"
-(,346,"(""",CRADILY,""", """,ROCK,""", """,GRASS,""", """,SUCTION CUPS,"""),"
-(,347,"(""",ANORITH,""", """,ROCK,""", """,BUG,""", """,BATTLE ARMOR,"""),"
-(,348,"(""",ARMALDO,""", """,ROCK,""", """,BUG,""", """,BATTLE ARMOR,"""),"
-(,349,"(""",FEEBAS,""", """,WATER,""", """,NONE,""", """,SWIFT SWIM,"""),"
-(,350,"(""",MILOTIC,""", """,WATER,""", """,NONE,""", """,MARVEL SCALE,"""),"
-(,351,"(""",CASTFORM,""", """,NORMAL,""", """,NONE,""", """,FORECAST,"""),"
-(,352,"(""",KECLEON,""", """,NORMAL,""", """,NONE,""", """,COLOR CHANGE,"""),"
-(,353,"(""",SHUPPET,""", """,GHOST,""", """,NONE,""", """,INSOMNIA,"""),"
-(,354,"(""",BANETTE,""", """,GHOST,""", """,NONE,""", """,INSOMNIA,"""),"
-(,355,"(""",DUSKULL,""", """,GHOST,""", """,NONE,""", """,LEVITATE,"""),"
-(,356,"(""",DUSCLOPS,""", """,GHOST,""", """,NONE,""", """,PRESSURE,"""),"
-(,357,"(""",TROPIUS,""", """,GRASS,""", """,FLYING,""", """,CHLOROPHYLL,"""),"
-(,358,"(""",CHIMECHO,""", """,PSYCHIC,""", """,NONE,""", """,LEVITATE,"""),"
-(,359,"(""",ABSOL,""", """,DARK,""", """,NONE,""", """,PRESSURE,"""),"
-(,360,"(""",WYNAUT,""", """,PSYCHIC,""", """,NONE,""", """,SHADOW TAG,"""),"
-(,361,"(""",SNORUNT,""", """,ICE,""", """,NONE,""", """,INNER FOCUS,"""),"
-(,362,"(""",GLALIE,""", """,ICE,""", """,NONE,""", """,INNER FOCUS,"""),"
-(,363,"(""",SPHEAL,""", """,ICE,""", """,WATER,""", """,THICK FAT,"""),"
-(,364,"(""",SEALEO,""", """,ICE,""", """,WATER,""", """,THICK FAT,"""),"
-(,365,"(""",WALREIN,""", """,ICE,""", """,WATER,""", """,THICK FAT,"""),"
-(,366,"(""",CLAMPERL,""", """,WATER,""", """,NONE,""", """,SHELL ARMOR,"""),"
-(,367,"(""",HUNTAIL,""", """,WATER,""", """,NONE,""", """,SWIFT SWIM,"""),"
-(,368,"(""",GOREBYSS,""", """,WATER,""", """,NONE,""", """,SWIFT SWIM,"""),"
-(,369,"(""",RELICANTH,""", """,WATER,""", """,ROCK,""", """,SWIFT SWIM,"""),"
-(,370,"(""",LUVDISC,""", """,WATER,""", """,NONE,""", """,SWIFT SWIM,"""),"
-(,371,"(""",BAGON,""", """,DRAGON,""", """,NONE,""", """,ROCK HEAD,"""),"
-(,372,"(""",SHELGON,""", """,DRAGON,""", """,NONE,""", """,ROCK HEAD,"""),"
-(,373,"(""",SALAMENCE,""", """,DRAGON,""", """,FLYING,""", """,INTIMIDATE,"""),"
-(,374,"(""",BELDUM,""", """,STEEL,""", """,PSYCHIC,""", """,CLEAR BODY,"""),"
-(,375,"(""",METANG,""", """,STEEL,""", """,PSYCHIC,""", """,CLEAR BODY,"""),"
-(,376,"(""",METAGROSS,""", """,STEEL,""", """,PSYCHIC,""", """,CLEAR BODY,"""),"
-(,377,"(""",REGIROCK,""", """,ROCK,""", """,NONE,""", """,CLEAR BODY,"""),"
-(,378,"(""",REGICE,""", """,ICE,""", """,NONE,""", """,CLEAR BODY,"""),"
-(,379,"(""",REGISTEEL,""", """,STEEL,""", """,NONE,""", """,CLEAR BODY,"""),"
-(,380,"(""",LATIAS,""", """,DRAGON,""", """,PSYCHIC,""", """,LEVITATE,"""),"
-(,381,"(""",LATIOS,""", """,DRAGON,""", """,PSYCHIC,""", """,LEVITATE,"""),"
-(,382,"(""",KYOGRE,""", """,WATER,""", """,NONE,""", """,DRIZZLE,"""),"
-(,383,"(""",GROUDON,""", """,GROUND,""", """,NONE,""", """,DROUGHT,"""),"
-(,384,"(""",RAYQUAZA,""", """,DRAGON,""", """,FLYING,""", """,AIR LOCK,"""),"
-(,385,"(""",JIRACHI,""", """,STEEL,""", """,PSYCHIC,""", """,SERENE GRACE,"""),"
-(,386,"(""",DEOXYS,""", """,PSYCHIC,""", """,NONE,""", """,PRESSURE,"""),"
-(,387,"(""",TURTWIG,""", """,GRASS,""", """,NONE,""", """,OVERGROW,"""),"
-(,388,"(""",GROTLE,""", """,GRASS,""", """,NONE,""", """,OVERGROW,"""),"
-(,389,"(""",TORTERRA,""", """,GRASS,""", """,GROUND,""", """,OVERGROW,"""),"
-(,390,"(""",CHIMCHAR,""", """,FIRE,""", """,NONE,""", """,BLAZE,"""),"
-(,391,"(""",MONFERNO,""", """,FIRE,""", """,FIGHTING,""", """,BLAZE,"""),"
-(,392,"(""",INFERNAPE,""", """,FIRE,""", """,FIGHTING,""", """,BLAZE,"""),"
-(,393,"(""",PIPLUP,""", """,WATER,""", """,NONE,""", """,TORRENT,"""),"
-(,394,"(""",PRINPLUP,""", """,WATER,""", """,NONE,""", """,TORRENT,"""),"
-(,395,"(""",EMPOLEON,""", """,WATER,""", """,STEEL,""", """,TORRENT,"""),"
-(,396,"(""",STARLY,""", """,NORMAL,""", """,FLYING,""", """,KEEN EYE,"""),"
-(,397,"(""",STARAVIA,""", """,NORMAL,""", """,FLYING,""", """,INTIMIDATE,"""),"
-(,398,"(""",STARAPTOR,""", """,NORMAL,""", """,FLYING,""", """,INTIMIDATE,"""),"
-(,399,"(""",BIDOOF,""", """,NORMAL,""", """,NONE,""", """,SIMPLE,"""),"
-(,400,"(""",BIBAREL,""", """,NORMAL,""", """,WATER,""", """,SIMPLE,"""),"
-(,401,"(""",KRICKETOT,""", """,BUG,""", """,NONE,""", """,SHED SKIN,"""),"
-(,402,"(""",KRICKETUNE,""", """,BUG,""", """,NONE,""", """,SWARM,"""),"
-(,403,"(""",SHINX,""", """,ELECTRIC,""", """,NONE,""", """,RIVALRY,"""),"
-(,404,"(""",LUXIO,""", """,ELECTRIC,""", """,NONE,""", """,RIVALRY,"""),"
-(,405,"(""",LUXRAY,""", """,ELECTRIC,""", """,NONE,""", """,RIVALRY,"""),"
-(,406,"(""",BUDEW,""", """,GRASS,""", """,POISON,""", """,NATURAL CURE,"""),"
-(,407,"(""",ROSERADE,""", """,GRASS,""", """,POISON,""", """,NATURAL CURE,"""),"
-(,408,"(""",CRANIDOS,""", """,ROCK,""", """,NONE,""", """,MOLD BREAKER,"""),"
-(,409,"(""",RAMPARDOS,""", """,ROCK,""", """,NONE,""", """,MOLD BREAKER,"""),"
-(,410,"(""",SHIELDON,""", """,ROCK,""", """,STEEL,""", """,STURDY,"""),"
-(,411,"(""",BASTIODON,""", """,ROCK,""", """,STEEL,""", """,STURDY,"""),"
-(,412,"(""",BURMY,""", """,BUG,""", """,NONE,""", """,SHED SKIN,"""),"
-(,413,"(""",WORMADAM,""", """,BUG,""", """,NONE,""", """,ANTICIPATION,"""),"
-(,414,"(""",MOTHIM,""", """,BUG,""", """,FLYING,""", """,SWARM,"""),"
-(,415,"(""",COMBEE,""", """,BUG,""", """,FLYING,""", """,HONEY GATHER,"""),"
-(,416,"(""",VESPIQUEN,""", """,BUG,""", """,FLYING,""", """,PRESSURE,"""),"
-(,417,"(""",PACHIRISU,""", """,ELECTRIC,""", """,NONE,""", """,RUN AWAY,"""),"
-(,418,"(""",BUIZEL,""", """,WATER,""", """,NONE,""", """,SWIFT SWIM,"""),"
-(,419,"(""",FLOATZEL,""", """,WATER,""", """,NONE,""", """,SWIFT SWIM,"""),"
-(,420,"(""",CHERUBI,""", """,GRASS,""", """,NONE,""", """,CHLOROPHYLL,"""),"
-(,421,"(""",CHERRIM,""", """,GRASS,""", """,NONE,""", """,FLOWER GIFT,"""),"
-(,422,"(""",SHELLOS,""", """,WATER,""", """,NONE,""", """,STICKY HOLD,"""),"
-(,423,"(""",GASTRODON,""", """,WATER,""", """,GROUND,""", """,STICKY HOLD,"""),"
-(,424,"(""",AMBIPOM,""", """,NORMAL,""", """,NONE,""", """,TECHNICIAN,"""),"
-(,425,"(""",DRIFLOON,""", """,GHOST,""", """,FLYING,""", """,AFTERMATH,"""),"
-(,426,"(""",DRIFBLIM,""", """,GHOST,""", """,FLYING,""", """,AFTERMATH,"""),"
-(,427,"(""",BUNEARY,""", """,NORMAL,""", """,NONE,""", """,RUN AWAY,"""),"
-(,428,"(""",LOPUNNY,""", """,NORMAL,""", """,NONE,""", """,CUTE CHARM,"""),"
-(,429,"(""",MISMAGIUS,""", """,GHOST,""", """,NONE,""", """,LEVITATE,"""),"
-(,430,"(""",HONCHKROW,""", """,DARK,""", """,FLYING,""", """,INSOMNIA,"""),"
-(,431,"(""",GLAMEOW,""", """,NORMAL,""", """,NONE,""", """,LIMBER,"""),"
-(,432,"(""",PURUGLY,""", """,NORMAL,""", """,NONE,""", """,THICK FAT,"""),"
-(,433,"(""",CHINGLING,""", """,PSYCHIC,""", """,NONE,""", """,LEVITATE,"""),"
-(,434,"(""",STUNKY,""", """,POISON,""", """,DARK,""", """,STENCH,"""),"
-(,435,"(""",SKUNTANK,""", """,POISON,""", """,DARK,""", """,STENCH,"""),"
-(,436,"(""",BRONZOR,""", """,STEEL,""", """,PSYCHIC,""", """,LEVITATE,"""),"
-(,437,"(""",BRONZONG,""", """,STEEL,""", """,PSYCHIC,""", """,LEVITATE,"""),"
-(,438,"(""",BONSLY,""", """,ROCK,""", """,NONE,""", """,STURDY,"""),"
-(,439,"(""",MIME JR.,""", """,PSYCHIC,""", """,FAIRY,""", """,SOUNDPROOF,"""),"
-(,440,"(""",HAPPINY,""", """,NORMAL,""", """,NONE,""", """,NATURAL CURE,"""),"
-(,441,"(""",CHATOT,""", """,NORMAL,""", """,FLYING,""", """,KEEN EYE,"""),"
-(,442,"(""",SPIRITOMB,""", """,GHOST,""", """,DARK,""", """,PRESSURE,"""),"
-(,443,"(""",GIBLE,""", """,DRAGON,""", """,GROUND,""", """,SAND VEIL,"""),"
-(,444,"(""",GABITE,""", """,DRAGON,""", """,GROUND,""", """,SAND VEIL,"""),"
-(,445,"(""",GARCHOMP,""", """,DRAGON,""", """,GROUND,""", """,SAND VEIL,"""),"
-(,446,"(""",MUNCHLAX,""", """,NORMAL,""", """,NONE,""", """,PICKUP,"""),"
-(,447,"(""",RIOLU,""", """,FIGHTING,""", """,NONE,""", """,STEADFAST,"""),"
-(,448,"(""",LUCARIO,""", """,FIGHTING,""", """,STEEL,""", """,STEADFAST,"""),"
-(,449,"(""",HIPPOPOTAS,""", """,GROUND,""", """,NONE,""", """,SAND STREAM,"""),"
-(,450,"(""",HIPPOWDON,""", """,GROUND,""", """,NONE,""", """,SAND STREAM,"""),"
-(,451,"(""",SKORUPI,""", """,POISON,""", """,BUG,""", """,BATTLE ARMOR,"""),"
-(,452,"(""",DRAPION,""", """,POISON,""", """,DARK,""", """,BATTLE ARMOR,"""),"
-(,453,"(""",CROAGUNK,""", """,POISON,""", """,FIGHTING,""", """,ANTICIPATION,"""),"
-(,454,"(""",TOXICROAK,""", """,POISON,""", """,FIGHTING,""", """,ANTICIPATION,"""),"
-(,455,"(""",CARNIVINE,""", """,GRASS,""", """,NONE,""", """,LEVITATE,"""),"
-(,456,"(""",FINNEON,""", """,WATER,""", """,NONE,""", """,SWIFT SWIM,"""),"
-(,457,"(""",LUMINEON,""", """,WATER,""", """,NONE,""", """,SWIFT SWIM,"""),"
-(,458,"(""",MANTYKE,""", """,WATER,""", """,FLYING,""", """,SWIFT SWIM,"""),"
-(,459,"(""",SNOVER,""", """,GRASS,""", """,ICE,""", """,SNOW WARNING,"""),"
-(,460,"(""",ABOMASNOW,""", """,GRASS,""", """,ICE,""", """,SNOW WARNING,"""),"
-(,461,"(""",WEAVILE,""", """,DARK,""", """,ICE,""", """,PRESSURE,"""),"
-(,462,"(""",MAGNEZONE,""", """,ELECTRIC,""", """,STEEL,""", """,MAGNET PULL,"""),"
-(,463,"(""",LICKILICKY,""", """,NORMAL,""", """,NONE,""", """,OWN TEMPO,"""),"
-(,464,"(""",RHYPERIOR,""", """,GROUND,""", """,ROCK,""", """,LIGHTNING ROD,"""),"
-(,465,"(""",TANGROWTH,""", """,GRASS,""", """,NONE,""", """,CHLOROPHYLL,"""),"
-(,466,"(""",ELECTIVIRE,""", """,ELECTRIC,""", """,NONE,""", """,MOTOR DRIVE,"""),"
-(,467,"(""",MAGMORTAR,""", """,FIRE,""", """,NONE,""", """,FLAME BODY,"""),"
-(,468,"(""",TOGEKISS,""", """,FAIRY,""", """,FLYING,""", """,HUSTLE,"""),"
-(,469,"(""",YANMEGA,""", """,BUG,""", """,FLYING,""", """,SPEED BOOST,"""),"
-(,470,"(""",LEAFEON,""", """,GRASS,""", """,NONE,""", """,LEAF GUARD,"""),"
-(,471,"(""",GLACEON,""", """,ICE,""", """,NONE,""", """,SNOW CLOAK,"""),"
-(,472,"(""",GLISCOR,""", """,GROUND,""", """,FLYING,""", """,HYPER CUTTER,"""),"
-(,473,"(""",MAMOSWINE,""", """,ICE,""", """,GROUND,""", """,OBLIVIOUS,"""),"
-(,474,"(""",PORYGON-Z,""", """,NORMAL,""", """,NONE,""", """,ADAPTABILITY,"""),"
-(,475,"(""",GALLADE,""", """,PSYCHIC,""", """,FIGHTING,""", """,STEADFAST,"""),"
-(,476,"(""",PROBOPASS,""", """,ROCK,""", """,STEEL,""", """,STURDY,"""),"
-(,477,"(""",DUSKNOIR,""", """,GHOST,""", """,NONE,""", """,PRESSURE,"""),"
-(,478,"(""",FROSLASS,""", """,ICE,""", """,GHOST,""", """,SNOW CLOAK,"""),"
-(,479,"(""",ROTOM,""", """,ELECTRIC,""", """,GHOST,""", """,LEVITATE,"""),"
-(,480,"(""",UXIE,""", """,PSYCHIC,""", """,NONE,""", """,LEVITATE,"""),"
-(,481,"(""",MESPRIT,""", """,PSYCHIC,""", """,NONE,""", """,LEVITATE,"""),"
-(,482,"(""",AZELF,""", """,PSYCHIC,""", """,NONE,""", """,LEVITATE,"""),"
-(,483,"(""",DIALGA,""", """,STEEL,""", """,DRAGON,""", """,PRESSURE,"""),"
-(,484,"(""",PALKIA,""", """,WATER,""", """,DRAGON,""", """,PRESSURE,"""),"
-(,485,"(""",HEATRAN,""", """,FIRE,""", """,STEEL,""", """,FLASH FIRE,"""),"
-(,486,"(""",REGIGIGAS,""", """,NORMAL,""", """,NONE,""", """,SLOW START,"""),"
-(,487,"(""",GIRATINA,""", """,GHOST,""", """,DRAGON,""", """,PRESSURE,"""),"
-(,488,"(""",CRESSELIA,""", """,PSYCHIC,""", """,NONE,""", """,LEVITATE,"""),"
-(,489,"(""",PHIONE,""", """,WATER,""", """,NONE,""", """,HYDRATION,"""),"
-(,490,"(""",MANAPHY,""", """,WATER,""", """,NONE,""", """,HYDRATION,"""),"
-(,491,"(""",DARKRAI,""", """,DARK,""", """,NONE,""", """,BAD DREAMS,"""),"
-(,492,"(""",SHAYMIN,""", """,GRASS,""", """,NONE,""", """,NATURAL CURE,"""),"
-(,493,"(""",ARCEUS,""", """,NORMAL,""", """,NONE,""", """,MULTITYPE,"""),"
-(,494,"(""",VICTINI,""", """,PSYCHIC,""", """,FIRE,""", """,VICTORY STAR,"""),"
-(,495,"(""",SNIVY,""", """,GRASS,""", """,NONE,""", """,OVERGROW,"""),"
-(,496,"(""",SERVINE,""", """,GRASS,""", """,NONE,""", """,OVERGROW,"""),"
-(,497,"(""",SERPERIOR,""", """,GRASS,""", """,NONE,""", """,OVERGROW,"""),"
-(,498,"(""",TEPIG,""", """,FIRE,""", """,NONE,""", """,BLAZE,"""),"
-(,499,"(""",PIGNITE,""", """,FIRE,""", """,FIGHTING,""", """,BLAZE,"""),"
-(,500,"(""",EMBOAR,""", """,FIRE,""", """,FIGHTING,""", """,BLAZE,"""),"
-(,501,"(""",OSHAWOTT,""", """,WATER,""", """,NONE,""", """,TORRENT,"""),"
-(,502,"(""",DEWOTT,""", """,WATER,""", """,NONE,""", """,TORRENT,"""),"
-(,503,"(""",SAMUROTT,""", """,WATER,""", """,NONE,""", """,TORRENT,"""),"
-(,504,"(""",PATRAT,""", """,NORMAL,""", """,NONE,""", """,RUN AWAY,"""),"
-(,505,"(""",WATCHOG,""", """,NORMAL,""", """,NONE,""", """,ILLUMINATE,"""),"
-(,506,"(""",LILLIPUP,""", """,NORMAL,""", """,NONE,""", """,VITAL SPIRIT,"""),"
-(,507,"(""",HERDIER,""", """,NORMAL,""", """,NONE,""", """,INTIMIDATE,"""),"
-(,508,"(""",STOUTLAND,""", """,NORMAL,""", """,NONE,""", """,INTIMIDATE,"""),"
-(,509,"(""",PURRLOIN,""", """,DARK,""", """,NONE,""", """,LIMBER,"""),"
-(,510,"(""",LIEPARD,""", """,DARK,""", """,NONE,""", """,LIMBER,"""),"
-(,511,"(""",PANSAGE,""", """,GRASS,""", """,NONE,""", """,GLUTTONY,"""),"
-(,512,"(""",SIMISAGE,""", """,GRASS,""", """,NONE,""", """,GLUTTONY,"""),"
-(,513,"(""",PANSEAR,""", """,FIRE,""", """,NONE,""", """,GLUTTONY,"""),"
-(,514,"(""",SIMISEAR,""", """,FIRE,""", """,NONE,""", """,GLUTTONY,"""),"
-(,515,"(""",PANPOUR,""", """,WATER,""", """,NONE,""", """,GLUTTONY,"""),"
-(,516,"(""",SIMIPOUR,""", """,WATER,""", """,NONE,""", """,GLUTTONY,"""),"
-(,517,"(""",MUNNA,""", """,PSYCHIC,""", """,NONE,""", """,FOREWARN,"""),"
-(,518,"(""",MUSHARNA,""", """,PSYCHIC,""", """,NONE,""", """,FOREWARN,"""),"
-(,519,"(""",PIDOVE,""", """,NORMAL,""", """,FLYING,""", """,BIG PECKS,"""),"
-(,520,"(""",TRANQUILL,""", """,NORMAL,""", """,FLYING,""", """,BIG PECKS,"""),"
-(,521,"(""",UNFEZANT,""", """,NORMAL,""", """,FLYING,""", """,BIG PECKS,"""),"
-(,522,"(""",BLITZLE,""", """,ELECTRIC,""", """,NONE,""", """,LIGHTNING ROD,"""),"
-(,523,"(""",ZEBSTRIKA,""", """,ELECTRIC,""", """,NONE,""", """,LIGHTNING ROD,"""),"
-(,524,"(""",ROGGENROLA,""", """,ROCK,""", """,NONE,""", """,STURDY,"""),"
-(,525,"(""",BOLDORE,""", """,ROCK,""", """,NONE,""", """,STURDY,"""),"
-(,526,"(""",GIGALITH,""", """,ROCK,""", """,NONE,""", """,STURDY,"""),"
-(,527,"(""",WOOBAT,""", """,PSYCHIC,""", """,FLYING,""", """,UNAWARE,"""),"
-(,528,"(""",SWOOBAT,""", """,PSYCHIC,""", """,FLYING,""", """,UNAWARE,"""),"
-(,529,"(""",DRILBUR,""", """,GROUND,""", """,NONE,""", """,SAND RUSH,"""),"
-(,530,"(""",EXCADRILL,""", """,GROUND,""", """,STEEL,""", """,SAND RUSH,"""),"
-(,531,"(""",AUDINO,""", """,NORMAL,""", """,NONE,""", """,HEALER,"""),"
-(,532,"(""",TIMBURR,""", """,FIGHTING,""", """,NONE,""", """,GUTS,"""),"
-(,533,"(""",GURDURR,""", """,FIGHTING,""", """,NONE,""", """,GUTS,"""),"
-(,534,"(""",CONKELDURR,""", """,FIGHTING,""", """,NONE,""", """,GUTS,"""),"
-(,535,"(""",TYMPOLE,""", """,WATER,""", """,NONE,""", """,SWIFT SWIM,"""),"
-(,536,"(""",PALPITOAD,""", """,WATER,""", """,GROUND,""", """,SWIFT SWIM,"""),"
-(,537,"(""",SEISMITOAD,""", """,WATER,""", """,GROUND,""", """,SWIFT SWIM,"""),"
-(,538,"(""",THROH,""", """,FIGHTING,""", """,NONE,""", """,GUTS,"""),"
-(,539,"(""",SAWK,""", """,FIGHTING,""", """,NONE,""", """,STURDY,"""),"
-(,540,"(""",SEWADDLE,""", """,BUG,""", """,GRASS,""", """,SWARM,"""),"
-(,541,"(""",SWADLOON,""", """,BUG,""", """,GRASS,""", """,LEAF GUARD,"""),"
-(,542,"(""",LEAVANNY,""", """,BUG,""", """,GRASS,""", """,SWARM,"""),"
-(,543,"(""",VENIPEDE,""", """,BUG,""", """,POISON,""", """,POISON POINT,"""),"
-(,544,"(""",WHIRLIPEDE,""", """,BUG,""", """,POISON,""", """,POISON POINT,"""),"
-(,545,"(""",SCOLIPEDE,""", """,BUG,""", """,POISON,""", """,POISON POINT,"""),"
-(,546,"(""",COTTONEE,""", """,GRASS,""", """,FAIRY,""", """,PRANKSTER,"""),"
-(,547,"(""",WHIMSICOTT,""", """,GRASS,""", """,FAIRY,""", """,PRANKSTER,"""),"
-(,548,"(""",PETILIL,""", """,GRASS,""", """,NONE,""", """,CHLOROPHYLL,"""),"
-(,549,"(""",LILLIGANT,""", """,GRASS,""", """,NONE,""", """,CHLOROPHYLL,"""),"
-(,550,"(""",BASCULIN,""", """,WATER,""", """,NONE,""", """,RECKLESS,"""),"
-(,551,"(""",SANDILE,""", """,GROUND,""", """,DARK,""", """,INTIMIDATE,"""),"
-(,552,"(""",KROKOROK,""", """,GROUND,""", """,DARK,""", """,INTIMIDATE,"""),"
-(,553,"(""",KROOKODILE,""", """,GROUND,""", """,DARK,""", """,INTIMIDATE,"""),"
-(,554,"(""",DARUMAKA,""", """,FIRE,""", """,NONE,""", """,HUSTLE,"""),"
-(,555,"(""",DARMANITAN,""", """,FIRE,""", """,NONE,""", """,SHEER FORCE,"""),"
-(,556,"(""",MARACTUS,""", """,GRASS,""", """,NONE,""", """,WATER ABSORB,"""),"
-(,557,"(""",DWEBBLE,""", """,BUG,""", """,ROCK,""", """,STURDY,"""),"
-(,558,"(""",CRUSTLE,""", """,BUG,""", """,ROCK,""", """,STURDY,"""),"
-(,559,"(""",SCRAGGY,""", """,DARK,""", """,FIGHTING,""", """,SHED SKIN,"""),"
-(,560,"(""",SCRAFTY,""", """,DARK,""", """,FIGHTING,""", """,SHED SKIN,"""),"
-(,561,"(""",SIGILYPH,""", """,PSYCHIC,""", """,FLYING,""", """,WONDER SKIN,"""),"
-(,562,"(""",YAMASK,""", """,GHOST,""", """,NONE,""", """,MUMMY,"""),"
-(,563,"(""",COFAGRIGUS,""", """,GHOST,""", """,NONE,""", """,MUMMY,"""),"
-(,564,"(""",TIRTOUGA,""", """,WATER,""", """,ROCK,""", """,SOLID ROCK,"""),"
-(,565,"(""",CARRACOSTA,""", """,WATER,""", """,ROCK,""", """,SOLID ROCK,"""),"
-(,566,"(""",ARCHEN,""", """,ROCK,""", """,FLYING,""", """,DEFEATIST,"""),"
-(,567,"(""",ARCHEOPS,""", """,ROCK,""", """,FLYING,""", """,DEFEATIST,"""),"
-(,568,"(""",TRUBBISH,""", """,POISON,""", """,NONE,""", """,STENCH,"""),"
-(,569,"(""",GARBODOR,""", """,POISON,""", """,NONE,""", """,STENCH,"""),"
-(,570,"(""",ZORUA,""", """,DARK,""", """,NONE,""", """,ILLUSION,"""),"
-(,571,"(""",ZOROARK,""", """,DARK,""", """,NONE,""", """,ILLUSION,"""),"
-(,572,"(""",MINCCINO,""", """,NORMAL,""", """,NONE,""", """,CUTE CHARM,"""),"
-(,573,"(""",CINCCINO,""", """,NORMAL,""", """,NONE,""", """,CUTE CHARM,"""),"
-(,574,"(""",GOTHITA,""", """,PSYCHIC,""", """,NONE,""", """,FRISK,"""),"
-(,575,"(""",GOTHORITA,""", """,PSYCHIC,""", """,NONE,""", """,FRISK,"""),"
-(,576,"(""",GOTHITELLE,""", """,PSYCHIC,""", """,NONE,""", """,FRISK,"""),"
-(,577,"(""",SOLOSIS,""", """,PSYCHIC,""", """,NONE,""", """,OVERCOAT,"""),"
-(,578,"(""",DUOSION,""", """,PSYCHIC,""", """,NONE,""", """,OVERCOAT,"""),"
-(,579,"(""",REUNICLUS,""", """,PSYCHIC,""", """,NONE,""", """,OVERCOAT,"""),"
-(,580,"(""",DUCKLETT,""", """,WATER,""", """,FLYING,""", """,KEEN EYE,"""),"
-(,581,"(""",SWANNA,""", """,WATER,""", """,FLYING,""", """,KEEN EYE,"""),"
-(,582,"(""",VANILLITE,""", """,ICE,""", """,NONE,""", """,ICE BODY,"""),"
-(,583,"(""",VANILLISH,""", """,ICE,""", """,NONE,""", """,ICE BODY,"""),"
-(,584,"(""",VANILLUXE,""", """,ICE,""", """,NONE,""", """,ICE BODY,"""),"
-(,585,"(""",DEERLING,""", """,NORMAL,""", """,GRASS,""", """,CHLOROPHYLL,"""),"
-(,586,"(""",SAWSBUCK,""", """,NORMAL,""", """,GRASS,""", """,CHLOROPHYLL,"""),"
-(,587,"(""",EMOLGA,""", """,ELECTRIC,""", """,FLYING,""", """,STATIC,"""),"
-(,588,"(""",KARRABLAST,""", """,BUG,""", """,NONE,""", """,SWARM,"""),"
-(,589,"(""",ESCAVALIER,""", """,BUG,""", """,STEEL,""", """,SWARM,"""),"
-(,590,"(""",FOONGUS,""", """,GRASS,""", """,POISON,""", """,EFFECT SPORE,"""),"
-(,591,"(""",AMOONGUSS,""", """,GRASS,""", """,POISON,""", """,EFFECT SPORE,"""),"
-(,592,"(""",FRILLISH,""", """,WATER,""", """,GHOST,""", """,WATER ABSORB,"""),"
-(,593,"(""",JELLICENT,""", """,WATER,""", """,GHOST,""", """,WATER ABSORB,"""),"
-(,594,"(""",ALOMOMOLA,""", """,WATER,""", """,NONE,""", """,HEALER,"""),"
-(,595,"(""",JOLTIK,""", """,BUG,""", """,ELECTRIC,""", """,COMPOUND EYES,"""),"
-(,596,"(""",GALVANTULA,""", """,BUG,""", """,ELECTRIC,""", """,COMPOUND EYES,"""),"
-(,597,"(""",FERROSEED,""", """,GRASS,""", """,STEEL,""", """,IRON BARBS,"""),"
-(,598,"(""",FERROTHORN,""", """,GRASS,""", """,STEEL,""", """,IRON BARBS,"""),"
-(,599,"(""",KLINK,""", """,STEEL,""", """,NONE,""", """,PLUS,"""),"
-(,600,"(""",KLANG,""", """,STEEL,""", """,NONE,""", """,PLUS,"""),"
-(,601,"(""",KLINKLANG,""", """,STEEL,""", """,NONE,""", """,PLUS,"""),"
-(,602,"(""",TYNAMO,""", """,ELECTRIC,""", """,NONE,""", """,LEVITATE,"""),"
-(,603,"(""",EELEKTRIK,""", """,ELECTRIC,""", """,NONE,""", """,LEVITATE,"""),"
-(,604,"(""",EELEKTROSS,""", """,ELECTRIC,""", """,NONE,""", """,LEVITATE,"""),"
-(,605,"(""",ELGYEM,""", """,PSYCHIC,""", """,NONE,""", """,TELEPATHY,"""),"
-(,606,"(""",BEHEEYEM,""", """,PSYCHIC,""", """,NONE,""", """,TELEPATHY,"""),"
-(,607,"(""",LITWICK,""", """,GHOST,""", """,FIRE,""", """,FLASH FIRE,"""),"
-(,608,"(""",LAMPENT,""", """,GHOST,""", """,FIRE,""", """,FLASH FIRE,"""),"
-(,609,"(""",CHANDELURE,""", """,GHOST,""", """,FIRE,""", """,FLASH FIRE,"""),"
-(,610,"(""",AXEW,""", """,DRAGON,""", """,NONE,""", """,RIVALRY,"""),"
-(,611,"(""",FRAXURE,""", """,DRAGON,""", """,NONE,""", """,RIVALRY,"""),"
-(,612,"(""",HAXORUS,""", """,DRAGON,""", """,NONE,""", """,RIVALRY,"""),"
-(,613,"(""",CUBCHOO,""", """,ICE,""", """,NONE,""", """,SNOW CLOAK,"""),"
-(,614,"(""",BEARTIC,""", """,ICE,""", """,NONE,""", """,SNOW CLOAK,"""),"
-(,615,"(""",CRYOGONAL,""", """,ICE,""", """,NONE,""", """,LEVITATE,"""),"
-(,616,"(""",SHELMET,""", """,BUG,""", """,NONE,""", """,HYDRATION,"""),"
-(,617,"(""",ACCELGOR,""", """,BUG,""", """,NONE,""", """,HYDRATION,"""),"
-(,618,"(""",STUNFISK,""", """,GROUND,""", """,ELECTRIC,""", """,STATIC,"""),"
-(,619,"(""",MIENFOO,""", """,FIGHTING,""", """,NONE,""", """,INNER FOCUS,"""),"
-(,620,"(""",MIENSHAO,""", """,FIGHTING,""", """,NONE,""", """,INNER FOCUS,"""),"
-(,621,"(""",DRUDDIGON,""", """,DRAGON,""", """,NONE,""", """,ROUGH SKIN,"""),"
-(,622,"(""",GOLETT,""", """,GROUND,""", """,GHOST,""", """,IRON FIST,"""),"
-(,623,"(""",GOLURK,""", """,GROUND,""", """,GHOST,""", """,IRON FIST,"""),"
-(,624,"(""",PAWNIARD,""", """,DARK,""", """,STEEL,""", """,DEFIANT,"""),"
-(,625,"(""",BISHARP,""", """,DARK,""", """,STEEL,""", """,DEFIANT,"""),"
-(,626,"(""",BOUFFALANT,""", """,NORMAL,""", """,NONE,""", """,RECKLESS,"""),"
-(,627,"(""",RUFFLET,""", """,NORMAL,""", """,FLYING,""", """,KEEN EYE,"""),"
-(,628,"(""",BRAVIARY,""", """,NORMAL,""", """,FLYING,""", """,KEEN EYE,"""),"
-(,629,"(""",VULLABY,""", """,DARK,""", """,FLYING,""", """,BIG PECKS,"""),"
-(,630,"(""",MANDIBUZZ,""", """,DARK,""", """,FLYING,""", """,BIG PECKS,"""),"
-(,631,"(""",HEATMOR,""", """,FIRE,""", """,NONE,""", """,GLUTTONY,"""),"
-(,632,"(""",DURANT,""", """,BUG,""", """,STEEL,""", """,SWARM,"""),"
-(,633,"(""",DEINO,""", """,DARK,""", """,DRAGON,""", """,HUSTLE,"""),"
-(,634,"(""",ZWEILOUS,""", """,DARK,""", """,DRAGON,""", """,HUSTLE,"""),"
-(,635,"(""",HYDREIGON,""", """,DARK,""", """,DRAGON,""", """,LEVITATE,"""),"
-(,636,"(""",LARVESTA,""", """,BUG,""", """,FIRE,""", """,FLAME BODY,"""),"
-(,637,"(""",VOLCARONA,""", """,BUG,""", """,FIRE,""", """,FLAME BODY,"""),"
-(,638,"(""",COBALION,""", """,STEEL,""", """,FIGHTING,""", """,JUSTIFIED,"""),"
-(,639,"(""",TERRAKION,""", """,ROCK,""", """,FIGHTING,""", """,JUSTIFIED,"""),"
-(,640,"(""",VIRIZION,""", """,GRASS,""", """,FIGHTING,""", """,JUSTIFIED,"""),"
-(,641,"(""",TORNADUS,""", """,FLYING,""", """,NONE,""", """,PRANKSTER,"""),"
-(,642,"(""",THUNDURUS,""", """,ELECTRIC,""", """,FLYING,""", """,PRANKSTER,"""),"
-(,643,"(""",RESHIRAM,""", """,DRAGON,""", """,FIRE,""", """,TURBOBLAZE,"""),"
-(,644,"(""",ZEKROM,""", """,DRAGON,""", """,ELECTRIC,""", """,TERAVOLT,"""),"
-(,645,"(""",LANDORUS,""", """,GROUND,""", """,FLYING,""", """,SAND FORCE,"""),"
-(,646,"(""",KYUREM,""", """,DRAGON,""", """,ICE,""", """,PRESSURE,"""),"
-(,647,"(""",KELDEO,""", """,WATER,""", """,FIGHTING,""", """,JUSTIFIED,"""),"
-(,648,"(""",MELOETTA,""", """,NORMAL,""", """,NONE,""", """,SERENE GRACE,"""),"
-(,649,"(""",GENESECT,""", """,BUG,""", """,STEEL,""", """,DOWNLOAD,"""),"
-(,650,"(""",CHESPIN,""", """,GRASS,""", """,NONE,""", """,OVERGROW,"""),"
-(,651,"(""",QUILLADIN,""", """,GRASS,""", """,NONE,""", """,OVERGROW,"""),"
-(,652,"(""",CHESNAUGHT,""", """,GRASS,""", """,FIGHTING,""", """,OVERGROW,"""),"
-(,653,"(""",FENNEKIN,""", """,FIRE,""", """,NONE,""", """,BLAZE,"""),"
-(,654,"(""",BRAIXEN,""", """,FIRE,""", """,NONE,""", """,BLAZE,"""),"
-(,655,"(""",DELPHOX,""", """,FIRE,""", """,PSYCHIC,""", """,BLAZE,"""),"
-(,656,"(""",FROAKIE,""", """,WATER,""", """,NONE,""", """,TORRENT,"""),"
-(,657,"(""",FROGADIER,""", """,WATER,""", """,NONE,""", """,TORRENT,"""),"
-(,658,"(""",GRENINJA,""", """,WATER,""", """,DARK,""", """,TORRENT,"""),"
-(,659,"(""",BUNNELBY,""", """,NORMAL,""", """,NONE,""", """,PICKUP,"""),"
-(,660,"(""",DIGGERSBY,""", """,NORMAL,""", """,GROUND,""", """,PICKUP,"""),"
-(,661,"(""",FLETCHLING,""", """,NORMAL,""", """,FLYING,""", """,BIG PECKS,"""),"
-(,662,"(""",FLETCHINDER,""", """,FIRE,""", """,FLYING,""", """,FLAME BODY,"""),"
-(,663,"(""",TALONFLAME,""", """,FIRE,""", """,FLYING,""", """,FLAME BODY,"""),"
-(,664,"(""",SCATTERBUG,""", """,BUG,""", """,NONE,""", """,SHIELD DUST,"""),"
-(,665,"(""",SPEWPA,""", """,BUG,""", """,NONE,""", """,SHED SKIN,"""),"
-(,666,"(""",VIVILLON,""", """,BUG,""", """,FLYING,""", """,SHIELD DUST,"""),"
-(,667,"(""",LITLEO,""", """,FIRE,""", """,NORMAL,""", """,RIVALRY,"""),"
-(,668,"(""",PYROAR,""", """,FIRE,""", """,NORMAL,""", """,RIVALRY,"""),"
-(,669,"(""",FLABÉBÉ,""", """,FAIRY,""", """,NONE,""", """,FLOWER VEIL,"""),"
-(,670,"(""",FLOETTE,""", """,FAIRY,""", """,NONE,""", """,FLOWER VEIL,"""),"
-(,671,"(""",FLORGES,""", """,FAIRY,""", """,NONE,""", """,FLOWER VEIL,"""),"
-(,672,"(""",SKIDDO,""", """,GRASS,""", """,NONE,""", """,SAP SIPPER,"""),"
-(,673,"(""",GOGOAT,""", """,GRASS,""", """,NONE,""", """,SAP SIPPER,"""),"
-(,674,"(""",PANCHAM,""", """,FIGHTING,""", """,NONE,""", """,IRON FIST,"""),"
-(,675,"(""",PANGORO,""", """,FIGHTING,""", """,DARK,""", """,IRON FIST,"""),"
-(,676,"(""",FURFROU,""", """,NORMAL,""", """,NONE,""", """,FUR COAT,"""),"
-(,677,"(""",ESPURR,""", """,PSYCHIC,""", """,NONE,""", """,KEEN EYE,"""),"
-(,678,"(""",MEOWSTIC,""", """,PSYCHIC,""", """,NONE,""", """,KEEN EYE,"""),"
-(,679,"(""",HONEDGE,""", """,STEEL,""", """,GHOST,""", """,NO GUARD,"""),"
-(,680,"(""",DOUBLADE,""", """,STEEL,""", """,GHOST,""", """,NO GUARD,"""),"
-(,681,"(""",AEGISLASH,""", """,STEEL,""", """,GHOST,""", """,STANCE CHANGE,"""),"
-(,682,"(""",SPRITZEE,""", """,FAIRY,""", """,NONE,""", """,HEALER,"""),"
-(,683,"(""",AROMATISSE,""", """,FAIRY,""", """,NONE,""", """,HEALER,"""),"
-(,684,"(""",SWIRLIX,""", """,FAIRY,""", """,NONE,""", """,SWEET VEIL,"""),"
-(,685,"(""",SLURPUFF,""", """,FAIRY,""", """,NONE,""", """,SWEET VEIL,"""),"
-(,686,"(""",INKAY,""", """,DARK,""", """,PSYCHIC,""", """,CONTRARY,"""),"
-(,687,"(""",MALAMAR,""", """,DARK,""", """,PSYCHIC,""", """,CONTRARY,"""),"
-(,688,"(""",BINACLE,""", """,ROCK,""", """,WATER,""", """,SNIPER,"""),"
-(,689,"(""",BARBARACLE,""", """,ROCK,""", """,WATER,""", """,SNIPER,"""),"
-(,690,"(""",SKRELP,""", """,POISON,""", """,WATER,""", """,POISON POINT,"""),"
-(,691,"(""",DRAGALGE,""", """,POISON,""", """,DRAGON,""", """,POISON POINT,"""),"
-(,692,"(""",CLAUNCHER,""", """,WATER,""", """,NONE,""", """,MEGA LAUNCHER,"""),"
-(,693,"(""",CLAWITZER,""", """,WATER,""", """,NONE,""", """,MEGA LAUNCHER,"""),"
-(,694,"(""",HELIOPTILE,""", """,ELECTRIC,""", """,NORMAL,""", """,DRY SKIN,"""),"
-(,695,"(""",HELIOLISK,""", """,ELECTRIC,""", """,NORMAL,""", """,DRY SKIN,"""),"
-(,696,"(""",TYRUNT,""", """,ROCK,""", """,DRAGON,""", """,STRONG JAW,"""),"
-(,697,"(""",TYRANTRUM,""", """,ROCK,""", """,DRAGON,""", """,STRONG JAW,"""),"
-(,698,"(""",AMAURA,""", """,ROCK,""", """,ICE,""", """,REFRIGERATE,"""),"
-(,699,"(""",AURORUS,""", """,ROCK,""", """,ICE,""", """,REFRIGERATE,"""),"
-(,700,"(""",SYLVEON,""", """,FAIRY,""", """,NONE,""", """,CUTE CHARM,"""),"
-(,701,"(""",HAWLUCHA,""", """,FIGHTING,""", """,FLYING,""", """,LIMBER,"""),"
-(,702,"(""",DEDENNE,""", """,ELECTRIC,""", """,FAIRY,""", """,CHEEK POUCH,"""),"
-(,703,"(""",CARBINK,""", """,ROCK,""", """,FAIRY,""", """,CLEAR BODY,"""),"
-(,704,"(""",GOOMY,""", """,DRAGON,""", """,NONE,""", """,SAP SIPPER,"""),"
-(,705,"(""",SLIGGOO,""", """,DRAGON,""", """,NONE,""", """,SAP SIPPER,"""),"
-(,706,"(""",GOODRA,""", """,DRAGON,""", """,NONE,""", """,SAP SIPPER,"""),"
-(,707,"(""",KLEFKI,""", """,STEEL,""", """,FAIRY,""", """,PRANKSTER,"""),"
-(,708,"(""",PHANTUMP,""", """,GHOST,""", """,GRASS,""", """,NATURAL CURE,"""),"
-(,709,"(""",TREVENANT,""", """,GHOST,""", """,GRASS,""", """,NATURAL CURE,"""),"
-(,710,"(""",PUMPKABOO,""", """,GHOST,""", """,GRASS,""", """,PICKUP,"""),"
-(,711,"(""",GOURGEIST,""", """,GHOST,""", """,GRASS,""", """,PICKUP,"""),"
-(,712,"(""",BERGMITE,""", """,ICE,""", """,NONE,""", """,OWN TEMPO,"""),"
-(,713,"(""",AVALUGG,""", """,ICE,""", """,NONE,""", """,OWN TEMPO,"""),"
-(,714,"(""",NOIBAT,""", """,FLYING,""", """,DRAGON,""", """,FRISK,"""),"
-(,715,"(""",NOIVERN,""", """,FLYING,""", """,DRAGON,""", """,FRISK,"""),"
-(,716,"(""",XERNEAS,""", """,FAIRY,""", """,NONE,""", """,FAIRY AURA,"""),"
-(,717,"(""",YVELTAL,""", """,DARK,""", """,FLYING,""", """,DARK AURA,"""),"
-(,718,"(""",ZYGARDE,""", """,DRAGON,""", """,GROUND,""", """,AURA BREAK,"""),"
-(,719,"(""",DIANCIE,""", """,ROCK,""", """,FAIRY,""", """,CLEAR BODY,"""),"
-(,720,"(""",HOOPAHOOPA,""", """,PSYCHIC,""", """,NONE,""", """,MAGICIAN,"""),"
-(,721,"(""",VOLCANION,""", """,FIRE,""", """,WATER,""", """,WATER ABSORB,""");"
+﻿Name,TypeOne,TypeTwo,Ability
+BULBASAUR,GRASS,POISON,OVERGROW
+IVYSAUR,GRASS,POISON,OVERGROW
+VENUSAUR,GRASS,POISON,OVERGROW
+CHARMANDER,FIRE,NONE,BLAZE
+CHARMELEON,FIRE,NONE,BLAZE
+CHARIZARD,FIRE,FLYING,BLAZE
+SQUIRTLE,WATER,NONE,TORRENT
+WARTORTLE,WATER,NONE,TORRENT
+BLASTOISE,WATER,NONE,TORRENT
+CATERPIE,BUG,NONE,SHIELD DUST
+METAPOD,BUG,NONE,SHED SKIN
+BUTTERFREE,BUG,FLYING,COMPOUND EYES
+WEEDLE,BUG,POISON,SHIELD DUST
+KAKUNA,BUG,POISON,SHED SKIN
+BEEDRILL,BUG,POISON,SWARM
+PIDGEY,NORMAL,FLYING,KEEN EYE
+PIDGEOTTO,NORMAL,FLYING,KEEN EYE
+PIDGEOT,NORMAL,FLYING,KEEN EYE
+RATTATA,NORMAL,NONE,RUN AWAY
+RATICATE,NORMAL,NONE,RUN AWAY
+SPEAROW,NORMAL,FLYING,KEEN EYE
+FEAROW,NORMAL,FLYING,KEEN EYE
+EKANS,POISON,NONE,INTIMIDATE
+ARBOK,POISON,NONE,INTIMIDATE
+PIKACHU,ELECTRIC,NONE,STATIC
+RAICHU,ELECTRIC,NONE,STATIC
+SANDSHREW,GROUND,NONE,SAND VEIL
+SANDSLASH,GROUND,NONE,SAND VEIL
+NIDORAN FEMALE,POISON,NONE,POISON POINT
+NIDORINA,POISON,NONE,POISON POINT
+NIDOQUEEN,POISON,GROUND,POISON POINT
+NIDORAN MALE,POISON,NONE,POISON POINT
+NIDORINO,POISON,NONE,POISON POINT
+NIDOKING,POISON,GROUND,POISON POINT
+CLEFAIRY,FAIRY,NONE,CUTE CHARM
+CLEFABLE,FAIRY,NONE,CUTE CHARM
+VULPIX,FIRE,NONE,FLASH FIRE
+NINETALES,FIRE,NONE,FLASH FIRE
+JIGGLYPUFF,NORMAL,FAIRY,CUTE CHARM
+WIGGLYTUFF,NORMAL,FAIRY,CUTE CHARM
+ZUBAT,POISON,FLYING,INNER FOCUS
+GOLBAT,POISON,FLYING,INNER FOCUS
+ODDISH,GRASS,POISON,CHLOROPHYLL
+GLOOM,GRASS,POISON,CHLOROPHYLL
+VILEPLUME,GRASS,POISON,CHLOROPHYLL
+PARAS,BUG,GRASS,EFFECT SPORE
+PARASECT,BUG,GRASS,EFFECT SPORE
+VENONAT,BUG,POISON,COMPOUND EYES
+VENOMOTH,BUG,POISON,SHIELD DUST
+DIGLETT,GROUND,NONE,SAND VEIL
+DUGTRIO,GROUND,NONE,SAND VEIL
+MEOWTH,NORMAL,NONE,PICKUP
+PERSIAN,NORMAL,NONE,LIMBER
+PSYDUCK,WATER,NONE,DAMP
+GOLDUCK,WATER,NONE,DAMP
+MANKEY,FIGHTING,NONE,VITAL SPIRIT
+PRIMEAPE,FIGHTING,NONE,VITAL SPIRIT
+GROWLITHE,FIRE,NONE,INTIMIDATE
+ARCANINE,FIRE,NONE,INTIMIDATE
+POLIWAG,WATER,NONE,WATER ABSORB
+POLIWHIRL,WATER,NONE,WATER ABSORB
+POLIWRATH,WATER,FIGHTING,WATER ABSORB
+ABRA,PSYCHIC,NONE,SYNCHRONIZE
+KADABRA,PSYCHIC,NONE,SYNCHRONIZE
+ALAKAZAM,PSYCHIC,NONE,SYNCHRONIZE
+MACHOP,FIGHTING,NONE,GUTS
+MACHOKE,FIGHTING,NONE,GUTS
+MACHAMP,FIGHTING,NONE,GUTS
+BELLSPROUT,GRASS,POISON,CHLOROPHYLL
+WEEPINBELL,GRASS,POISON,CHLOROPHYLL
+VICTREEBEL,GRASS,POISON,CHLOROPHYLL
+TENTACOOL,WATER,POISON,CLEAR BODY
+TENTACRUEL,WATER,POISON,CLEAR BODY
+GEODUDE,ROCK,GROUND,ROCK HEAD
+GRAVELER,ROCK,GROUND,ROCK HEAD
+GOLEM,ROCK,GROUND,ROCK HEAD
+PONYTA,FIRE,NONE,RUN AWAY
+RAPIDASH,FIRE,NONE,RUN AWAY
+SLOWPOKE,WATER,PSYCHIC,OBLIVIOUS
+SLOWBRO,WATER,PSYCHIC,OBLIVIOUS
+MAGNEMITE,ELECTRIC,STEEL,MAGNET PULL
+MAGNETON,ELECTRIC,STEEL,MAGNET PULL
+FARFETCH'D,NORMAL,FLYING,KEEN EYE
+DODUO,NORMAL,FLYING,RUN AWAY
+DODRIO,NORMAL,FLYING,RUN AWAY
+SEEL,WATER,NONE,THICK FAT
+DEWGONG,WATER,ICE,THICK FAT
+GRIMER,POISON,NONE,STENCH
+MUK,POISON,NONE,STENCH
+SHELLDER,WATER,NONE,SHELL ARMOR
+CLOYSTER,WATER,ICE,SHELL ARMOR
+GASTLY,GHOST,POISON,LEVITATE
+HAUNTER,GHOST,POISON,LEVITATE
+GENGAR,GHOST,POISON,CURSED BODY
+ONIX,ROCK,GROUND,ROCK HEAD
+DROWZEE,PSYCHIC,NONE,INSOMNIA
+HYPNO,PSYCHIC,NONE,INSOMNIA
+KRABBY,WATER,NONE,HYPER CUTTER
+KINGLER,WATER,NONE,HYPER CUTTER
+VOLTORB,ELECTRIC,NONE,SOUNDPROOF
+ELECTRODE,ELECTRIC,NONE,SOUNDPROOF
+EXEGGCUTE,GRASS,PSYCHIC,CHLOROPHYLL
+EXEGGUTOR,GRASS,PSYCHIC,CHLOROPHYLL
+CUBONE,GROUND,NONE,ROCK HEAD
+MAROWAK,GROUND,NONE,ROCK HEAD
+HITMONLEE,FIGHTING,NONE,LIMBER
+HITMONCHAN,FIGHTING,NONE,KEEN EYE
+LICKITUNG,NORMAL,NONE,OWN TEMPO
+KOFFING,POISON,NONE,LEVITATE
+WEEZING,POISON,NONE,LEVITATE
+RHYHORN,GROUND,ROCK,LIGHTNING ROD
+RHYDON,GROUND,ROCK,LIGHTNING ROD
+CHANSEY,NORMAL,NONE,NATURAL CURE
+TANGELA,GRASS,NONE,CHLOROPHYLL
+KANGASKHAN,NORMAL,NONE,EARLY BIRD
+HORSEA,WATER,NONE,SWIFT SWIM
+SEADRA,WATER,NONE,POISON POINT
+GOLDEEN,WATER,NONE,SWIFT SWIM
+SEAKING,WATER,NONE,SWIFT SWIM
+STARYU,WATER,NONE,ILLUMINATE
+STARMIE,WATER,PSYCHIC,ILLUMINATE
+MR. MIME,PSYCHIC,FAIRY,SOUNDPROOF
+SCYTHER,BUG,FLYING,SWARM
+JYNX,ICE,PSYCHIC,OBLIVIOUS
+ELECTABUZZ,ELECTRIC,NONE,STATIC
+MAGMAR,FIRE,NONE,FLAME BODY
+PINSIR,BUG,NONE,HYPER CUTTER
+TAUROS,NORMAL,NONE,INTIMIDATE
+MAGIKARP,WATER,NONE,SWIFT SWIM
+GYARADOS,WATER,FLYING,INTIMIDATE
+LAPRAS,WATER,ICE,WATER ABSORB
+DITTO,NORMAL,NONE,LIMBER
+EEVEE,NORMAL,NONE,RUN AWAY
+VAPOREON,WATER,NONE,WATER ABSORB
+JOLTEON,ELECTRIC,NONE,VOLT ABSORB
+FLAREON,FIRE,NONE,FLASH FIRE
+PORYGON,NORMAL,NONE,TRACE
+OMANYTE,ROCK,WATER,SWIFT SWIM
+OMASTAR,ROCK,WATER,SWIFT SWIM
+KABUTO,ROCK,WATER,SWIFT SWIM
+KABUTOPS,ROCK,WATER,SWIFT SWIM
+AERODACTYL,ROCK,FLYING,ROCK HEAD
+SNORLAX,NORMAL,NONE,IMMUNITY
+ARTICUNO,ICE,FLYING,PRESSURE
+ZAPDOS,ELECTRIC,FLYING,PRESSURE
+MOLTRES,FIRE,FLYING,PRESSURE
+DRATINI,DRAGON,NONE,SHED SKIN
+DRAGONAIR,DRAGON,NONE,SHED SKIN
+DRAGONITE,DRAGON,FLYING,INNER FOCUS
+MEWTWO,PSYCHIC,NONE,PRESSURE
+MEW,PSYCHIC,NONE,SYNCHRONIZE
+CHIKORITA,GRASS,NONE,OVERGROW
+BAYLEEF,GRASS,NONE,OVERGROW
+MEGANIUM,GRASS,NONE,OVERGROW
+CYNDAQUIL,FIRE,NONE,BLAZE
+QUILAVA,FIRE,NONE,BLAZE
+TYPHLOSION,FIRE,NONE,BLAZE
+TOTODILE,WATER,NONE,TORRENT
+CROCONAW,WATER,NONE,TORRENT
+FERALIGATR,WATER,NONE,TORRENT
+SENTRET,NORMAL,NONE,RUN AWAY
+FURRET,NORMAL,NONE,RUN AWAY
+HOOTHOOT,NORMAL,FLYING,INSOMNIA
+NOCTOWL,NORMAL,FLYING,INSOMNIA
+LEDYBA,BUG,FLYING,SWARM
+LEDIAN,BUG,FLYING,SWARM
+SPINARAK,BUG,POISON,SWARM
+ARIADOS,BUG,POISON,SWARM
+CROBAT,POISON,FLYING,INNER FOCUS
+CHINCHOU,WATER,ELECTRIC,VOLT ABSORB
+LANTURN,WATER,ELECTRIC,VOLT ABSORB
+PICHU,ELECTRIC,NONE,STATIC
+CLEFFA,FAIRY,NONE,CUTE CHARM
+IGGLYBUFF,NORMAL,FAIRY,CUTE CHARM
+TOGEPI,FAIRY,NONE,HUSTLE
+TOGETIC,FAIRY,FLYING,HUSTLE
+NATU,PSYCHIC,FLYING,SYNCHRONIZE
+XATU,PSYCHIC,FLYING,SYNCHRONIZE
+MAREEP,ELECTRIC,NONE,STATIC
+FLAAFFY,ELECTRIC,NONE,STATIC
+AMPHAROS,ELECTRIC,NONE,STATIC
+BELLOSSOM,GRASS,NONE,CHLOROPHYLL
+MARILL,WATER,FAIRY,THICK FAT
+AZUMARILL,WATER,FAIRY,THICK FAT
+SUDOWOODO,ROCK,NONE,STURDY
+POLITOED,WATER,NONE,WATER ABSORB
+HOPPIP,GRASS,FLYING,CHLOROPHYLL
+SKIPLOOM,GRASS,FLYING,CHLOROPHYLL
+JUMPLUFF,GRASS,FLYING,CHLOROPHYLL
+AIPOM,NORMAL,NONE,RUN AWAY
+SUNKERN,GRASS,NONE,CHLOROPHYLL
+SUNFLORA,GRASS,NONE,CHLOROPHYLL
+YANMA,BUG,FLYING,SPEED BOOST
+WOOPER,WATER,GROUND,DAMP
+QUAGSIRE,WATER,GROUND,DAMP
+ESPEON,PSYCHIC,NONE,SYNCHRONIZE
+UMBREON,DARK,NONE,SYNCHRONIZE
+MURKROW,DARK,FLYING,INSOMNIA
+SLOWKING,WATER,PSYCHIC,OBLIVIOUS
+MISDREAVUS,GHOST,NONE,LEVITATE
+UNOWN,PSYCHIC,NONE,LEVITATE
+WOBBUFFET,PSYCHIC,NONE,SHADOW TAG
+GIRAFARIG,NORMAL,PSYCHIC,INNER FOCUS
+PINECO,BUG,NONE,STURDY
+FORRETRESS,BUG,STEEL,STURDY
+DUNSPARCE,NORMAL,NONE,SERENE GRACE
+GLIGAR,GROUND,FLYING,HYPER CUTTER
+STEELIX,STEEL,GROUND,ROCK HEAD
+SNUBBULL,FAIRY,NONE,INTIMIDATE
+GRANBULL,FAIRY,NONE,INTIMIDATE
+QWILFISH,WATER,POISON,POISON POINT
+SCIZOR,BUG,STEEL,SWARM
+SHUCKLE,BUG,ROCK,STURDY
+HERACROSS,BUG,FIGHTING,SWARM
+SNEASEL,DARK,ICE,INNER FOCUS
+TEDDIURSA,NORMAL,NONE,PICKUP
+URSARING,NORMAL,NONE,GUTS
+SLUGMA,FIRE,NONE,MAGMA ARMOR
+MAGCARGO,FIRE,ROCK,MAGMA ARMOR
+SWINUB,ICE,GROUND,OBLIVIOUS
+PILOSWINE,ICE,GROUND,OBLIVIOUS
+CORSOLA,WATER,ROCK,HUSTLE
+REMORAID,WATER,NONE,HUSTLE
+OCTILLERY,WATER,NONE,SUCTION CUPS
+DELIBIRD,ICE,FLYING,VITAL SPIRIT
+MANTINE,WATER,FLYING,SWIFT SWIM
+SKARMORY,STEEL,FLYING,KEEN EYE
+HOUNDOUR,DARK,FIRE,EARLY BIRD
+HOUNDOOM,DARK,FIRE,EARLY BIRD
+KINGDRA,WATER,DRAGON,SWIFT SWIM
+PHANPY,GROUND,NONE,PICKUP
+DONPHAN,GROUND,NONE,STURDY
+PORYGON2,NORMAL,NONE,TRACE
+STANTLER,NORMAL,NONE,INTIMIDATE
+SMEARGLE,NORMAL,NONE,OWN TEMPO
+TYROGUE,FIGHTING,NONE,GUTS
+HITMONTOP,FIGHTING,NONE,INTIMIDATE
+SMOOCHUM,ICE,PSYCHIC,OBLIVIOUS
+ELEKID,ELECTRIC,NONE,STATIC
+MAGBY,FIRE,NONE,FLAME BODY
+MILTANK,NORMAL,NONE,THICK FAT
+BLISSEY,NORMAL,NONE,NATURAL CURE
+RAIKOU,ELECTRIC,NONE,PRESSURE
+ENTEI,FIRE,NONE,PRESSURE
+SUICUNE,WATER,NONE,PRESSURE
+LARVITAR,ROCK,GROUND,GUTS
+PUPITAR,ROCK,GROUND,SHED SKIN
+TYRANITAR,ROCK,DARK,SAND STREAM
+LUGIA,PSYCHIC,FLYING,PRESSURE
+HO-OH,FIRE,FLYING,PRESSURE
+CELEBI,PSYCHIC,GRASS,NATURAL CURE
+TREECKO,GRASS,NONE,OVERGROW
+GROVYLE,GRASS,NONE,OVERGROW
+SCEPTILE,GRASS,NONE,OVERGROW
+TORCHIC,FIRE,NONE,BLAZE
+COMBUSKEN,FIRE,FIGHTING,BLAZE
+BLAZIKEN,FIRE,FIGHTING,BLAZE
+MUDKIP,WATER,NONE,TORRENT
+MARSHTOMP,WATER,GROUND,TORRENT
+SWAMPERT,WATER,GROUND,TORRENT
+POOCHYENA,DARK,NONE,RUN AWAY
+MIGHTYENA,DARK,NONE,INTIMIDATE
+ZIGZAGOON,NORMAL,NONE,PICKUP
+LINOONE,NORMAL,NONE,PICKUP
+WURMPLE,BUG,NONE,SHIELD DUST
+SILCOON,BUG,NONE,SHED SKIN
+BEAUTIFLY,BUG,FLYING,SWARM
+CASCOON,BUG,NONE,SHED SKIN
+DUSTOX,BUG,POISON,SHIELD DUST
+LOTAD,WATER,GRASS,SWIFT SWIM
+LOMBRE,WATER,GRASS,SWIFT SWIM
+LUDICOLO,WATER,GRASS,SWIFT SWIM
+SEEDOT,GRASS,NONE,CHLOROPHYLL
+NUZLEAF,GRASS,DARK,CHLOROPHYLL
+SHIFTRY,GRASS,DARK,CHLOROPHYLL
+TAILLOW,NORMAL,FLYING,GUTS
+SWELLOW,NORMAL,FLYING,GUTS
+WINGULL,WATER,FLYING,KEEN EYE
+PELIPPER,WATER,FLYING,KEEN EYE
+RALTS,PSYCHIC,FAIRY,SYNCHRONIZE
+KIRLIA,PSYCHIC,FAIRY,SYNCHRONIZE
+GARDEVOIR,PSYCHIC,FAIRY,SYNCHRONIZE
+SURSKIT,BUG,WATER,SWIFT SWIM
+MASQUERAIN,BUG,FLYING,INTIMIDATE
+SHROOMISH,GRASS,NONE,EFFECT SPORE
+BRELOOM,GRASS,FIGHTING,EFFECT SPORE
+SLAKOTH,NORMAL,NONE,TRUANT
+VIGOROTH,NORMAL,NONE,VITAL SPIRIT
+SLAKING,NORMAL,NONE,TRUANT
+NINCADA,BUG,GROUND,COMPOUND EYES
+NINJASK,BUG,FLYING,SPEED BOOST
+SHEDINJA,BUG,GHOST,WONDER GUARD
+WHISMUR,NORMAL,NONE,SOUNDPROOF
+LOUDRED,NORMAL,NONE,SOUNDPROOF
+EXPLOUD,NORMAL,NONE,SOUNDPROOF
+MAKUHITA,FIGHTING,NONE,THICK FAT
+HARIYAMA,FIGHTING,NONE,THICK FAT
+AZURILL,NORMAL,FAIRY,THICK FAT
+NOSEPASS,ROCK,NONE,STURDY
+SKITTY,NORMAL,NONE,CUTE CHARM
+DELCATTY,NORMAL,NONE,CUTE CHARM
+SABLEYE,DARK,GHOST,KEEN EYE
+MAWILE,STEEL,FAIRY,HYPER CUTTER
+ARON,STEEL,ROCK,STURDY
+LAIRON,STEEL,ROCK,STURDY
+AGGRON,STEEL,ROCK,STURDY
+MEDITITE,FIGHTING,PSYCHIC,PURE POWER
+MEDICHAM,FIGHTING,PSYCHIC,PURE POWER
+ELECTRIKE,ELECTRIC,NONE,STATIC
+MANECTRIC,ELECTRIC,NONE,STATIC
+PLUSLE,ELECTRIC,NONE,PLUS
+MINUN,ELECTRIC,NONE,MINUS
+VOLBEAT,BUG,NONE,ILLUMINATE
+ILLUMISE,BUG,NONE,OBLIVIOUS
+ROSELIA,GRASS,POISON,NATURAL CURE
+GULPIN,POISON,NONE,LIQUID OOZE
+SWALOT,POISON,NONE,LIQUID OOZE
+CARVANHA,WATER,DARK,ROUGH SKIN
+SHARPEDO,WATER,DARK,ROUGH SKIN
+WAILMER,WATER,NONE,WATER VEIL
+WAILORD,WATER,NONE,WATER VEIL
+NUMEL,FIRE,GROUND,OBLIVIOUS
+CAMERUPT,FIRE,GROUND,MAGMA ARMOR
+TORKOAL,FIRE,NONE,WHITE SMOKE
+SPOINK,PSYCHIC,NONE,THICK FAT
+GRUMPIG,PSYCHIC,NONE,THICK FAT
+SPINDA,NORMAL,NONE,OWN TEMPO
+TRAPINCH,GROUND,NONE,HYPER CUTTER
+VIBRAVA,GROUND,DRAGON,LEVITATE
+FLYGON,GROUND,DRAGON,LEVITATE
+CACNEA,GRASS,NONE,SAND VEIL
+CACTURNE,GRASS,DARK,SAND VEIL
+SWABLU,NORMAL,FLYING,NATURAL CURE
+ALTARIA,DRAGON,FLYING,NATURAL CURE
+ZANGOOSE,NORMAL,NONE,IMMUNITY
+SEVIPER,POISON,NONE,SHED SKIN
+LUNATONE,ROCK,PSYCHIC,LEVITATE
+SOLROCK,ROCK,PSYCHIC,LEVITATE
+BARBOACH,WATER,GROUND,OBLIVIOUS
+WHISCASH,WATER,GROUND,OBLIVIOUS
+CORPHISH,WATER,NONE,HYPER CUTTER
+CRAWDAUNT,WATER,DARK,HYPER CUTTER
+BALTOY,GROUND,PSYCHIC,LEVITATE
+CLAYDOL,GROUND,PSYCHIC,LEVITATE
+LILEEP,ROCK,GRASS,SUCTION CUPS
+CRADILY,ROCK,GRASS,SUCTION CUPS
+ANORITH,ROCK,BUG,BATTLE ARMOR
+ARMALDO,ROCK,BUG,BATTLE ARMOR
+FEEBAS,WATER,NONE,SWIFT SWIM
+MILOTIC,WATER,NONE,MARVEL SCALE
+CASTFORM,NORMAL,NONE,FORECAST
+KECLEON,NORMAL,NONE,COLOR CHANGE
+SHUPPET,GHOST,NONE,INSOMNIA
+BANETTE,GHOST,NONE,INSOMNIA
+DUSKULL,GHOST,NONE,LEVITATE
+DUSCLOPS,GHOST,NONE,PRESSURE
+TROPIUS,GRASS,FLYING,CHLOROPHYLL
+CHIMECHO,PSYCHIC,NONE,LEVITATE
+ABSOL,DARK,NONE,PRESSURE
+WYNAUT,PSYCHIC,NONE,SHADOW TAG
+SNORUNT,ICE,NONE,INNER FOCUS
+GLALIE,ICE,NONE,INNER FOCUS
+SPHEAL,ICE,WATER,THICK FAT
+SEALEO,ICE,WATER,THICK FAT
+WALREIN,ICE,WATER,THICK FAT
+CLAMPERL,WATER,NONE,SHELL ARMOR
+HUNTAIL,WATER,NONE,SWIFT SWIM
+GOREBYSS,WATER,NONE,SWIFT SWIM
+RELICANTH,WATER,ROCK,SWIFT SWIM
+LUVDISC,WATER,NONE,SWIFT SWIM
+BAGON,DRAGON,NONE,ROCK HEAD
+SHELGON,DRAGON,NONE,ROCK HEAD
+SALAMENCE,DRAGON,FLYING,INTIMIDATE
+BELDUM,STEEL,PSYCHIC,CLEAR BODY
+METANG,STEEL,PSYCHIC,CLEAR BODY
+METAGROSS,STEEL,PSYCHIC,CLEAR BODY
+REGIROCK,ROCK,NONE,CLEAR BODY
+REGICE,ICE,NONE,CLEAR BODY
+REGISTEEL,STEEL,NONE,CLEAR BODY
+LATIAS,DRAGON,PSYCHIC,LEVITATE
+LATIOS,DRAGON,PSYCHIC,LEVITATE
+KYOGRE,WATER,NONE,DRIZZLE
+GROUDON,GROUND,NONE,DROUGHT
+RAYQUAZA,DRAGON,FLYING,AIR LOCK
+JIRACHI,STEEL,PSYCHIC,SERENE GRACE
+DEOXYS,PSYCHIC,NONE,PRESSURE
+TURTWIG,GRASS,NONE,OVERGROW
+GROTLE,GRASS,NONE,OVERGROW
+TORTERRA,GRASS,GROUND,OVERGROW
+CHIMCHAR,FIRE,NONE,BLAZE
+MONFERNO,FIRE,FIGHTING,BLAZE
+INFERNAPE,FIRE,FIGHTING,BLAZE
+PIPLUP,WATER,NONE,TORRENT
+PRINPLUP,WATER,NONE,TORRENT
+EMPOLEON,WATER,STEEL,TORRENT
+STARLY,NORMAL,FLYING,KEEN EYE
+STARAVIA,NORMAL,FLYING,INTIMIDATE
+STARAPTOR,NORMAL,FLYING,INTIMIDATE
+BIDOOF,NORMAL,NONE,SIMPLE
+BIBAREL,NORMAL,WATER,SIMPLE
+KRICKETOT,BUG,NONE,SHED SKIN
+KRICKETUNE,BUG,NONE,SWARM
+SHINX,ELECTRIC,NONE,RIVALRY
+LUXIO,ELECTRIC,NONE,RIVALRY
+LUXRAY,ELECTRIC,NONE,RIVALRY
+BUDEW,GRASS,POISON,NATURAL CURE
+ROSERADE,GRASS,POISON,NATURAL CURE
+CRANIDOS,ROCK,NONE,MOLD BREAKER
+RAMPARDOS,ROCK,NONE,MOLD BREAKER
+SHIELDON,ROCK,STEEL,STURDY
+BASTIODON,ROCK,STEEL,STURDY
+BURMY,BUG,NONE,SHED SKIN
+WORMADAM,BUG,NONE,ANTICIPATION
+MOTHIM,BUG,FLYING,SWARM
+COMBEE,BUG,FLYING,HONEY GATHER
+VESPIQUEN,BUG,FLYING,PRESSURE
+PACHIRISU,ELECTRIC,NONE,RUN AWAY
+BUIZEL,WATER,NONE,SWIFT SWIM
+FLOATZEL,WATER,NONE,SWIFT SWIM
+CHERUBI,GRASS,NONE,CHLOROPHYLL
+CHERRIM,GRASS,NONE,FLOWER GIFT
+SHELLOS,WATER,NONE,STICKY HOLD
+GASTRODON,WATER,GROUND,STICKY HOLD
+AMBIPOM,NORMAL,NONE,TECHNICIAN
+DRIFLOON,GHOST,FLYING,AFTERMATH
+DRIFBLIM,GHOST,FLYING,AFTERMATH
+BUNEARY,NORMAL,NONE,RUN AWAY
+LOPUNNY,NORMAL,NONE,CUTE CHARM
+MISMAGIUS,GHOST,NONE,LEVITATE
+HONCHKROW,DARK,FLYING,INSOMNIA
+GLAMEOW,NORMAL,NONE,LIMBER
+PURUGLY,NORMAL,NONE,THICK FAT
+CHINGLING,PSYCHIC,NONE,LEVITATE
+STUNKY,POISON,DARK,STENCH
+SKUNTANK,POISON,DARK,STENCH
+BRONZOR,STEEL,PSYCHIC,LEVITATE
+BRONZONG,STEEL,PSYCHIC,LEVITATE
+BONSLY,ROCK,NONE,STURDY
+MIME JR.,PSYCHIC,FAIRY,SOUNDPROOF
+HAPPINY,NORMAL,NONE,NATURAL CURE
+CHATOT,NORMAL,FLYING,KEEN EYE
+SPIRITOMB,GHOST,DARK,PRESSURE
+GIBLE,DRAGON,GROUND,SAND VEIL
+GABITE,DRAGON,GROUND,SAND VEIL
+GARCHOMP,DRAGON,GROUND,SAND VEIL
+MUNCHLAX,NORMAL,NONE,PICKUP
+RIOLU,FIGHTING,NONE,STEADFAST
+LUCARIO,FIGHTING,STEEL,STEADFAST
+HIPPOPOTAS,GROUND,NONE,SAND STREAM
+HIPPOWDON,GROUND,NONE,SAND STREAM
+SKORUPI,POISON,BUG,BATTLE ARMOR
+DRAPION,POISON,DARK,BATTLE ARMOR
+CROAGUNK,POISON,FIGHTING,ANTICIPATION
+TOXICROAK,POISON,FIGHTING,ANTICIPATION
+CARNIVINE,GRASS,NONE,LEVITATE
+FINNEON,WATER,NONE,SWIFT SWIM
+LUMINEON,WATER,NONE,SWIFT SWIM
+MANTYKE,WATER,FLYING,SWIFT SWIM
+SNOVER,GRASS,ICE,SNOW WARNING
+ABOMASNOW,GRASS,ICE,SNOW WARNING
+WEAVILE,DARK,ICE,PRESSURE
+MAGNEZONE,ELECTRIC,STEEL,MAGNET PULL
+LICKILICKY,NORMAL,NONE,OWN TEMPO
+RHYPERIOR,GROUND,ROCK,LIGHTNING ROD
+TANGROWTH,GRASS,NONE,CHLOROPHYLL
+ELECTIVIRE,ELECTRIC,NONE,MOTOR DRIVE
+MAGMORTAR,FIRE,NONE,FLAME BODY
+TOGEKISS,FAIRY,FLYING,HUSTLE
+YANMEGA,BUG,FLYING,SPEED BOOST
+LEAFEON,GRASS,NONE,LEAF GUARD
+GLACEON,ICE,NONE,SNOW CLOAK
+GLISCOR,GROUND,FLYING,HYPER CUTTER
+MAMOSWINE,ICE,GROUND,OBLIVIOUS
+PORYGON-Z,NORMAL,NONE,ADAPTABILITY
+GALLADE,PSYCHIC,FIGHTING,STEADFAST
+PROBOPASS,ROCK,STEEL,STURDY
+DUSKNOIR,GHOST,NONE,PRESSURE
+FROSLASS,ICE,GHOST,SNOW CLOAK
+ROTOM,ELECTRIC,GHOST,LEVITATE
+UXIE,PSYCHIC,NONE,LEVITATE
+MESPRIT,PSYCHIC,NONE,LEVITATE
+AZELF,PSYCHIC,NONE,LEVITATE
+DIALGA,STEEL,DRAGON,PRESSURE
+PALKIA,WATER,DRAGON,PRESSURE
+HEATRAN,FIRE,STEEL,FLASH FIRE
+REGIGIGAS,NORMAL,NONE,SLOW START
+GIRATINA,GHOST,DRAGON,PRESSURE
+CRESSELIA,PSYCHIC,NONE,LEVITATE
+PHIONE,WATER,NONE,HYDRATION
+MANAPHY,WATER,NONE,HYDRATION
+DARKRAI,DARK,NONE,BAD DREAMS
+SHAYMIN,GRASS,NONE,NATURAL CURE
+ARCEUS,NORMAL,NONE,MULTITYPE
+VICTINI,PSYCHIC,FIRE,VICTORY STAR
+SNIVY,GRASS,NONE,OVERGROW
+SERVINE,GRASS,NONE,OVERGROW
+SERPERIOR,GRASS,NONE,OVERGROW
+TEPIG,FIRE,NONE,BLAZE
+PIGNITE,FIRE,FIGHTING,BLAZE
+EMBOAR,FIRE,FIGHTING,BLAZE
+OSHAWOTT,WATER,NONE,TORRENT
+DEWOTT,WATER,NONE,TORRENT
+SAMUROTT,WATER,NONE,TORRENT
+PATRAT,NORMAL,NONE,RUN AWAY
+WATCHOG,NORMAL,NONE,ILLUMINATE
+LILLIPUP,NORMAL,NONE,VITAL SPIRIT
+HERDIER,NORMAL,NONE,INTIMIDATE
+STOUTLAND,NORMAL,NONE,INTIMIDATE
+PURRLOIN,DARK,NONE,LIMBER
+LIEPARD,DARK,NONE,LIMBER
+PANSAGE,GRASS,NONE,GLUTTONY
+SIMISAGE,GRASS,NONE,GLUTTONY
+PANSEAR,FIRE,NONE,GLUTTONY
+SIMISEAR,FIRE,NONE,GLUTTONY
+PANPOUR,WATER,NONE,GLUTTONY
+SIMIPOUR,WATER,NONE,GLUTTONY
+MUNNA,PSYCHIC,NONE,FOREWARN
+MUSHARNA,PSYCHIC,NONE,FOREWARN
+PIDOVE,NORMAL,FLYING,BIG PECKS
+TRANQUILL,NORMAL,FLYING,BIG PECKS
+UNFEZANT,NORMAL,FLYING,BIG PECKS
+BLITZLE,ELECTRIC,NONE,LIGHTNING ROD
+ZEBSTRIKA,ELECTRIC,NONE,LIGHTNING ROD
+ROGGENROLA,ROCK,NONE,STURDY
+BOLDORE,ROCK,NONE,STURDY
+GIGALITH,ROCK,NONE,STURDY
+WOOBAT,PSYCHIC,FLYING,UNAWARE
+SWOOBAT,PSYCHIC,FLYING,UNAWARE
+DRILBUR,GROUND,NONE,SAND RUSH
+EXCADRILL,GROUND,STEEL,SAND RUSH
+AUDINO,NORMAL,NONE,HEALER
+TIMBURR,FIGHTING,NONE,GUTS
+GURDURR,FIGHTING,NONE,GUTS
+CONKELDURR,FIGHTING,NONE,GUTS
+TYMPOLE,WATER,NONE,SWIFT SWIM
+PALPITOAD,WATER,GROUND,SWIFT SWIM
+SEISMITOAD,WATER,GROUND,SWIFT SWIM
+THROH,FIGHTING,NONE,GUTS
+SAWK,FIGHTING,NONE,STURDY
+SEWADDLE,BUG,GRASS,SWARM
+SWADLOON,BUG,GRASS,LEAF GUARD
+LEAVANNY,BUG,GRASS,SWARM
+VENIPEDE,BUG,POISON,POISON POINT
+WHIRLIPEDE,BUG,POISON,POISON POINT
+SCOLIPEDE,BUG,POISON,POISON POINT
+COTTONEE,GRASS,FAIRY,PRANKSTER
+WHIMSICOTT,GRASS,FAIRY,PRANKSTER
+PETILIL,GRASS,NONE,CHLOROPHYLL
+LILLIGANT,GRASS,NONE,CHLOROPHYLL
+BASCULIN,WATER,NONE,RECKLESS
+SANDILE,GROUND,DARK,INTIMIDATE
+KROKOROK,GROUND,DARK,INTIMIDATE
+KROOKODILE,GROUND,DARK,INTIMIDATE
+DARUMAKA,FIRE,NONE,HUSTLE
+DARMANITAN,FIRE,NONE,SHEER FORCE
+MARACTUS,GRASS,NONE,WATER ABSORB
+DWEBBLE,BUG,ROCK,STURDY
+CRUSTLE,BUG,ROCK,STURDY
+SCRAGGY,DARK,FIGHTING,SHED SKIN
+SCRAFTY,DARK,FIGHTING,SHED SKIN
+SIGILYPH,PSYCHIC,FLYING,WONDER SKIN
+YAMASK,GHOST,NONE,MUMMY
+COFAGRIGUS,GHOST,NONE,MUMMY
+TIRTOUGA,WATER,ROCK,SOLID ROCK
+CARRACOSTA,WATER,ROCK,SOLID ROCK
+ARCHEN,ROCK,FLYING,DEFEATIST
+ARCHEOPS,ROCK,FLYING,DEFEATIST
+TRUBBISH,POISON,NONE,STENCH
+GARBODOR,POISON,NONE,STENCH
+ZORUA,DARK,NONE,ILLUSION
+ZOROARK,DARK,NONE,ILLUSION
+MINCCINO,NORMAL,NONE,CUTE CHARM
+CINCCINO,NORMAL,NONE,CUTE CHARM
+GOTHITA,PSYCHIC,NONE,FRISK
+GOTHORITA,PSYCHIC,NONE,FRISK
+GOTHITELLE,PSYCHIC,NONE,FRISK
+SOLOSIS,PSYCHIC,NONE,OVERCOAT
+DUOSION,PSYCHIC,NONE,OVERCOAT
+REUNICLUS,PSYCHIC,NONE,OVERCOAT
+DUCKLETT,WATER,FLYING,KEEN EYE
+SWANNA,WATER,FLYING,KEEN EYE
+VANILLITE,ICE,NONE,ICE BODY
+VANILLISH,ICE,NONE,ICE BODY
+VANILLUXE,ICE,NONE,ICE BODY
+DEERLING,NORMAL,GRASS,CHLOROPHYLL
+SAWSBUCK,NORMAL,GRASS,CHLOROPHYLL
+EMOLGA,ELECTRIC,FLYING,STATIC
+KARRABLAST,BUG,NONE,SWARM
+ESCAVALIER,BUG,STEEL,SWARM
+FOONGUS,GRASS,POISON,EFFECT SPORE
+AMOONGUSS,GRASS,POISON,EFFECT SPORE
+FRILLISH,WATER,GHOST,WATER ABSORB
+JELLICENT,WATER,GHOST,WATER ABSORB
+ALOMOMOLA,WATER,NONE,HEALER
+JOLTIK,BUG,ELECTRIC,COMPOUND EYES
+GALVANTULA,BUG,ELECTRIC,COMPOUND EYES
+FERROSEED,GRASS,STEEL,IRON BARBS
+FERROTHORN,GRASS,STEEL,IRON BARBS
+KLINK,STEEL,NONE,PLUS
+KLANG,STEEL,NONE,PLUS
+KLINKLANG,STEEL,NONE,PLUS
+TYNAMO,ELECTRIC,NONE,LEVITATE
+EELEKTRIK,ELECTRIC,NONE,LEVITATE
+EELEKTROSS,ELECTRIC,NONE,LEVITATE
+ELGYEM,PSYCHIC,NONE,TELEPATHY
+BEHEEYEM,PSYCHIC,NONE,TELEPATHY
+LITWICK,GHOST,FIRE,FLASH FIRE
+LAMPENT,GHOST,FIRE,FLASH FIRE
+CHANDELURE,GHOST,FIRE,FLASH FIRE
+AXEW,DRAGON,NONE,RIVALRY
+FRAXURE,DRAGON,NONE,RIVALRY
+HAXORUS,DRAGON,NONE,RIVALRY
+CUBCHOO,ICE,NONE,SNOW CLOAK
+BEARTIC,ICE,NONE,SNOW CLOAK
+CRYOGONAL,ICE,NONE,LEVITATE
+SHELMET,BUG,NONE,HYDRATION
+ACCELGOR,BUG,NONE,HYDRATION
+STUNFISK,GROUND,ELECTRIC,STATIC
+MIENFOO,FIGHTING,NONE,INNER FOCUS
+MIENSHAO,FIGHTING,NONE,INNER FOCUS
+DRUDDIGON,DRAGON,NONE,ROUGH SKIN
+GOLETT,GROUND,GHOST,IRON FIST
+GOLURK,GROUND,GHOST,IRON FIST
+PAWNIARD,DARK,STEEL,DEFIANT
+BISHARP,DARK,STEEL,DEFIANT
+BOUFFALANT,NORMAL,NONE,RECKLESS
+RUFFLET,NORMAL,FLYING,KEEN EYE
+BRAVIARY,NORMAL,FLYING,KEEN EYE
+VULLABY,DARK,FLYING,BIG PECKS
+MANDIBUZZ,DARK,FLYING,BIG PECKS
+HEATMOR,FIRE,NONE,GLUTTONY
+DURANT,BUG,STEEL,SWARM
+DEINO,DARK,DRAGON,HUSTLE
+ZWEILOUS,DARK,DRAGON,HUSTLE
+HYDREIGON,DARK,DRAGON,LEVITATE
+LARVESTA,BUG,FIRE,FLAME BODY
+VOLCARONA,BUG,FIRE,FLAME BODY
+COBALION,STEEL,FIGHTING,JUSTIFIED
+TERRAKION,ROCK,FIGHTING,JUSTIFIED
+VIRIZION,GRASS,FIGHTING,JUSTIFIED
+TORNADUS,FLYING,NONE,PRANKSTER
+THUNDURUS,ELECTRIC,FLYING,PRANKSTER
+RESHIRAM,DRAGON,FIRE,TURBOBLAZE
+ZEKROM,DRAGON,ELECTRIC,TERAVOLT
+LANDORUS,GROUND,FLYING,SAND FORCE
+KYUREM,DRAGON,ICE,PRESSURE
+KELDEO,WATER,FIGHTING,JUSTIFIED
+MELOETTA,NORMAL,NONE,SERENE GRACE
+GENESECT,BUG,STEEL,DOWNLOAD
+CHESPIN,GRASS,NONE,OVERGROW
+QUILLADIN,GRASS,NONE,OVERGROW
+CHESNAUGHT,GRASS,FIGHTING,OVERGROW
+FENNEKIN,FIRE,NONE,BLAZE
+BRAIXEN,FIRE,NONE,BLAZE
+DELPHOX,FIRE,PSYCHIC,BLAZE
+FROAKIE,WATER,NONE,TORRENT
+FROGADIER,WATER,NONE,TORRENT
+GRENINJA,WATER,DARK,TORRENT
+BUNNELBY,NORMAL,NONE,PICKUP
+DIGGERSBY,NORMAL,GROUND,PICKUP
+FLETCHLING,NORMAL,FLYING,BIG PECKS
+FLETCHINDER,FIRE,FLYING,FLAME BODY
+TALONFLAME,FIRE,FLYING,FLAME BODY
+SCATTERBUG,BUG,NONE,SHIELD DUST
+SPEWPA,BUG,NONE,SHED SKIN
+VIVILLON,BUG,FLYING,SHIELD DUST
+LITLEO,FIRE,NORMAL,RIVALRY
+PYROAR,FIRE,NORMAL,RIVALRY
+FLABÉBÉ,FAIRY,NONE,FLOWER VEIL
+FLOETTE,FAIRY,NONE,FLOWER VEIL
+FLORGES,FAIRY,NONE,FLOWER VEIL
+SKIDDO,GRASS,NONE,SAP SIPPER
+GOGOAT,GRASS,NONE,SAP SIPPER
+PANCHAM,FIGHTING,NONE,IRON FIST
+PANGORO,FIGHTING,DARK,IRON FIST
+FURFROU,NORMAL,NONE,FUR COAT
+ESPURR,PSYCHIC,NONE,KEEN EYE
+MEOWSTIC,PSYCHIC,NONE,KEEN EYE
+HONEDGE,STEEL,GHOST,NO GUARD
+DOUBLADE,STEEL,GHOST,NO GUARD
+AEGISLASH,STEEL,GHOST,STANCE CHANGE
+SPRITZEE,FAIRY,NONE,HEALER
+AROMATISSE,FAIRY,NONE,HEALER
+SWIRLIX,FAIRY,NONE,SWEET VEIL
+SLURPUFF,FAIRY,NONE,SWEET VEIL
+INKAY,DARK,PSYCHIC,CONTRARY
+MALAMAR,DARK,PSYCHIC,CONTRARY
+BINACLE,ROCK,WATER,SNIPER
+BARBARACLE,ROCK,WATER,SNIPER
+SKRELP,POISON,WATER,POISON POINT
+DRAGALGE,POISON,DRAGON,POISON POINT
+CLAUNCHER,WATER,NONE,MEGA LAUNCHER
+CLAWITZER,WATER,NONE,MEGA LAUNCHER
+HELIOPTILE,ELECTRIC,NORMAL,DRY SKIN
+HELIOLISK,ELECTRIC,NORMAL,DRY SKIN
+TYRUNT,ROCK,DRAGON,STRONG JAW
+TYRANTRUM,ROCK,DRAGON,STRONG JAW
+AMAURA,ROCK,ICE,REFRIGERATE
+AURORUS,ROCK,ICE,REFRIGERATE
+SYLVEON,FAIRY,NONE,CUTE CHARM
+HAWLUCHA,FIGHTING,FLYING,LIMBER
+DEDENNE,ELECTRIC,FAIRY,CHEEK POUCH
+CARBINK,ROCK,FAIRY,CLEAR BODY
+GOOMY,DRAGON,NONE,SAP SIPPER
+SLIGGOO,DRAGON,NONE,SAP SIPPER
+GOODRA,DRAGON,NONE,SAP SIPPER
+KLEFKI,STEEL,FAIRY,PRANKSTER
+PHANTUMP,GHOST,GRASS,NATURAL CURE
+TREVENANT,GHOST,GRASS,NATURAL CURE
+PUMPKABOO,GHOST,GRASS,PICKUP
+GOURGEIST,GHOST,GRASS,PICKUP
+BERGMITE,ICE,NONE,OWN TEMPO
+AVALUGG,ICE,NONE,OWN TEMPO
+NOIBAT,FLYING,DRAGON,FRISK
+NOIVERN,FLYING,DRAGON,FRISK
+XERNEAS,FAIRY,NONE,FAIRY AURA
+YVELTAL,DARK,FLYING,DARK AURA
+ZYGARDE,DRAGON,GROUND,AURA BREAK
+DIANCIE,ROCK,FAIRY,CLEAR BODY
+HOOPAHOOPA,PSYCHIC,NONE,MAGICIAN
+VOLCANION,FIRE,WATER,WATER ABSORB
