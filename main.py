@@ -29,7 +29,7 @@ def viewAllPkmnByType(mysql_cur, type_name):
     mysql_cur.execute(f"SELECT * FROM Pokedex WHERE type_one = {type_name} OR type_two = {type_name}")
     result = mysql_cur.fetchall()
     for pkmn in result:
-        print(f"Dex Number: {result[counter][0]}\nName: {result[counter][1]}\nType(s): {result[counter][2]}/{result[counter][3]}\n)
+        print(f"Dex Number: {result[counter][0]}\nName: {result[counter][1]}\nType(s): {result[counter][2]}/{result[counter][3]}\n")
         counter += 1
 
 def searchPkmnByDex(mysql_cur, dex_num):
@@ -154,7 +154,7 @@ def readData():
                         print(serchPkmnByDex(mysql_cur, dexNum))
                     except:
                         print("ERROR. Invalid Pokédex Number.")
-                elif (inputSelection == '3')
+                elif (inputSelection == '3'):
                     print("Returning to previous menu..\n")
                 else:
                     print("\nERROR. Invalid input.")
