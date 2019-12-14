@@ -109,7 +109,7 @@ def deleteAbilityByID(mysql_cur, ability_name):
 
 
 # CRUD FUNCTIONS
-def readData():
+def readData(mysql_cur):
     readingData = True
     while (readingData):
         print("\nThe following data is viewable:")
@@ -177,7 +177,7 @@ def readData():
         else:
             print("\nERROR. Invalid input.")
 
-def createData():
+def createData(mysql_cur):
     addingData = True
     while (addingData):
         print("\nThe following data is creatable:")
@@ -238,7 +238,7 @@ def createData():
         else:
             print("ERROR. Invalid input.")
 
-def updateData():
+def updateData(mysql_cur):
     updatingData = True
     while (updatingData):
         print("\nThe following data is updatable: ")
@@ -325,7 +325,7 @@ def updateData():
         else:
             print("\nERROR. Invalid input.")
 
-def deleteData():
+def deleteData(mysql_cur):
     deletingData = True
     while (deletingData):
         print("\nThe following data is deletable?")
@@ -402,13 +402,13 @@ def main():
         inputSelection = input("\nEnter an option: ")
 
         if (inputSelection == '1'):
-            readData()
+            readData(mysql_cur)
         elif (inputSelection == '2'):
-            createData()                            #IMPLEMENTED WITHOUT ERROR HANDLING
+            createData(mysql_cur)
         elif (inputSelection == '3'):
-            updateData()                            #IMPLEMENTED WITHOUT ERROR HANDLING
+            updateData(mysql_cur)
         elif (inputSelection == '4'):
-            deleteData()                            #IMPLEMENTED WITHOUT ERROR HANDLING
+            deleteData(mysql_cur)
         elif (inputSelection == '5'):
             print("\nThank you for using The Pokémon Database! Now exiting...\n")
             isRunning = False
