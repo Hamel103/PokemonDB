@@ -372,6 +372,13 @@ def deleteData(mysql_conn, mysql_cur):
                 print(f"SUCCESS. Ability {abilityName.upper()} has been deleted.")
             except:
                 print("ERROR. Invalid Ability.")
+                
+        elif (inputSelection == '4'):
+            print("Returning to previous menu..\n")
+            updatingData = False
+
+        else:
+            print("\nERROR. Invalid input.")
 
 
 # MAIN FUNCTION
