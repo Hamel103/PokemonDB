@@ -24,16 +24,6 @@ def viewAllPokemon(mysql_cur):
         print(f"Dex Number: {result[counter][0]}\nName: {result[counter][1]}\nType(s): {result[counter][2]}/{result[counter][3]}\n")
         counter += 1
 
-def searchPkmnByName(mysql_cur, pokemon_name):
-    mysql_cur.execute(f"SELECT * FROM Pokemon WHERE pokemon_name = '{pokemon_name}'")
-    result = mysql_cur.fetchone()
-    return f"Dex Number: {result[0][0]}\nName: {result[0][1]}\nType(s): {result[0][2]}/{result[0][3]}\nAbility: {result[0][3]}\nCan Mega Evolve: {result[0][4]}\nHas Gigantimax Form: {result[0][5]}\n"
-
-def searchPkmnByDex(mysql_cur, dex_num):
-    mysql_cur.execute(f"SELECT * FROM Pokemon WHERE dex_num = {dex_num}")
-    result = mysql_cur.fetchone()
-    return f"Dex Number: {result[0][0]}\nName: {result[0][1]}\nType(s): {result[0][2]}/{result[0][3]}\nAbility: {result[0][3]}\nCan Mega Evolve: {result[0][4]}\nHas Gigantimax Form: {result[0][5]}\n"
-
 def viewAllPkmnByType(mysql_cur, type_name):
     counter = 0
     mysql_cur.execute(f"SELECT * FROM Pokedex WHERE type_one = {type_name} OR type_two = {type_name}")
@@ -41,6 +31,21 @@ def viewAllPkmnByType(mysql_cur, type_name):
     for pkmn in result:
         print(f"Dex Number: {result[counter][0]}\nName: {result[counter][1]}\nType(s): {result[counter][2]}/{result[counter][3]}\n)
         counter += 1
+
+def searchPkmnByDex(mysql_cur, dex_num):
+    mysql_cur.execute(f"SELECT * FROM Pokedex WHERE dex_num = {dex_num}")
+    result = mysql_cur.fetchone()
+    mysql_cur.execute(f"SELECT * FROM Pokemon WHERE name = '{result[0][1]}'")
+    result2 = mysql_cur.fetchone()
+    return f"Dex Number: {result[0][0]}\nName: {result[0][1]}\nType(s): {result[0][2]}/{result[0][3]}\nAbility: {result[0][3]}\nCan Mega Evolve: {result2[0][1]}\nHas Gigantimax Form: {result2[0][2]}\n"
+
+def searchPkmnByName(mysql_cur, pokemon_name):
+    mysql_cur.execute(f"SELECT * FROM Pokedex WHERE pokemon_name = '{pokemon_name}'")
+    result = mysql_cur.fetchone()
+    mysql_cur.execute(f"SELECT * FROM Pokemon WHERE pokemon_name = '{pokemon_name}'")
+    result2 = mysql_cur.fetchone()
+    return f"Dex Number: {result[0][0]}\nName: {result[0][1]}\nType(s): {result[0][2]}/{result[0][3]}\nAbility: {result[0][3]}\nCan Mega Evolve: {result2[0][1]}\nHas Gigantimax Form: {result2[0][2]}\n"
+
 
 def viewAllTypes(mysql_cur):
     counter = 0
@@ -59,53 +64,49 @@ def viewAllAbilities(mysql_cur):
         counter += 1
 
 #SQL CREATE FUNCTIONS: NEED TO ADD ABILITY AND MOVES TO POKEMON CREATION
-def createPokemon(mysql_cur, pokemon_name, pokemon_typeone, pokemon_typetwo, pokemon_ability):
-    mysql_cur.execute(f"INSERT INTO Pokemon VALUES ('{pokemon_name}', {pokemon_typeone}, '{pokemon_typetwo}', '{pokemon_ability}')")
-    #mysql_cur.execute(f"INSERT INTO PokemonAbilities VALUES ()")
+def createPokemon(mysql_cur, pokemon_name, has_mega, has_gmax, pokemon_typeone, pokemon_typetwo, pokemon_ability):
+    mysql_cur.execute(f"INSERT INTO Pokemon VALUES ('{pokemon_name}', '{has_mega}', '{has_gmax}')")
+    mysql_cur.execute(f"INSERT INTO Pokedex VALUES('{pokemon_name}', {pokemon_typeone}, '{pokemon_typetwo}', '{pokemon_ability}')")
 
-def createType(mysql_cur, type_name):
-    mysql_cur.execute(f"INSERT INTO Type VALUES ('{type_name}')")
+def createType(mysql_cur, type_name, advantages, disadvantages):
+    mysql_cur.execute(f"INSERT INTO Type VALUES ('{type_name}', '{advantages}', '{disadvantages}')")
 
-def createAbility(mysql_cur, abilities_name):
-    mysql_cur.execute(f"INSERT INTO Abilities VALUES ('{abilities_name}')")
+def createAbility(mysql_cur, ability_name, description):
+    mysql_cur.execute(f"INSERT INTO Abilities VALUES ('{ability_name}', '{description}')")
 
 # SQL UPDATE FUNCTIONS
 def updatePkmnName(mysql_cur, old_pokemon_name, new_pokemon_name):
-    mysql_cur.execute(f"UPDATE Pokemon SET pokemon_name = {new_pokemon_name} WHERE pokemon_name = '{old_pokemon_name}'")
+    mysql_cur.execute(f"UPDATE Pokemon SET name = {new_pokemon_name} WHERE name = '{old_pokemon_name}'")
 
 def updatePkmnTypeOne(mysql_cur, pokemon_name, new_pokemon_typeone):
-    mysql_cur.execute(f"UPDATE Pokemon SET pokemon_typeone = {new_pokemon_typeone} WHERE pokemon_name = '{pokemon_name}'")
+    mysql_cur.execute(f"UPDATE Pokedex SET type_one = {new_pokemon_typeone} WHERE name = '{pokemon_name}'")
 
 def updatePkmnTypeTwo(mysql_cur, pokemon_name, new_pokemon_typetwo):
-    mysql_cur.execute(f"UPDATE Pokemon SET pokemon_typetwo = {new_pokemon_typetwo} WHERE pokemon_name = '{pokemon_name}'")
+    mysql_cur.execute(f"UPDATE Pokedex SET type_two = {new_pokemon_typetwo} WHERE name = '{pokemon_name}'")
 
 def updatePkmnAbility(mysql_cur, pokemon_ability, new_pokemon_ability):
-    mysql_cur.execute(f"UPDATE Pokemon SET pokemon_ability = {new_pokemon_ability} WHERE pokemon_ability = '{pokemon_ability}'")
+    mysql_cur.execute(f"UPDATE Pokedex SET ability_name = {new_pokemon_ability} WHERE name = '{pokemon_ability}'")
 
 def updateTypeName(mysql_cur, old_type_name, new_type_name):
-    mysql_cur.execute(f"UPDATE Abilities SET type_name = {new_type_name} WHERE type_name = '{old_type_name}'")
+    mysql_cur.execute(f"UPDATE Types SET type_name = {new_type_name} WHERE type_name = '{old_type_name}'")
 
 def updateAbilityName(mysql_cur, old_abilities_name, new_abilities_name):
-    mysql_cur.execute(f"UPDATE Abilities SET abilities_name = {new_abilities_name} WHERE abilities_name = '{old_abilities_name}'")
+    mysql_cur.execute(f"UPDATE Abilities SET ability_name = {new_abilities_name} WHERE ability_name = '{old_abilities_name}'")
 
 #SQL DELETE FUNCTIONS: NEED TO ACCOUNT FOR HOW THESE DELETES IMPACT THE FOREIGN KEYS
 def deletePkmnByID(mysql_cur, pokemon_id):
-    mysql_cur.execute(f"DELETE * FROM Pokemon WHERE pokemon_id = '{pokemon_id}'")
+    mysql_cur.execute(f"DELETE * FROM Pokedex WHERE dex_num = '{pokemon_id}'")
 
 def deletePkmnByName(mysql_cur, pokemon_name):
     mysql_cur.execute(f"DELETE * FROM Pokemon WHERE pokemon_name = '{pokemon_name}'")
 
-def deleteTypeByID(mysql_cur, type_id):
-    mysql_cur.execute(f"DELETE * FROM Type WHERE type_id = '{type_id}'")
-
 def deleteTypeByName(mysql_cur, type_name):
     mysql_cur.execute(f"DELETE * FROM Type WHERE type_name = '{type_name}'")
 
-def deleteAbilityByID(mysql_cur, abilities_id):
-    mysql_cur.execute(f"DELETE * FROM Abilities WHERE abilities_id = '{abilities_id}'")
+def deleteAbilityByID(mysql_cur, ability_name):
+    mysql_cur.execute(f"DELETE * FROM Abilities WHERE ability_name = '{ability_name}'")
 
-def deleteAbilityByName(mysql_cur, abilities_name):
-    mysql_cur.execute(f"DELETE * FROM Abilities WHERE abilities_name = '{abilities_name}'")
+
 
 # CRUD FUNCTIONS
 def readData():
@@ -165,76 +166,72 @@ def readData():
         elif (inputSelection == '2'):
             print("Showing all types..\n\n")
             viewAllTypes(mysql_cur)
+
         elif (inputSelection == '3'):
             print("Showing all abilities..\n\n")
             viewAllAbilities(mysql_cur)
+
         elif (inputSelection == '4'):
             print("Returning to previous menu..\n")
             readingData = False
         else:
             print("\nERROR. Invalid input.")
 
-def addNewData():
+def createData():
     addingData = True
     while (addingData):
-        print("\nWhat data would you like to add?")
+        print("\nThe following data is creatable:")
         print("\n1. New Pokémon")
         print("2. New Type")
-        print("3. New Abilities")
+        print("3. New Ability")
         print("4. Return to previous menu")
-        inputSelection = input("\nPlease select an option: ")
+        inputSelection = input("\nEnter the option number of the data you wish to create: ")
 
         if (inputSelection == '1'):
-            count = 0
-            while (count < 5):
-                exitCreatingPokemon = input("\nType 'y' to cancel: ")
-                if (exitCreatingPokemon == 'y' or exitCreatingPokemon == 'Y'):
-                    break
-                elif (count == 0):
-                    pokeName = input("\nEnter the name of the new Pokemon: ")
-                    count += 1
-                elif (count == 1):
-                    pokeTypeOne = input("\nEnter the Type ID for the Pokemon: ")
-                    count += 1
-                elif (count == 2):
-                    pokeTypeTwo = input("\nEnter the second Type ID for the pokemon (If it does not have one, leave the input empty): ")
-                    count += 1
-                elif (count == 3):
-                    pokeAbility = input("\nEnter the Ability ID for the Pokemon: ")
-                    count += 1
-                elif (count == 4):
-                    createPokemon(mysql_cur, pokeName, pokeTypeOne, pokeTypeTwo, pokeAbility)
-                    count += 1
-                else:
-                    print("ERROR. Invalid input.")
+            name = input("\nEnter a name for the new Pokémon: ")
+            boolInput = input("Can this Pokémon Mega Evolve? (y/n)")
+            if (boolInput.upper() == 'Y'):
+                mega = True
+            else:
+                mega = False
+            boolInput = input("Can this Pokémon Gigantimax? (y/n)")
+            if (boolInput.upper() == 'Y'):
+                gmax = True
+            else:
+                gmax = False
+            typeone = input("Enter a first type for the new Pokémon: ")
+            typetwo = input("Enter a second type for the new Pokémon (If no second type, enter 'NONE'): ")
+            ability = input("Enter an ability name for the new Pokémon: ")
+
+            try:
+                createPokemon(mysql_cur, name.upper(), mega, gmax, typeone.upper(), typetwo.upper(), ability.upper())
+                mysql_conn.commit()
+            except:
+                print("\nERROR. Invalid input during Pokémon creation.")
+
         elif (inputSelection == '2'):
-            count = 0
-            while (count < 2):
-                exitCreatingType = input("\nWould you like to cancel? (y/n)")
-                if (exitCreatingType == 'y' or exitCreatingType == 'Y'):
-                    break
-                elif (count == 0):
-                    typeName = input("\nEnter the name of the new Type: ")
-                    count += 1
-                elif (count == 1):
-                    createType(mysql_cur, typeName)
-                    count += 1
-                else:
-                    print("ERROR. Invalid input.")
+            name = input("Enter a name for the new Type: ")
+            temp = input("Enter the type advantages for the new Type (FORMATTING EXAMPLE: BUG, GHOST, DARK): ")
+            adv = temp.upper()
+            temp = input("Enter the type disadvantages for the new Type (FORMATTING EXAMPLE: BUG, GHOST, DARK): ")
+            disadv = temp.upper()
+
+            try:
+                createType(name.upper(), adv, disadv)
+                mysql_conn.commit()
+            except:
+                print("\nERROR. Invalid input during Type creation.")
+
         elif (inputSelection == '3'):
-            count = 0
-            while (count < 2):
-                exitCreatingAbility = input("\nWould you like to cancel? (y/n)")
-                if (exitCreatingAbility == 'y' or exitCreatingAbility == 'Y'):
-                    break
-                elif (count == 0):
-                    abilityName = input("\nEnter the name of the new ability: ")
-                    count += 1
-                elif (count == 1):
-                    createAbility(mysql_cur, abilityName)
-                    count += 1
-                else:
-                    print("ERROR. Invalid input.")
+            name = input("Enter a name for the new Ability: ")
+            desc = input("Enter a description for the new Ability (100 character MAX): ")
+
+            try:
+                createAbility(name.upper(), desc)
+                mysql_conn.commit()
+            except:
+                print("\nERROR. Invalid input during Ability creation.")
+
         elif (inputSelection == '4'):
             print("Returning to previous menu..\n")
             addingData = False
@@ -244,17 +241,15 @@ def addNewData():
 def updateData():
     updatingData = True
     while (updatingData):
-        print("\nWhat data would you like to update?")
-        print("\n1. Pokemon")
+        print("\nThe following data is updatable: ")
+        print("\n1. Pokémon")
         print("2. Types")
         print("3. Abilities")
         print("4. Return to previous menu")
 
-        inputSelection = input("\nPlease select an option: ")
-
+        inputSelection = input("\nEnter the option of the data you wish to update: ")
         if (inputSelection == '1'):
-            print("First Option Selected")
-            print("\nWhat would you like to update?")
+            print("\nEnter the option of the Pokémon data you wish to update: ")
             print("\n1. Name")
             print("2. First Type")
             print("3. Second Type")
@@ -263,83 +258,83 @@ def updateData():
 
             while (True):
                 inputSelection = input("\nPlease select an option: ")
-
                 if (inputSelection == '1'):
-                    currPokeName = input("\nPlease enter the Pokemon's current name that you would like to change: ")
-                    oldPokeName = input("\nPlease enter the Pokemon's new name: ")
-                    updatePkmnName(mysql_cur, currPokeName, newPokeName)
+                    currPokeName = input("Please enter the Pokemon's current name that you would like to change: ")
+                    oldPokeName = input("Please enter the Pokemon's new name: ")
+                    try:
+                        updatePkmnName(mysql_cur, currPokeName.upper(), newPokeName.upper())
+                        mysql_conn.commit()
+                    except:
+                        print("ERROR. Invalid input.")
                     break
                 elif (inputSelection == '2'):
-                    pokeName = input("\nPlease enter the name of the Pokemon whose type you would like to update: ")
-                    newTypeOne = int(input("\nPlease enter the new Type ID: "))
-                    updatePkmnTypeOne(mysql_cur, pokeName, newTypeOne)
+                    pokeName = input("Please enter the name of the Pokemon whose type you would like to update: ")
+                    newTypeOne = input("Please enter the name of the new Type: ")
+                    try:
+                        updatePkmnTypeOne(mysql_cur, pokeName.upper(), newTypeOne.upper())
+                        mysql_conn.commit()
+                    except:
+                        print("ERROR. Invalid input.")
                     break
                 elif (inputSelection == '3'):
-                    pokeName = input("\nPlease enter the name of the Pokemon whose type you would like to update: ")
-                    newTypeTwo = input("\nPlease enter the new Type ID: ")
-                    updatePkmnTypeTwo(mysql_cur, pokeName, newTypeTwo)
+                    pokeName = input("Please enter the name of the Pokemon whose type you would like to update: ")
+                    newTypeTwo = input("Please enter the name of the new Type: ")
+                    try:
+                        updatePkmnTypeTwo(mysql_cur, pokeName.upper(), newTypeTwo.upper())
+                        mysql_conn.commit()
+                    except:
+                        print("ERROR. Invalid input.")
                     break
                 elif (inputSelection == '4'):
-                    currPokeAbility = input("\nPlease enter the Pokemon's current Ability that you would like to change: ")
-                    oldPokeAbility = input("\nPlease enter the Pokemon's new Ability: ")
-                    updatePkmnAbility(mysql_cur, currPokeAbility, newPokeAbility)
+                    currPokeAbility = input("Please enter the Pokemon's current Ability that you would like to change: ")
+                    oldPokeAbility = input("Please enter the Pokemon's new Ability: ")
+                    try:
+                        updatePkmnAbility(mysql_cur, currPokeAbility.upper(), newPokeAbility.upper())
+                        mysql_conn.commit()
+                    except:
+                        print("ERROR. Invalid input.")
                     break
                 elif (inputSelection == '5'):
                     print("Returning to previous menu..\n")
                     break
                 else:
-                    print("\nThe input given was invalid.")
+                    print("\nERROR. Invalid input.")
+
         elif (inputSelection == '2'):
-            print("\nWhat would you like to update?")
-            print("\n1. Name")
-            print("2. Return to previous menu")
-            while (True):
-                inputSelection = input("\nPlease select an option: ")
+            curTypeName = input("Enter the name of the Type to be updated: ")
+            newTypeName = input(f"Enter a new name for the Type {curTypeName.upper()}: ")
+            try:
+                updateTypeName(mysql_cur, curTypeName.upper(), newTypeName.upper())
+                mysql_conn.commit()
+            except:
+                print("ERROR. Invalid input.")
 
-                if (inputSelection == '1'):
-                    currTypeName = input("\nPlease enter the name of the ability you would like to update: ")
-                    newTypeName = input("\nPlease enter the new name: ")
-                    updateAbilitiesName(mysql_cur, currTypeName, newTypeName)
-                    break
-                elif (inputSelection == '2'):
-                    print("Returning to previous menu..\n")
-                    break
-                else:
-                    print("The input was invalid.")
         elif (inputSelection == '3'):
-            print("\nWhat would you like to update?")
-            print("\n1. Name")
-            print("2. Return to previous menu")
-            while (True):
-                inputSelection = input("\nPlease select an option: ")
+            curAbilityName = input("Enter the name of the Ability to be updated: ")
+            newAbilityName = input(f"Enter the new name for the Ability {curAbilityName.upper()}: ")
+            try:
+                updateAbilityName(mysql_cur, curAbilityName.upper(), newAbilityName.upper())
+                mysql_conn.commit()
+            except:
+                print("ERROR. Invalid input.")
 
-                if (inputSelection == '1'):
-                    currAbilitiesName = input("\nPlease enter the name of the ability you would like to update: ")
-                    newAbilitiesName = input("\nPlease enter the new name: ")
-                    updateAbilitiesName(mysql_cur, currAbilitiesName, newAbilitiesName)
-                    break
-                elif (inputSelection == '2'):
-                    print("Returning to previous menu..\n")
-                    break
-                else:
-                    print("ERROR. Invalid input.")
         elif (inputSelection == 4):
             print("Returning to previous menu..\n")
             updatingData = False
+
         else:
             print("\nERROR. Invalid input.")
 
 def deleteData():
     deletingData = True
     while (deletingData):
-        print("\nWhat data would you like to delete?")
+        print("\nThe following data is deletable?")
         print("\n1. Pokémon")
         print("2. Types")
         print("3. Abilities")
         print("4. Return to previous menu")
 
         inputSelection = input("\nPlease select an option: ")
-
         if (inputSelection == '1'):
             print("\nWould you like to delete by Name or Pokédex Number(ID)?")
             print("1. \nName")
@@ -347,58 +342,44 @@ def deleteData():
             while (True):
                 inputSelection = input("\nPlease select an option: ")
                 if (inputSelection == '1'):
-                    pokeName = input("\nPlease enter the Pokemon's Name: ")
-                    deletePkmnByName(mysql_cur, pokeName)
+                    pokeName = input("\nPlease enter the Pokémon's Name: ")
+                    try:
+                        deletePkmnByName(mysql_cur, pokeName.upper())
+                        mysql_conn.commit()
+                        print(f"SUCCESS. Pokémon {pokeName} has been deleted.")
+                    except:
+                        print("ERROR. Invalid Pokémon name")
                     break
                 elif (inputSelection == '2'):
                     dexNum = input("\nPlease enter the Pokedex Number(ID): ")
-                    print(f"You have deleted '{getPokemonName(mysql_cur, dexNum)}' from the database.")
-                    deletePkmnByID(mysql_cur, dexNum)
+                    try:
+                        deletePkmnByID(mysql_cur, dexNum)
+                        mysql_conn.commit()
+                        print(f"SUCCESS. Pokémon at Pokédex number {dexNum} has been deleted.")
+                    except:
+                        print("ERROR. Invalid Pokédex number.")
                     break
                 else:
                     print("\nERROR. Invalid input.")
+
         elif (inputSelection == '2'):
-            print("\nWould you like to delete by Name or Type ID?")
-            print("\n1. Name")
-            print("2. Type ID")
-            while (True):
-                inputSelection = input("\nPlease select an option: ")
-                if (inputSelection == '1'):
-                    typeName = input("\nPlease enter the Type's Name: ")
-                    deleteTypeByName(mysql_cur, typeName)
-                    break
-                elif (inputSelection == '2'):
-                    typeID = int(input("\nPlease enter the Type ID: "))
-                    print(f"You have deleted '{searchTypeByID(mysql_cur, typeID)}' from the database.")
-                    deleteTypeByID(mysql_cur, typeID)
-                    break
-                else:
-                    print("\nERROR. Invalid input.")
+            typeName = input("\nEnter the name of the Type to be deleted: ")
+            try:
+                deleteTypeByName(mysql_cur, typeName.upper())
+                mysql_conn.commit()
+                print(f"SUCCESS. Type {typeName.upper()} has been deleted.")
+            except:
+                print("ERROR. Invalid Type.")
+
         elif (inputSelection == '3'):
-            print("Third Option Selected")
-            print("\nWould you like to delete by Name or ID Number?")
-            print("\n1. Name")
-            print("2. ID Number")
-            while (True):
-                inputSelection = input("\nPlease select an option: ")
-                if (inputSelection == '1'):
-                    print("First Option Selected")
-                    abilityName = input("\nPlease enter the Ability's Name: ")
-                    deleteAbilityByName(mysql_cur, abilityName)
-                    break
-                elif (inputSelection == '2'):
-                    print("Second Option Selected")
-                    abilityID = input("\nPlease enter the Ability's ID: ")
-                    print(f"You have deleted '{searchAbilityByID(mysql_cur, abilityID)}' from the database.")
-                    deleteAbilityByID(mysql_cur, abilityID)
-                    break
-                else:
-                    print("\nERROR. Invalid input.")
-        elif (inputSelection == '4'):
-            print("Returning to previous menu..\n")
-            deletingData = False
-        else:
-            print("\nERROR. Invalid input.")
+            abilityName = input("\nEnter the name of the Ability to be deleted: ")
+            try:
+                deleteAbilityByName(mysql_cur, abilityName.upper())
+                mysql_conn.commit()
+                print(f"SUCCESS. Ability {abilityName.upper()} has been deleted.")
+            except:
+                print("ERROR. Invalid Ability.")
+
 
 # MAIN FUNCTION
 def main():
@@ -421,9 +402,9 @@ def main():
         inputSelection = input("\nEnter an option: ")
 
         if (inputSelection == '1'):
-            readData()                              #LIMITED IMPLEMENTATION WITHOUT ERROR HANDLING
+            readData()
         elif (inputSelection == '2'):
-            addNewData()                            #IMPLEMENTED WITHOUT ERROR HANDLING
+            createData()                            #IMPLEMENTED WITHOUT ERROR HANDLING
         elif (inputSelection == '3'):
             updateData()                            #IMPLEMENTED WITHOUT ERROR HANDLING
         elif (inputSelection == '4'):
