@@ -59,7 +59,7 @@ def viewAllAbilities(mysql_cur):
 #SQL CREATE FUNCTIONS: NEED TO ADD ABILITY AND MOVES TO POKEMON CREATION
 def createPokemon(mysql_cur, pokemon_name, has_mega, has_gmax, pokemon_typeone, pokemon_typetwo, pokemon_ability):
     mysql_cur.execute(f"INSERT INTO Pokemon VALUES ('{pokemon_name}', '{has_mega}', '{has_gmax}')")
-    mysql_cur.execute(f"INSERT INTO Pokedex VALUES('{pokemon_name}', {pokemon_typeone}, '{pokemon_typetwo}', '{pokemon_ability}')")
+    mysql_cur.execute(f"INSERT INTO Pokedex VALUES('{pokemon_name}', '{pokemon_typeone}', '{pokemon_typetwo}', '{pokemon_ability}')")
 
 def createType(mysql_cur, type_name, advantages, disadvantages):
     mysql_cur.execute(f"INSERT INTO Types VALUES ('{type_name}', '{advantages}', '{disadvantages}')")
@@ -69,22 +69,22 @@ def createAbility(mysql_cur, ability_name, description):
 
 # SQL UPDATE FUNCTIONS
 def updatePkmnName(mysql_cur, old_pokemon_name, new_pokemon_name):
-    mysql_cur.execute(f"UPDATE Pokemon SET name = {new_pokemon_name} WHERE name = '{old_pokemon_name}'")
+    mysql_cur.execute(f"UPDATE Pokemon SET name = '{new_pokemon_name}' WHERE name = '{old_pokemon_name}'")
 
 def updatePkmnTypeOne(mysql_cur, pokemon_name, new_pokemon_typeone):
-    mysql_cur.execute(f"UPDATE Pokedex SET type_one = {new_pokemon_typeone} WHERE name = '{pokemon_name}'")
+    mysql_cur.execute(f"UPDATE Pokedex SET type_one = '{new_pokemon_typeone}' WHERE name = '{pokemon_name}'")
 
 def updatePkmnTypeTwo(mysql_cur, pokemon_name, new_pokemon_typetwo):
-    mysql_cur.execute(f"UPDATE Pokedex SET type_two = {new_pokemon_typetwo} WHERE name = '{pokemon_name}'")
+    mysql_cur.execute(f"UPDATE Pokedex SET type_two = '{new_pokemon_typetwo}' WHERE name = '{pokemon_name}'")
 
 def updatePkmnAbility(mysql_cur, pokemon_ability, new_pokemon_ability):
-    mysql_cur.execute(f"UPDATE Pokedex SET ability_name = {new_pokemon_ability} WHERE name = '{pokemon_ability}'")
+    mysql_cur.execute(f"UPDATE Pokedex SET ability_name = '{new_pokemon_ability}' WHERE name = '{pokemon_ability}'")
 
 def updateTypeName(mysql_cur, old_type_name, new_type_name):
-    mysql_cur.execute(f"UPDATE Types SET type_name = {new_type_name} WHERE type_name = '{old_type_name}'")
+    mysql_cur.execute(f"UPDATE Types SET type_name = '{new_type_name}' WHERE type_name = '{old_type_name}'")
 
 def updateAbilityName(mysql_cur, old_abilities_name, new_abilities_name):
-    mysql_cur.execute(f"UPDATE Abilities SET ability_name = {new_abilities_name} WHERE ability_name = '{old_abilities_name}'")
+    mysql_cur.execute(f"UPDATE Abilities SET ability_name = '{new_abilities_name}' WHERE ability_name = '{old_abilities_name}'")
 
 #SQL DELETE FUNCTIONS: NEED TO ACCOUNT FOR HOW THESE DELETES IMPACT THE FOREIGN KEYS
 def deletePkmnByID(mysql_cur, pokemon_id):
@@ -372,7 +372,7 @@ def deleteData(mysql_conn, mysql_cur):
                 print(f"SUCCESS. Ability {abilityName.upper()} has been deleted.")
             except:
                 print("ERROR. Invalid Ability.")
-                
+
         elif (inputSelection == '4'):
             print("Returning to previous menu..\n")
             updatingData = False
