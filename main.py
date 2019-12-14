@@ -9,12 +9,6 @@ def create_mysql_connection(db_user, db_password, host_name, db_name):
         print("Connection failed..")
     return conn
 
-#SQL GENERAL FUNCTIONS
-def getPokemonName(mysql_cur, pokemon_id):
-    mysql_cur.execute(f"SELECT pokemon_name FROM Pokemon WHERE pokemon_id = '{pokemon_id}'")
-    result = mysql_cur.fetchone()
-    return str(result[0])
-
 # SQL SELECT FUNCTIONS: DONT KNOW IF THESE FOUR WILL WORK PROPERLY; THEY MAY ONLY RETURN A SINGLE ATTRIBUTE INSTEAD OF ALL
 def viewAllPokemon(mysql_cur):
     counter = 0
@@ -46,10 +40,9 @@ def searchPkmnByName(mysql_cur, pokemon_name):
     result2 = mysql_cur.fetchone()
     return f"Dex Number: {result[0][0]}\nName: {result[0][1]}\nType(s): {result[0][2]}/{result[0][3]}\nAbility: {result[0][3]}\nCan Mega Evolve: {result2[0][1]}\nHas Gigantimax Form: {result2[0][2]}\n"
 
-
 def viewAllTypes(mysql_cur):
     counter = 0
-    mysql_cur.execute(f"SELECT * FROM Type")
+    mysql_cur.execute(f"SELECT * FROM Types")
     result = mysql_cur.fetchall()
     for type in result:
         print(f"Type: {result[counter][0]}\nEffective Against: {result[counter][1]}\nWeak Against: {result[counter][2]}\n")
@@ -69,7 +62,7 @@ def createPokemon(mysql_cur, pokemon_name, has_mega, has_gmax, pokemon_typeone, 
     mysql_cur.execute(f"INSERT INTO Pokedex VALUES('{pokemon_name}', {pokemon_typeone}, '{pokemon_typetwo}', '{pokemon_ability}')")
 
 def createType(mysql_cur, type_name, advantages, disadvantages):
-    mysql_cur.execute(f"INSERT INTO Type VALUES ('{type_name}', '{advantages}', '{disadvantages}')")
+    mysql_cur.execute(f"INSERT INTO Types VALUES ('{type_name}', '{advantages}', '{disadvantages}')")
 
 def createAbility(mysql_cur, ability_name, description):
     mysql_cur.execute(f"INSERT INTO Abilities VALUES ('{ability_name}', '{description}')")
@@ -98,10 +91,10 @@ def deletePkmnByID(mysql_cur, pokemon_id):
     mysql_cur.execute(f"DELETE * FROM Pokedex WHERE dex_num = '{pokemon_id}'")
 
 def deletePkmnByName(mysql_cur, pokemon_name):
-    mysql_cur.execute(f"DELETE * FROM Pokemon WHERE pokemon_name = '{pokemon_name}'")
+    mysql_cur.execute(f"DELETE * FROM Pokemon WHERE name = '{pokemon_name}'")
 
 def deleteTypeByName(mysql_cur, type_name):
-    mysql_cur.execute(f"DELETE * FROM Type WHERE type_name = '{type_name}'")
+    mysql_cur.execute(f"DELETE * FROM Types WHERE type_name = '{type_name}'")
 
 def deleteAbilityByID(mysql_cur, ability_name):
     mysql_cur.execute(f"DELETE * FROM Abilities WHERE ability_name = '{ability_name}'")
@@ -145,13 +138,13 @@ def readData(mysql_cur):
                 if (inputSelection == '1'):
                     pkmnName = input("\nEnter the name of the Pokémon you wish to view: ")
                     try:
-                        print(seachPkmnByName(mysql_cur, pkmnName.upper()))
+                        print(searchPkmnByName(mysql_cur, pkmnName.upper()))
                     except:
                         print("ERROR. Invalid Pokémon name.")
                 elif (inputSelection == '2'):
                     dexNum = input("\nEnter the Pokédex Number of the Pokémon you wish to view: ")
                     try:
-                        print(serchPkmnByDex(mysql_cur, dexNum))
+                        print(searchPkmnByDex(mysql_cur, dexNum))
                     except:
                         print("ERROR. Invalid Pokédex Number.")
                 elif (inputSelection == '3'):
@@ -177,7 +170,7 @@ def readData(mysql_cur):
         else:
             print("\nERROR. Invalid input.")
 
-def createData(mysql_cur):
+def createData(mysql_conn, mysql_cur):
     addingData = True
     while (addingData):
         print("\nThe following data is creatable:")
@@ -238,7 +231,7 @@ def createData(mysql_cur):
         else:
             print("ERROR. Invalid input.")
 
-def updateData(mysql_cur):
+def updateData(mysql_conn, mysql_cur):
     updatingData = True
     while (updatingData):
         print("\nThe following data is updatable: ")
@@ -325,7 +318,7 @@ def updateData(mysql_cur):
         else:
             print("\nERROR. Invalid input.")
 
-def deleteData(mysql_cur):
+def deleteData(mysql_conn, mysql_cur):
     deletingData = True
     while (deletingData):
         print("\nThe following data is deletable?")
@@ -404,11 +397,11 @@ def main():
         if (inputSelection == '1'):
             readData(mysql_cur)
         elif (inputSelection == '2'):
-            createData(mysql_cur)
+            createData(mysql_conn, mysql_cur)
         elif (inputSelection == '3'):
-            updateData(mysql_cur)
+            updateData(mysql_conn, mysql_cur)
         elif (inputSelection == '4'):
-            deleteData(mysql_cur)
+            deleteData(mysql_conn, mysql_cur)
         elif (inputSelection == '5'):
             print("\nThank you for using The Pokémon Database! Now exiting...\n")
             isRunning = False
