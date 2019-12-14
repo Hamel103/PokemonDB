@@ -88,16 +88,16 @@ def updateAbilityName(mysql_cur, old_abilities_name, new_abilities_name):
 
 #SQL DELETE FUNCTIONS: NEED TO ACCOUNT FOR HOW THESE DELETES IMPACT THE FOREIGN KEYS
 def deletePkmnByID(mysql_cur, pokemon_id):
-    mysql_cur.execute(f"DELETE * FROM Pokedex WHERE dex_num = '{pokemon_id}'")
+    mysql_cur.execute(f"DELETE FROM Pokedex WHERE dex_num = '{pokemon_id}'")
 
 def deletePkmnByName(mysql_cur, pokemon_name):
-    mysql_cur.execute(f"DELETE * FROM Pokemon WHERE name = '{pokemon_name}'")
+    mysql_cur.execute(f"DELETE FROM Pokemon WHERE name = '{pokemon_name}'")
 
 def deleteTypeByName(mysql_cur, type_name):
-    mysql_cur.execute(f"DELETE * FROM Types WHERE type_name = '{type_name}'")
+    mysql_cur.execute(f"DELETE FROM Types WHERE type_name = '{type_name}'")
 
 def deleteAbilityByID(mysql_cur, ability_name):
-    mysql_cur.execute(f"DELETE * FROM Abilities WHERE ability_name = '{ability_name}'")
+    mysql_cur.execute(f"DELETE FROM Abilities WHERE ability_name = '{ability_name}'")
 
 
 
@@ -375,7 +375,7 @@ def deleteData(mysql_conn, mysql_cur):
 
         elif (inputSelection == '4'):
             print("Returning to previous menu..\n")
-            updatingData = False
+            deletingData = False
 
         else:
             print("\nERROR. Invalid input.")
