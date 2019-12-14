@@ -383,8 +383,8 @@ def deleteData():
 
 # MAIN FUNCTION
 def main():
-    #mysql_conn = create_mysql_connection(db_user='root', db_password='rMxtwa024OfAi7iF', host_name='35.226.194.71', db_name='banking_app')
-    mysql_conn = create_mysql_connection(db_user='root', db_password='password', host_name='104.197.101.227', db_name='PokemonDB')
+    mysql_conn = create_mysql_connection(db_user='root', db_password='rMxtwa024OfAi7iF', host_name='35.226.194.71', db_name='PokemonDB')
+    #mysql_conn = create_mysql_connection(db_user='root', db_password='password', host_name='104.197.101.227', db_name='PokemonDB')
     mysql_cur = mysql_conn.cursor()
     isRunning = True
 
