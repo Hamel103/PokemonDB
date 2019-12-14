@@ -12,18 +12,18 @@ CREATE TABLE Types (
 
 CREATE TABLE Abilities (
   ability_name VARCHAR(32) PRIMARY KEY,
-  ability_description VARCHAR(100)
+  ability_description VARCHAR(200)
 );
 
 CREATE TABLE Pokemon (
-  name VARCHAR(12) PRIMARY KEY,
+  name VARCHAR(20) PRIMARY KEY,
   has_mega_evolution BOOLEAN,
   has_gmax_form BOOLEAN
 );
 
 CREATE TABLE Pokedex (
   dex_num INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(12) NOT NULL,
+  name VARCHAR(20) NOT NULL,
   type_one VARCHAR(10) NOT NULL,
   type_two VARCHAR(10) NOT NULL,
   ability_name VARCHAR(32) NOT NULL,

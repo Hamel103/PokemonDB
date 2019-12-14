@@ -210,7 +210,7 @@ def createData(mysql_conn, mysql_cur):
             disadv = temp.upper()
 
             try:
-                createType(name.upper(), adv, disadv)
+                createType(mysql_cur, name.upper(), adv, disadv)
                 mysql_conn.commit()
             except:
                 print("\nERROR. Invalid input during Type creation.")
@@ -220,7 +220,7 @@ def createData(mysql_conn, mysql_cur):
             desc = input("Enter a description for the new Ability (100 character MAX): ")
 
             try:
-                createAbility(name.upper(), desc)
+                createAbility(mysql_cur, name.upper(), desc)
                 mysql_conn.commit()
             except:
                 print("\nERROR. Invalid input during Ability creation.")
@@ -311,7 +311,7 @@ def updateData(mysql_conn, mysql_cur):
             except:
                 print("ERROR. Invalid input.")
 
-        elif (inputSelection == 4):
+        elif (inputSelection == '4'):
             print("Returning to previous menu..\n")
             updatingData = False
 
